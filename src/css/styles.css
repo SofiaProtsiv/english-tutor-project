@@ -1,25 +1,61 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-@import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
+/* Fonts */
+@import url('../assets/fonts/fonts.css');
 
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+/* Base */
+@import url('./base/reset.css');
+@import url('./base/normalize.css');
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+/* Utils */
+@import url('./utils/variables.css');
+@import url('./utils/common.css');
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+/* Components */
+@import url('./components/hero.css');
+@import url("./components/header.css");
+@import url("./components/hero.css");
+@import url("./components/about-me.css");
+@import url("./components/advice.css");
+@import url("./components/quote.css");
+@import url("./components/opportunities.css");
+@import url("./components/requirements.css");
+@import url("./components/workflow.css");
+@import url("./components/assessment.css");
+@import url("./components/formats.css");
+@import url("./components/reviews.css");
+@import url("./components/footer.css");
+@import url("./components/modal.css");
+@import url("./components/pop-up.css");
+
+.example-breakpoints {
+  /* до 375рх */
+  display: block;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #000;
+
+  /* починаючи з 375рх */
+  @media (375px <=width) {
+    background-color: red;
+  }
+
+  /* лише проміжок між 375рх і 769рх */
+  @media (width >=375px) and (width < 768px) {
+    background-color: yellow;
+  }
+
+  /* починаючи з 768px */
+  @media (768px <=width) {
+    background-color: blue;
+  }
+
+  /* лише проміжок між 769рх і 1440рх */
+  @media (width >=768px) and (width < 1440px) {
+    background-color: rebeccapurple;
+  }
+
+  /* починаючи з 1440рх */
+  @media (width >=1440px) {
+    background-color: pink;
+  }
 }

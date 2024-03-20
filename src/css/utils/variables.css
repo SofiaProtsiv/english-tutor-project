@@ -1,0 +1,34 @@
+:root {
+  /* Colors */
+  --primary-text-color: #292929;
+  --accent-color: #DC3353;
+  --hover-accent-color: #8F2135;
+  --white-color: #FFFFFF;
+  --error-color: #DC3353;
+  --body-bg: #FFFFFF;
+  --container-bg: #F0F2F5;
+  --input-bg: #F0F2F5;
+  --footer-bg: #292929;
+  --scrollbar-thumb-bg: #292929;
+  --scrollbar-track-bg: #FFFFFF;
+
+  /* Breakpoints */
+  --mobile: 375px;
+  --mobile-max: 767.98px;
+  --tablet: 768px;
+  --table-max: 1439.98px;
+  --desktop: 1440px;
+
+  /* Transition properties */
+  --transition-time: 250ms;
+  --transition-effect: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Backdrop */
+  --background-color: rgba(0, 0, 0, 0.6);
+
+  /* Backdrop */
+  --primary-font-family: 'PlayfairDisplay', sans-serif;
+  --secondary-font-family: 'Montserrat',
+    sans-serif;
+  --accent-font-family: 'Hurricane';
+}
