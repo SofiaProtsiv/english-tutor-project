@@ -27,20 +27,20 @@
 @import url("./components/pop-up.css");
 
 .example-breakpoints {
-  /* до 375рх */
+  /* до 360px */
   display: block;
   width: 100vw;
   height: 100vh;
 
   background-color: #000;
 
-  /* починаючи з 375рх */
-  @media (375px <=width) {
+  /* починаючи з 360px */
+  @media (360px <=width) {
     background-color: red;
   }
 
-  /* лише проміжок між 375рх і 769рх */
-  @media (width >=375px) and (width < 768px) {
+  /* лише проміжок між 360px і 769рх */
+  @media (width >=360px) and (width < 768px) {
     background-color: yellow;
   }
 

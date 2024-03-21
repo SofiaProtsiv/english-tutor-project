@@ -13,7 +13,7 @@
   --scrollbar-track-bg: #FFFFFF;
 
   /* Breakpoints */
-  --mobile: 375px;
+  --mobile: 360px;
   --mobile-max: 767.98px;
   --tablet: 768px;
   --table-max: 1439.98px;
