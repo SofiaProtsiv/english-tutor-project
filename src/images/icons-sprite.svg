@@ -14,5 +14,13 @@
 <symbol id="icon-menu-close" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M1.4 14L0 12.6L5.6 7L0 1.4L1.4 0L7 5.6L12.6 0L14 1.4L8.4 7L14 12.6L12.6 14L7 8.4L1.4 14Z" fill="#292929" />
 </symbol>
+<symbol id="icon-horisontal-line" viewBox="0 0 352 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="352" y1="0.5" y2="0.5" stroke="#292929"/>
+</symbol>
+<symbol id="icon-vertical-line" viewBox="0 0 2 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.32" d="M0.0520001 17.492V0.643999H1.24V17.492H0.0520001Z" fill="#292929"/>
+</svg>
+
+
   </defs>
 </svg>
