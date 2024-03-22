@@ -1,51 +1,111 @@
 .section {
-    padding: 64px 0;
+    padding: 0px 20px;
   
     @media (768px<=width) {
-      padding: 100px 0;
+      padding: 0px 32px;
     }
   
     @media (1440px<=width) {
-      padding: 140px 0;
+      padding: 0px 112px;
     }
   }
 
   .container {
-    position: relative;
-  
     @media (360px<=width) {
       max-width: var(--mobile);
+      margin-top: 60px;
     }
   
     @media (768px<=width) {
       max-width: var(--tablet);
+      margin-top: 68px;
     }
   
     @media (1440px<=width) {
       max-width: var(--desktop);
+      margin-top: 112px;
     }
+  }
+
+  .main-title p {
+    text-transform: uppercase;
+    font-family: var(--primary-font-family);
+    font-weight: 600;
+    font-size: 104px;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+  }
+
+  .about-me-div {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .about-me {
+    position: relative;
+    width: 384px;
+    font-family: var(--secondary-font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 108px 0px 108px 100px;
+    padding: 0;
+  }
+
+  .about-me::before {
+    content: "";
+    position: absolute;
+    border-color: var(--primary-text-color);
+    border-style: solid;
+    border-width: 1px;
+    height: 100%;
+    left: -32px;
+  }
+
+  .btn-connect {
+    font-family: var(--secondary-font-family);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.3;
+    margin: 108px 60px;
+    padding: 45px 36px;
+    border: none;
+    background: none;
   }
 
   .photo {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 108px;
     z-index: -1;
   }
   
   .menu-social {
+    position: relative;
+    width: 364px;
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: end;
-    height: 64px;
-    width: 100%;
+    justify-content: space-between;
+    margin-left: auto;
+  }
+
+  .menu-social::before {
+    content: "";
+    position: absolute;
+    border-color: var(--primary-text-color);
+    border-style: solid;
+    border-width: 1px;
+    width: 1000%;
+    right: 400;
+    bottom: 8px;
   }
   
   .menu-social-item {
+    font-family: var(--secondary-font-family);
     display: flex;
     justify-content: end;
     align-items: center;
-    padding: 10px;
     text-decoration: none;
     color: var(--primary-text-color);
   }
