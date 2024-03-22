@@ -65,7 +65,6 @@
   }
 
   .btn-connect {
-    position: relative;
     font-family: var(--secondary-font-family);
     font-weight: 600;
     font-size: 18px;
@@ -79,6 +78,10 @@
     background-image: url(../../images/hero/Vector.png);
     background-repeat: no-repeat;
     background-size: contain;
+  }
+
+  .btn-connect:hover {
+    background-image: url(../../images/hero/Vectorhover.png);
   }
 
   .photo {
@@ -104,7 +107,7 @@
     border-width: 1px;
     width: 1000%;
     right: 400;
-    bottom: 8px;
+    bottom: 12px;
   }
   
   .menu-social-item {
@@ -114,4 +117,11 @@
     align-items: center;
     text-decoration: none;
     color: var(--primary-text-color);
+    padding: 5px 0px;
+  }
+
+  .menu-social-item:hover {
+    color: #FFFFFF;
+    background-color: #292929;
+    border-bottom: 1px solid #DC3353;
   }
