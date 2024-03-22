@@ -8,20 +8,13 @@
   line-height: 0.85;
   letter-spacing: 0.02em;
 }
-
-.section-title {
-  color: var(--primary-text-color);
-  text-align: right;
-  font-family: var(--primary-font-family);
+.requirements-section-title {
   font-size: 30px;
-  font-weight: 600;
-  line-height: 1.38;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+  text-align: right;
   height: 88px;
   min-width: 280px;
-  margin-bottom: 32px;
 }
+
 .requirements-list {
   display: flex;
   flex-direction: column;
@@ -59,7 +52,7 @@
 }
 
 @media (360px <=width) {
-  .section-title {
+  .requirements-section-title {
     font-size: 32px;
     width: 320px;
   }
