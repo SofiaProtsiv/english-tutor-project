@@ -1,0 +1,92 @@
+.advice-title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1.38;
+    letter-spacing: 0.02em;
+    max-width: 320px;
+    text-transform: uppercase;
+    padding-bottom: 32px;
+}
+
+.advice-list {
+    list-style-type: disc;
+    width: 296px;
+    margin-top: 32px;
+    margin-left: 24px;
+}
+
+.advice-item {
+    margin-bottom: 24px;
+    font-family: Montserrat;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+}
+
+.advice-list .advice-item::marker {
+    color: red;
+    
+}
+
+
+@media (768px<=width) {
+    .advice-title {   
+        font-size: 56px;
+        line-height: 1.23;
+        letter-spacing: 0.02em;
+        max-width: 704px;
+        padding-bottom: 56px;
+    }
+
+    .advice-border {
+        border-left: 2px solid black;
+    }
+    
+    .advice-img {
+        max-width: 672px;
+    }
+    .advice-list {
+        width: 672px;
+        margin-top: 56px;
+        margin-left: 32px;
+    }
+    .advice-item {
+        margin-bottom: 24px;
+        font-size: 18px;
+        line-height: 1.55;
+        letter-spacing: 0.01em;
+    }
+
+
+
+}
+
+@media (1440px<=width) {
+
+    .advice-title {
+        max-width: 1072px;
+        padding-bottom: 72px;
+    }
+
+    .advice-info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+            
+    }
+    .advice-list {
+        width: 448px;
+        margin-top: 0;
+        margin-left: 104px;
+        margin-right: 184px;
+    }
+    
+    .advice-item {
+        margin-bottom: 24px;
+        font-size: 18px;
+        line-height: 1.55;
+        letter-spacing: 0.01em;
+    }
+}
+ 
