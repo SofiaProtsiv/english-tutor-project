@@ -1,0 +1,55 @@
+/* workflow-styles */
+.workflow-content-image {
+  margin-bottom: 32px;
+}
+
+.workflow-list-item {
+  margin-bottom: 24px;
+}
+
+.workflow-list-item:last-child {
+  margin-bottom: 0;
+}
+
+.points-numbers {
+  font-family: var(--accent-font-family);
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: var(--accent-color);
+}
+
+.points-title {
+  margin-bottom: 12px;
+  padding-left: 52px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33333;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.points-list {
+  padding-left: 52px;
+  list-style: disc;
+}
+
+.points-list-item {
+  margin-bottom: 8px;
+  font-family: var(--secondary-font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  color: #292929;
+}
+
+.points-list-item:last-child {
+  margin-bottom: 0;
+}
+
+.points-list-item::marker {
+  color: var(--accent-color);
+}
