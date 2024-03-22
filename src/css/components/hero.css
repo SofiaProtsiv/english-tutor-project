@@ -17,22 +17,29 @@ h1,h2,h3 {
 
   .container {
     @media (360px<=width) {
-      max-width: var(--mobile);
+      max-width: 360px;
       margin-top: 60px;
+      margin-right: auto;
+      margin-left: auto;
     }
   
     @media (768px<=width) {
-      max-width: var(--tablet);
+      max-width: 704px;
       margin-top: 68px;
+      margin-right: auto;
+      margin-left: auto;
     }
   
     @media (1440px<=width) {
-      max-width: var(--desktop);
+      max-width: 1216px;
       margin-top: 112px;
+      margin-right: auto;
+      margin-left: auto;
     }
   }
 
-  .main-title p {
+  .main-title {
+    width: 1000px;
     text-transform: uppercase;
     font-family: var(--primary-font-family);
     font-weight: 600;
@@ -42,12 +49,15 @@ h1,h2,h3 {
     padding: 0;
 
     @media screen and (max-width: 1439px) and (min-width: 768px) {
-
+      width: 704px;
     }
 
     @media screen and (max-width: 767px) and (min-width: 360px) {
+      width: 320px;
       font-size: 48px;
       line-height: 1.25;
+      margin-right: auto;
+      margin-left: auto;
     }
   }
 
@@ -61,7 +71,10 @@ h1,h2,h3 {
     }
 
     @media screen and (max-width: 767px) and (min-width: 360px) {
-      
+      display: block;
+      width: 320px;
+      margin-right: auto;
+      margin-left: auto;
     }
   }
 
@@ -80,7 +93,8 @@ h1,h2,h3 {
     }
 
     @media screen and (max-width: 767px) and (min-width: 360px) {
-      
+      width: 296px;
+      margin: 32px 20px;      
     }
   }
 
@@ -92,14 +106,6 @@ h1,h2,h3 {
     border-width: 1px;
     height: 100%;
     left: -32px;
-
-    @media screen and (max-width: 1439px) and (min-width: 768px) {
-      
-    }
-
-    @media screen and (max-width: 767px) and (min-width: 360px) {
-      
-    }
   }
 
   .btn-connect {
@@ -122,7 +128,7 @@ h1,h2,h3 {
     }
 
     @media screen and (max-width: 767px) and (min-width: 360px) {
-      
+      margin: 32px 48px 40px 48px;
     }
   }
 
@@ -159,7 +165,10 @@ h1,h2,h3 {
     }
 
     @media screen and (max-width: 767px) and (min-width: 360px) {
-      
+      width: 320px;
+      margin-top: 16px;
+      margin-right: auto;
+      margin-left: auto;
     }
   }
 
