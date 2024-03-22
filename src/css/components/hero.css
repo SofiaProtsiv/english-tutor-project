@@ -70,18 +70,15 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 1.3;
+    width: 224px;
+    height: 96px;
     margin: 108px 60px;
-    padding: 45px 36px;
     border: none;
     background: none;
     cursor: pointer;
-  }
-
-  .btn-connect::before {
-    content: url(../../images/hero/Vector.png);
-    position: absolute;
-    top: 10px;
-    left: -25px;
+    background-image: url(../../images/hero/Vector.png);
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   .photo {
