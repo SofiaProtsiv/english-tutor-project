@@ -1,0 +1,69 @@
+.requirements-wrapper {
+  background-color: var(--container-bg);
+}
+.section-subtitle {
+  font-family: var(--accent-font-family);
+  color: var(--accent-color);
+  font-size: 52px;
+  line-height: 0.85;
+  letter-spacing: 0.02em;
+}
+
+.section-title {
+  color: var(--primary-text-color);
+  text-align: right;
+  font-family: var(--primary-font-family);
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.38;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  height: 88px;
+  min-width: 280px;
+  margin-bottom: 32px;
+}
+.requirements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.requirement {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.requirement-title {
+  color: var(--accent-color);
+  font-family: var(--primary-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.33;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.requirement-description {
+  padding-bottom: 24px;
+  border-bottom: black solid 1px;
+}
+.requirement-img {
+  height: 280px;
+  object-fit: cover;
+}
+.requirement-article {
+  color: var(--primary-text-color);
+  font-family: var(--secondary-font-family);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.0125em;
+}
+
+@media (360px <=width) {
+  .section-title {
+    font-size: 32px;
+    width: 320px;
+  }
+  .requirement-img {
+    width: 320px;
+  }
+}
