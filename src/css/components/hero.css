@@ -1,3 +1,8 @@
+h1,h2,h3 {
+  margin: 0;
+  padding: 0;
+}
+
 .section {
     padding: 0px 20px;
   
@@ -35,12 +40,29 @@
     line-height: 1.2;
     margin: 0;
     padding: 0;
+
+    @media screen and (max-width: 1439px) and (min-width: 768px) {
+
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 360px) {
+      font-size: 48px;
+      line-height: 1.25;
+    }
   }
 
   .about-me-div {
     display: flex;
     align-items: center;
     position: relative;
+
+    @media screen and (max-width: 1439px) and (min-width: 768px) {
+      display: block;
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 360px) {
+      
+    }
   }
 
   .about-me {
@@ -52,6 +74,14 @@
     line-height: 1.5;
     margin: 108px 0px 108px 100px;
     padding: 0;
+
+    @media screen and (max-width: 1439px) and (min-width: 768px) {
+      margin: 40px 32px;
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 360px) {
+      
+    }
   }
 
   .about-me::before {
@@ -62,6 +92,14 @@
     border-width: 1px;
     height: 100%;
     left: -32px;
+
+    @media screen and (max-width: 1439px) and (min-width: 768px) {
+      
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 360px) {
+      
+    }
   }
 
   .btn-connect {
@@ -78,6 +116,14 @@
     background-image: url(../../images/hero/Vector.png);
     background-repeat: no-repeat;
     background-size: contain;
+
+    @media screen and (max-width: 1439px) and (min-width: 768px) {
+      margin: 40px 0px 40px 0px;
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 360px) {
+      
+    }
   }
 
   .btn-connect:hover {
@@ -86,9 +132,19 @@
 
   .photo {
     position: absolute;
+    width: 384px;
     right: 0;
     bottom: 108px;
     z-index: -1;
+
+    @media screen and (max-width: 1439px) and (min-width: 768px) {
+      width: 256px;
+      bottom: 40px;
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 360px) {
+      display: none;
+    }
   }
   
   .menu-social {
@@ -97,6 +153,14 @@
     display: flex;
     justify-content: space-between;
     margin-left: auto;
+
+    @media screen and (max-width: 1439px) and (min-width: 768px) {
+      
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 360px) {
+      
+    }
   }
 
   .menu-social::before {
@@ -118,6 +182,14 @@
     text-decoration: none;
     color: var(--primary-text-color);
     padding: 5px 0px;
+
+    @media screen and (max-width: 1439px) and (min-width: 768px) {
+      
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 360px) {
+      
+    }
   }
 
   .menu-social-item:hover {
