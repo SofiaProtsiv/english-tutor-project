@@ -1,3 +1,5 @@
+
+
 .advice-title {
     text-align: center;
     font-weight: 600;
@@ -6,7 +8,7 @@
     letter-spacing: 0.02em;
     max-width: 320px;
     text-transform: uppercase;
-    padding-bottom: 32px;
+    margin-bottom: 32px;
 }
 
 .advice-list {
@@ -25,7 +27,7 @@
 }
 
 .advice-list .advice-item::marker {
-    color: red;
+    color: #DC3353; 
     
 }
 
@@ -36,11 +38,12 @@
         line-height: 1.23;
         letter-spacing: 0.02em;
         max-width: 704px;
-        padding-bottom: 56px;
+        margin-bottom: 56px;
     }
 
     .advice-border {
-        border-left: 2px solid black;
+        padding-left: 32px;
+        border-left: 1px solid #292929;
     }
     
     .advice-img {
@@ -58,28 +61,26 @@
         letter-spacing: 0.01em;
     }
 
-
-
 }
 
 @media (1440px<=width) {
 
     .advice-title {
         max-width: 1072px;
-        padding-bottom: 72px;
+        margin-bottom: 55px;
+        margin-left: 155px;
     }
 
     .advice-info{
         display: flex;
         justify-content: center;
         align-items: center;
-            
     }
     .advice-list {
         width: 448px;
         margin-top: 0;
         margin-left: 104px;
-        margin-right: 184px;
+        margin-top: 15px;
     }
     
     .advice-item {
