@@ -65,6 +65,7 @@
   }
 
   .btn-connect {
+    position: relative;
     font-family: var(--secondary-font-family);
     font-weight: 600;
     font-size: 18px;
@@ -73,6 +74,14 @@
     padding: 45px 36px;
     border: none;
     background: none;
+    cursor: pointer;
+  }
+
+  .btn-connect::before {
+    content: url(../../images/hero/Vector.png);
+    position: absolute;
+    top: 10px;
+    left: -25px;
   }
 
   .photo {
