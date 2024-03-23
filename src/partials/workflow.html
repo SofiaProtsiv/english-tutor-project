@@ -1,26 +1,58 @@
 <section class="section workflow">
-  <div class="container">
+  <div class="container workflow-container">
     <h2 class="section-title">Як ми будемо працювати</h2>
     <div class="workflow-content">
       <div class="workflow-content-image">
         <picture>
           <source
             srcset="
-              ./images/workflow/workflow-photo.webp    1x,
-              ./images/workflow/workflow-photo@2x.webp 2x
+              ./images/workflow/workflow-desctop.webp    1x,
+              ./images/workflow/workflow-desctop@2x.webp 2x
             "
+            media="(min-width: 1440px)"
             type="image/webp"
           />
           <source
-            srcset="./images/workflow/workflow-photo@2x.png 2x"
+            srcset="
+              ./images/workflow/workflow-desctop.png    1x,
+              ./images/workflow/workflow-desctop@2x.png 2x
+            "
+            media="(min-width: 1440px)"
             type="image/png"
           />
-          <img
-            src="./images/workflow/workflow-photo.png"
-            alt="photo desc"
-            width="320"
-            height="320"
+          <source
+            srcset="
+              ./images/workflow/workflow-tablet.webp    1x,
+              ./images/workflow/workflow-tablet@2x.webp 2x
+            "
+            media="(min-width: 768px)"
+            type="image/webp"
           />
+          <source
+            srcset="
+              ./images/workflow/workflow-tablet.png    1x,
+              ./images/workflow/workflow-tablet@2x.png 2x
+            "
+            media="(min-width: 768px)"
+            type="image/png"
+          />
+          <source
+            srcset="
+              ./images/workflow/workflow-mobile.webp    1x,
+              ./images/workflow/workflow-mobile@2x.webp 2x
+            "
+            media="(max-width: 767px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./images/workflow/workflow-mobile.png    1x,
+              ./images/workflow/workflow-mobile@2x.png 2x
+            "
+            media="(max-width: 767px)"
+            type="image/png"
+          />
+          <img src="./images/workflow/workflow-desctop.png" alt="photo desc" />
         </picture>
       </div>
       <div class="workflow-content-list">

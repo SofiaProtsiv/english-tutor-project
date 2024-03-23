@@ -1,6 +1,43 @@
 /* workflow-styles */
+.workflow-container {
+  @media (1440px<=width) {
+    max-width: 1136px;
+  }
+}
+.workflow-content {
+  @media (768px<=width) {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  @media (1440px<=width) {
+    gap: 72px;
+    padding-left: 32px;
+    border-left: 1px solid var(--primary-text-color);
+  }
+}
+
 .workflow-content-image {
   margin-bottom: 32px;
+  @media (768px<=width) {
+    margin-bottom: 0;
+    width: 288px;
+  }
+
+  @media (1440px<=width) {
+    width: 488px;
+  }
+}
+
+.workflow-content-list {
+  @media (768px<=width) {
+    width: 384px;
+  }
+
+  @media (1440px<=width) {
+    width: 480px;
+  }
 }
 
 .workflow-list-item {
@@ -15,10 +52,14 @@
   font-family: var(--accent-font-family);
   font-weight: 400;
   font-size: 52px;
-  line-height: 1;
+  line-height: 0.2;
   letter-spacing: 0.02em;
   text-align: left;
   color: var(--accent-color);
+  @media (768px<=width) {
+    font-size: 96px;
+    line-height: 0.52;
+  }
 }
 
 .points-title {
@@ -29,11 +70,24 @@
   line-height: 1.33333;
   letter-spacing: 0.02em;
   text-transform: uppercase;
+  @media (768px<=width) {
+    margin-bottom: 16px;
+    padding-left: 80px;
+    font-size: 28px;
+    line-height: 1;
+  }
 }
 
 .points-list {
   padding-left: 52px;
   list-style: disc;
+  @media (768px<=width) {
+    padding-left: 80px;
+    max-width: 400px;
+  }
+  @media (1440px<=width) {
+    max-width: 422px;
+  }
 }
 
 .points-list-item {
@@ -43,7 +97,9 @@
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.01em;
-  color: #292929;
+  @media (768px<=width) {
+    font-size: 18px;
+  }
 }
 
 .points-list-item:last-child {

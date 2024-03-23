@@ -86,4 +86,13 @@ body::-webkit-scrollbar-track {
   text-transform: uppercase;
   text-align: center;
   color: var(--primary-text-color);
+  @media (768px<=width) {
+    margin-bottom: 56px;
+    font-size: 56px;
+    line-height: 1.2;
+  }
+
+  @media (1440px<=width) {
+    margin-bottom: 72px;
+  }
 }
