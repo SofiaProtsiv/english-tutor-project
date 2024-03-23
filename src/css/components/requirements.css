@@ -1,30 +1,89 @@
+/* видалити в кінці */
+@media (1440px<=width) {
+  .container {
+    padding: 0 112px;
+  }
+}
+/* видалити в кінці */
 .requirements-wrapper {
   background-color: var(--container-bg);
 }
-.section-subtitle {
+
+.requirements-subtitle {
   font-family: var(--accent-font-family);
   color: var(--accent-color);
   font-size: 52px;
   line-height: 0.85;
   letter-spacing: 0.02em;
+  @media (768px<=width) {
+    font-size: 96px;
+    line-height: 0.79;
+  }
 }
+
 .requirements-section-title {
   font-size: 30px;
   text-align: right;
   height: 88px;
   min-width: 280px;
+  @media (360px <=width) {
+    font-size: 32px;
+    width: 320px;
+  }
+  @media (768px<=width) {
+    height: 136px;
+    min-width: 704px;
+  }
+
+  @media (1440px<=width) {
+    height: 68px;
+    min-width: 1216px;
+  }
 }
+
+/* this styles will be created in common.ss */
+
+.section-title {
+  color: var(--primary-text-color);
+  font-weight: 600;
+  line-height: 1.38;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+
+  @media (768px<=width) {
+    margin-bottom: 56px;
+    font-size: 56px;
+    line-height: 1.2;
+  }
+
+  @media (1440px<=width) {
+    margin-bottom: 72px;
+  }
+}
+
+/* will be created in common.ss */
 
 .requirements-list {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
+
 .requirement {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  @media (768px<=width) {
+    flex-direction: row;
+  }
 }
+@media (768px<=width) {
+  .requirement:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
+
 .requirement-title {
   color: var(--accent-color);
   font-family: var(--primary-font-family);
@@ -34,29 +93,44 @@
   letter-spacing: 0.02em;
   text-transform: uppercase;
   margin-bottom: 24px;
+  @media (768px<=width) {
+    font-size: 28px;
+    line-height: 1.29;
+  }
 }
+
 .requirement-description {
   padding-bottom: 24px;
   border-bottom: black solid 1px;
+  @media (768px<=width) {
+    width: 336px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
 }
+
 .requirement-img {
   height: 280px;
   object-fit: cover;
+
+  @media (360px<=width) {
+    width: 320px;
+  }
+  @media (768px<=width) {
+    width: 336px;
+  }
 }
+
 .requirement-article {
   color: var(--primary-text-color);
   font-family: var(--secondary-font-family);
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.0125em;
-}
-
-@media (360px <=width) {
-  .requirements-section-title {
-    font-size: 32px;
-    width: 320px;
-  }
-  .requirement-img {
-    width: 320px;
+  @media (768px<=width) {
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.01em;
   }
 }

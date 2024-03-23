@@ -76,25 +76,3 @@ body::-webkit-scrollbar-track {
     max-width: var(--desktop);
   }
 }
-
-.section-title {
-  color: var(--primary-text-color);
-  font-weight: 600;
-  line-height: 1.38;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  margin-bottom: 32px;
-}
-/* @media (768px>=width) {
-  .section-title {
-    margin-bottom: 56px;
-    font-size: 56px;
-    line-height: 1.2;
-  }
-}
-
-@media (1440px>=width) {
-  .section-title {
-    margin-bottom: 72px;
-  }
-} */
