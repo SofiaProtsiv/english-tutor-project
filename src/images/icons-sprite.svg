@@ -19,8 +19,9 @@
 </symbol>
 <symbol id="icon-vertical-line" viewBox="0 0 2 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path opacity="0.32" d="M0.0520001 17.492V0.643999H1.24V17.492H0.0520001Z" fill="#292929"/>
-</svg>
-
-
+</symbol>
+<symbol id="icon-switch-arrow" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0L5 5L10 0H0Z" fill="#292929"/>
+</symbol>
   </defs>
 </svg>

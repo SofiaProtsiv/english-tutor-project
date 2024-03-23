@@ -1,13 +1,10 @@
-.header-menu-open .container {
-  max-width: initial;
-}
-
 .header {
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   border-bottom: 1px solid var(--primary-text-color);
+  background: var(--white-color);
 }
 
 .header-container {
@@ -20,8 +17,12 @@
   height: 76px;
 }
 
-.header-menu-open .header-container {
+.header.header-menu-open {
   background: rgb(240, 242, 245);
+}
+
+.logo {
+  cursor: pointer;
 }
 
 .icon-logo {
@@ -38,11 +39,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .icon-menu {
   width: 32px;
   height: 32px;
+  cursor: pointer;
 }
 
 .header-menu-open .icon-menu {
@@ -60,12 +63,14 @@
 .header-menu-open .icon-menu-close {
   visibility: visible;
   display: inline;
+  cursor: pointer;
 }
 
 .menu-container {
-  position: absolute;
-  top: var(--header-height-small);
+  position: fixed;
+  top: calc(1px + var(--header-height-small));
   left: 0;
+  right: 0;
   display: none;
   visibility: hidden;
   flex-direction: column;
@@ -80,7 +85,7 @@
   visibility: visible;
 }
 
-.menu-nav {
+.menu-content {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,6 +94,14 @@
   border-bottom: 1px solid var(--primary-text-color);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   flex: 1;
+}
+
+.menu-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
 }
 
 .menu-item {
@@ -102,6 +115,7 @@
   color: var(--primary-text-color);
   padding-top: 24px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .menu-item:hover::after {
@@ -113,9 +127,10 @@
   background-color: var(--accent-color);
   transition: bottom 0.3s ease;
   bottom: 0;
+  cursor: pointer;
 }
 
-.select-lang {
+.custom-select-small {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,14 +155,15 @@
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.01em;
+  cursor: pointer;
 }
 
-.select-lang-btn:hover,
-.select-lang-btn:focus {
+.select-lang-btn-active {
   color: var(--accent-color);
 }
 
 .vertical-line {
+  display: initial;
   color: #b5b4b4;
   height: 22px;
 }
@@ -181,10 +197,12 @@
   line-height: 1.5;
   letter-spacing: 0.01em;
   color: var(--primary-text-color);
+  cursor: pointer;
 }
 
 .menu-social-item:focus {
   background-color: var(--primary-text-color);
+  cursor: pointer;
 }
 
 .menu-social-item:hover::after {
@@ -196,6 +214,47 @@
   background-color: var(--accent-color);
   transition: bottom 0.3s ease;
   bottom: 0;
+  cursor: pointer;
+}
+
+.custom-select {
+  display: none;
+  visibility: hidden;
+  flex-direction: column;
+  height: 24px;
+  width: max-content;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  padding-right: 20px;
+}
+
+.custom-select-open {
+  overflow: inherit;
+}
+
+.custom-select-option {
+  font-family: var(--primary-font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--primary-text-color);
+  text-decoration: none;
+  height: 24px;
+}
+
+.custom-select-icon {
+  position: absolute;
+  top: 14px;
+  right: 0;
+  width: 10px;
+  height: 5px;
+  pointer-events: none;
+}
+.custom-select-option:hover {
+  background: #f0f2f5;
 }
 
 /* ======= tablet styles ======= */
@@ -205,7 +264,7 @@
     height: calc(100vh - var(--header-height-small));
   }
 
-  .menu-nav {
+  .menu-content {
     border-bottom: none;
     box-shadow: none;
   }
@@ -213,6 +272,7 @@
   .menu-item {
     font-size: 28px;
     line-height: 1.28571;
+    cursor: pointer;
   }
 
   .menu-social {
@@ -221,6 +281,7 @@
 
   .icon-horisontal-line {
     display: flex;
+    visibility: visible;
     align-items: center;
     flex: 1;
     margin-right: 20px;
@@ -258,10 +319,16 @@
     visibility: hidden;
   }
 
-  .menu-nav {
+  .menu-content {
     flex-direction: row;
     border-bottom: initial;
     box-shadow: initial;
+    flex: initial;
+    width: initial;
+  }
+
+  .menu-nav {
+    flex-direction: row;
     flex: initial;
     width: initial;
   }
@@ -286,7 +353,14 @@
     visibility: hidden;
   }
 
-  .select-lang {
-    margin-top: 0;
+  .custom-select-small {
+    display: none;
+    visibility: hidden;
+  }
+
+  .custom-select {
+    display: flex;
+    visibility: visible;
+    max-width: 52px;
   }
 }
