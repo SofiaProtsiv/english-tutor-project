@@ -108,6 +108,12 @@ h1,h2,h3 {
     left: -32px;
   }
 
+  @media screen and (max-width: 767px) and (min-width: 360px) {
+    .about-me::before {
+      left: -24px;
+    }
+  }
+
   .btn-connect {
     font-family: var(--secondary-font-family);
     font-weight: 600;
@@ -181,6 +187,14 @@ h1,h2,h3 {
     width: 1000%;
     right: 400;
     bottom: 12px;
+  }
+
+  @media screen and (max-width: 767px) and (min-width: 360px) {
+    .menu-social::before {
+      width: 112%;
+      right: -21px;
+      bottom: 34px;
+    }
   }
   
   .menu-social-item {
