@@ -1,1 +1,46 @@
-<div>modal</div>
+<div class="mdl-box">
+    <div class="mdl-flex">
+      <div class="mdl-forma">
+
+          <svg class="close" width="24" height="24">
+              <use href="../images/icons-sprite.svg#close-icon"></use>
+          </svg>
+
+          <div class="mdl-content">
+
+            <div class="thumb-title">
+              <h2 class="title-form">Зв’язатися<br> зі мною</h2>
+              <p class="paragraf-form">Будь ласка, заповніть форму<br> і я зв’яжуся з Вами якнайшвидше для обговорення деталей.</p>
+            </div>
+
+            <form class="forma-for-connect">
+        
+              <label class="label-inpt"><span>Ваше ім’я<span class="star">*</span></span>
+              <input type="text" class="user-inpt username" name="username" placeholder="Анастасія" required>
+              </label>
+
+              <label class="label-inpt"><span>Номер телефону<span class="star">*</span></span>
+              <input type="tel" class="user-inpt phone" name="phone" placeholder="+38 000 000 00 00" pattern="\+[0-9]{11,12}" required>
+              </label>
+
+              <label class="label-inpt">Формат навчання
+                <div class="select-box">
+                    <select class="user-inpt selected-category" name="education">
+                        <option value="Individual study">Індивідуальне навчання</option>
+                        <option value="Study with a friend">Парні заняття</option>
+                        <option value="Groupe study">Групові заняття</option>
+                    </select>
+                </div>
+              </label>
+
+              <label class="label-inpt">Коментар
+                <textarea class="user-inpt text-com" name="comment" placeholder="Ваш коментар"></textarea>
+              </label>
+                     
+            <button class="but-submit" type="submit">ВІДПРАВИТИ</button> 
+        
+            </form>
+          </div>
+      </div>
+    </div>
+  </div>

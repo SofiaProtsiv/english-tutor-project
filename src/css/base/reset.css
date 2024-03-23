@@ -47,3 +47,13 @@ body.is-hidden {
 span {
   z-index: 1;
 }
+.btn-connect {
+  border: none;
+  cursor: pointer;
+  width: 224px;
+  height: 96px;
+  background-color: white;
+  background-image: url(/images/button@1x.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
