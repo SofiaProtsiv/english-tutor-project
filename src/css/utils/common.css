@@ -87,6 +87,13 @@ body::-webkit-scrollbar-track {
   background-image: url(../../images/common/button1x.png);
   background-repeat: no-repeat;
   background-size: contain;
+  filter: brightness(100%);
+  -webkit-transition: -webkit-filter var(--transition-time) var(--transition-effect);
+  transition: filter var(--transition-time) var(--transition-effect);
+}
+
+.btn-connect:hover {
+  filter: saturate(50%);
 }
 
 @media (min-resolution: 2dppx) {
