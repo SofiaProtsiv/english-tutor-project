@@ -121,6 +121,7 @@ h1,h2,h3 {
     line-height: 1.3;
     width: 224px;
     height: 96px;
+    text-transform: uppercase;
     margin: 108px 60px;
     border: none;
     background: none;
