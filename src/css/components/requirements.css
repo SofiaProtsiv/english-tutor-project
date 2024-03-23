@@ -1,11 +1,4 @@
-/* видалити в кінці */
-@media (1440px<=width) {
-  .container {
-    padding: 0 112px;
-  }
-}
-/* видалити в кінці */
-.requirements-wrapper {
+.requirements-section {
   background-color: var(--container-bg);
 }
 
@@ -62,12 +55,16 @@
   }
 }
 
-/* will be created in common.ss */
+/*this styles will be created in common.ss */
 
 .requirements-list {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  @media (1440px<=width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .requirement {
@@ -79,34 +76,19 @@
   }
 }
 @media (768px<=width) {
-  .requirement:nth-child(even) {
+  .requirement:nth-child(4) {
     flex-direction: row-reverse;
   }
 }
 
-.requirement-title {
-  color: var(--accent-color);
-  font-family: var(--primary-font-family);
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 1.33;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  margin-bottom: 24px;
-  @media (768px<=width) {
-    font-size: 28px;
-    line-height: 1.29;
+@media (width >=768px) and (width < 1440px) {
+  .requirement:nth-child(2) {
+    flex-direction: row-reverse;
   }
 }
-
-.requirement-description {
-  padding-bottom: 24px;
-  border-bottom: black solid 1px;
-  @media (768px<=width) {
-    width: 336px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+@media (1440px<=width) {
+  .requirement:nth-child(3) {
+    flex-direction: row-reverse;
   }
 }
 
@@ -119,6 +101,38 @@
   }
   @media (768px<=width) {
     width: 336px;
+  }
+  @media (1440px<=width) {
+    width: 280px;
+  }
+}
+
+.requirement-description {
+  padding-bottom: 24px;
+  border-bottom: black solid 1px;
+  @media (768px<=width) {
+    width: 336px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 32px;
+  }
+  @media (1440px<=width) {
+    width: 280px;
+  }
+}
+.requirement-title {
+  color: var(--accent-color);
+  font-family: var(--primary-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.33;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  @media (768px<=width) {
+    font-size: 28px;
+    line-height: 1.29;
   }
 }
 
