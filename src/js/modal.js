@@ -5,8 +5,8 @@ const contentForm = document.querySelector(".mdl-content")
 const butClose = document.querySelector(".close");
 const formUser = document.querySelector(".forma-for-connect");
 const formElements = Array.from(formUser.elements);
-const token = "6077606622:AAG6g12itzLvnsQfazmk9-oBfkHb1kflQYk";
-let idCzat = -1002080915692;
+const TOKEN = "6077606622:AAG6g12itzLvnsQfazmk9-oBfkHb1kflQYk";
+let IDCZAT = -1002080915692;
 
 buttonClick.addEventListener("click", function () { 
     modalWindow.style.display = "block";
@@ -27,11 +27,11 @@ formUser.addEventListener("submit", async (e) => {
     const comment = formData.get("comment");
         
     const message = `
-        Нова заявка:
-        1) Ім'я: ${userName};
-        2) Телефон: ${userPhone};
-        3) Формат навчання: ${education};
-        4) Коментар: ${comment ? comment : "Без коментарів"};
+    Нова заявка:
+    1) Ім'я: ${userName};
+    2) Телефон: ${userPhone};
+    3) Формат навчання: ${education};
+    4) Коментар: ${comment ? comment : "Без коментарів"};
     `;
 
     sendMessage(message);
@@ -39,8 +39,8 @@ formUser.addEventListener("submit", async (e) => {
 
 async function sendMessage(message) {
     try {
-        await axios.post(`https://api.telegram.org/bot${token}/sendMessage`, {
-            chat_id: idCzat,
+        await axios.post(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
+            chat_id: IDCZAT,
             text: message
         });
         feedbackMessage(true);

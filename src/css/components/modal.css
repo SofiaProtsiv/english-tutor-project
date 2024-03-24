@@ -144,7 +144,7 @@ select {
     background-size: contain;
     font-family: var(--font-family);
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 156%;
     letter-spacing: 0.01em;
 }
@@ -188,6 +188,9 @@ select {
     .mdl-forma {
         max-width: 704px;
         padding: 56px;
+    }
+    .but-submit {
+        font-size: 18px;
     }
     .text-feedback {
         width: 500px;
