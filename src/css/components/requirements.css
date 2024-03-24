@@ -24,6 +24,7 @@
     width: 320px;
   }
   @media (768px<=width) {
+    font-size: 56px;
     height: 136px;
     min-width: 704px;
   }
@@ -33,35 +34,6 @@
     min-width: 1216px;
   }
 }
-
-/* this styles will be created in common.ss - DELETE */
-
-.section-title {
-  color: var(--primary-text-color);
-  font-weight: 600;
-  line-height: 1.38;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  margin-bottom: 32px;
-
-  @media (768px<=width) {
-    margin-bottom: 56px;
-    font-size: 56px;
-    line-height: 1.2;
-  }
-
-  @media (1440px<=width) {
-    margin-bottom: 72px;
-  }
-}
-
-.container {
-  @media (1440px<=width) {
-    padding: 0 112px;
-  }
-}
-
-/*this styles will be created in common.ss - DELETE */
 
 .requirements-list {
   display: flex;
