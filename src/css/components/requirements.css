@@ -34,7 +34,7 @@
   }
 }
 
-/* this styles will be created in common.ss */
+/* this styles will be created in common.ss - DELETE */
 
 .section-title {
   color: var(--primary-text-color);
@@ -55,7 +55,13 @@
   }
 }
 
-/*this styles will be created in common.ss */
+.container {
+  @media (1440px<=width) {
+    padding: 0 112px;
+  }
+}
+
+/*this styles will be created in common.ss - DELETE */
 
 .requirements-list {
   display: flex;
