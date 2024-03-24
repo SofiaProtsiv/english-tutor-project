@@ -90,7 +90,6 @@ select {
     appearance: none;
     cursor: pointer;
     color: var(--primary-text-color);
-    opacity: 0.4;
   }
   .select-box {
     position: relative;
@@ -121,6 +120,9 @@ select {
     background-color: var(--input-bg);
     border: none;
     outline: none;
+    color: var(--primary-text-color);
+}
+.user-inpt::placeholder {
     color: var( --primary-text-color);
     opacity: 0.4;
 }
