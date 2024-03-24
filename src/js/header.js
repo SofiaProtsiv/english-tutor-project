@@ -34,34 +34,10 @@ const renderHeaderMarkup = () => {
        <div class="custom-select" id="CUSTOM_SELECT_JS">
        </div>
      </div>
-     <nav class="menu-social">
+     <nav class="menu-social" id="MENU_SOCIAL_JS">
        <svg class="icon-horisontal-line">
          <use href="../images/icons-sprite.svg#icon-horisontal-line"></use>
        </svg>
-       <a
-         class="menu-social-item"
-         target="_blank"
-         rel="noopener"
-         href="https://t.me/@alyona_alyona"
-       >
-         TELEGRAM
-       </a>
-       <a
-         class="menu-social-item"
-         target="_blank"
-         rel="noopener"
-         href="https://www.instagram.com/lolaserenity?igsh=MWxpdGRwM2R2M3Rxcg=="
-       >
-         INSTAGRAM
-       </a>
-       <a
-         class="menu-social-item"
-         target="_blank"
-         rel="noopener"
-         href="https://www.facebook.com/alyona.stulina"
-       >
-         FACEBOOK
-       </a>
      </nav>
    </section>
  </div>
@@ -95,7 +71,7 @@ if (menuNav) {
 /* ======= menu navigation  ======= */
 const menuNavigation = document.querySelector("#MENU_NAV_JS");
 
-const createNavMarkup = () => {
+const createNavigationMarkup = () => {
   return ` <a class="menu-item" href="#about-me">
             ПРО МЕНЕ
           </a>
@@ -110,13 +86,14 @@ const createNavMarkup = () => {
           </a>`;
 };
 
-const renderNavMarkup = () => {
+const renderNavigationMarkup = () => {
   if (menuNavigation) {
-    menuNavigation.innerHTML = createNavMarkup();
+    menuNavigation.innerHTML = createNavigationMarkup();
   }
 };
 
-renderNavMarkup();
+renderNavigationMarkup();
+
 /* ======= select ======= */
 
 const selectEl = document.querySelector("#CUSTOM_SELECT_JS");
@@ -186,3 +163,42 @@ const renderCustomSelectSmall = () => {
 
 renderCustomSelectSmall();
 renderCustomSelect();
+
+/* ======= menu social ======= */
+
+const menuSocial = document.querySelector("#MENU_SOCIAL_JS");
+
+const createMenuSocialMarkup = () => {
+  return `  <a
+         class="menu-social-item"
+         target="_blank"
+         rel="noopener"
+         href="https://t.me/@alyona_alyona"
+       >
+         TELEGRAM
+       </a>
+       <a
+         class="menu-social-item"
+         target="_blank"
+         rel="noopener"
+         href="https://www.instagram.com/lolaserenity?igsh=MWxpdGRwM2R2M3Rxcg=="
+       >
+         INSTAGRAM
+       </a>
+       <a
+         class="menu-social-item"
+         target="_blank"
+         rel="noopener"
+         href="https://www.facebook.com/alyona.stulina"
+       >
+         FACEBOOK
+       </a>`;
+};
+
+const renderMenuSocialMarkup = () => {
+  if (menuSocial) {
+    menuSocial.insertAdjacentHTML("beforeend", createMenuSocialMarkup());
+  }
+};
+
+renderMenuSocialMarkup();
