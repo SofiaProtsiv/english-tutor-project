@@ -189,6 +189,9 @@ select {
         max-width: 704px;
         padding: 56px;
     }
+    .mdl-flex {
+        padding: 32px 0;
+    }
     .but-submit {
         font-size: 18px;
     }
@@ -231,6 +234,9 @@ select {
     .mdl-forma {
         max-width: 1208px;
         padding: 80px 100px;
+    }
+    .mdl-flex {
+        padding: 54px 0;
     }
     .text-feedback {
         width: 500px;
