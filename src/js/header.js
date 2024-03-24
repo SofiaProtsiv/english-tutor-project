@@ -72,25 +72,45 @@ if (menuNav) {
 const menuNavigation = document.querySelector("#MENU_NAV_JS");
 
 const createNavigationMarkup = () => {
-  return ` <a class="menu-item" href="#about-me">
+  return ` <button class="menu-item" data-section="about-me"  type="button">
             ПРО МЕНЕ
-          </a>
-          <a class="menu-item" href="#quote">
+          </button>
+          <button class="menu-item" data-section="quote" type="button">
             ВАРТІСТЬ
-          </a>
-          <a class="menu-item" htef="#rewiews">
+          </button>
+          <button class="menu-item" data-section="rewiews" type="button">
             ВІДГУКИ
-          </a>
-          <a class="menu-item" href="#">
+          </button>
+          <button class="menu-item" data-section="contacts" type="button">
             КОНТАКТИ
-          </a>`;
+          </button>`;
+};
+
+const addEventListenersToButtons = () => {
+  const buttons = document.querySelectorAll(".menu-item");
+  buttons.forEach((button) => {
+    button.addEventListener("click", handleButtonClick);
+  });
 };
 
 const renderNavigationMarkup = () => {
   if (menuNavigation) {
     menuNavigation.innerHTML = createNavigationMarkup();
+    addEventListenersToButtons();
   }
 };
+
+function handleButtonClick(event) {
+  const sectionId = event.target.dataset.section;
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+      inline: "nearest",
+    });
+  }
+}
 
 renderNavigationMarkup();
 
