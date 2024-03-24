@@ -1,7 +1,7 @@
 /* workflow-styles */
 .workflow-container {
   @media (1440px<=width) {
-    max-width: 1136px;
+    max-width: 1296px;
   }
 }
 .workflow-content {
@@ -22,21 +22,6 @@
   margin-bottom: 32px;
   @media (768px<=width) {
     margin-bottom: 0;
-    width: 288px;
-  }
-
-  @media (1440px<=width) {
-    width: 488px;
-  }
-}
-
-.workflow-content-list {
-  @media (768px<=width) {
-    width: 384px;
-  }
-
-  @media (1440px<=width) {
-    width: 480px;
   }
 }
 
