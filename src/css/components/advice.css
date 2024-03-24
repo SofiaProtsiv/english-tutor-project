@@ -1,5 +1,4 @@
 
-
 .advice-title {
     text-align: center;
     font-weight: 600;
@@ -9,6 +8,21 @@
     max-width: 320px;
     text-transform: uppercase;
     margin-bottom: 32px;
+
+    @media (768px <=width) {
+        font-size: 56px;
+        line-height: 1.23;
+        letter-spacing: 0.02em;
+        max-width: 704px;
+        margin-bottom: 56px;
+    }
+
+    @media (width >=1440px) {
+        max-width: 1072px;
+        margin-bottom: 55px;
+        margin-left: 155px;
+    }
+
 }
 
 .advice-list {
@@ -16,6 +30,19 @@
     width: 296px;
     margin-top: 32px;
     margin-left: 24px;
+
+    @media (768px <=width) {
+        width: 672px;
+        margin-top: 56px;
+        margin-left: 32px;
+    }
+    
+    @media (width >=1440px) {
+        width: 448px;
+        margin-top: 0;
+        margin-left: 104px;
+        margin-top: 15px;
+    }
 }
 
 .advice-item {
@@ -24,70 +51,44 @@
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.01em;
+
+    @media (768px <=width) {
+        margin-bottom: 24px;
+        font-size: 18px;
+        line-height: 1.55;
+        letter-spacing: 0.01em;
+    }
+
+    @media (width >=1440px) {
+        margin-bottom: 24px;
+        font-size: 18px;
+        line-height: 1.55;
+        letter-spacing: 0.01em;
+    }
 }
 
 .advice-list .advice-item::marker {
     color: #DC3353; 
-    
 }
-
-
-@media (768px<=width) {
-    .advice-title {   
-        font-size: 56px;
-        line-height: 1.23;
-        letter-spacing: 0.02em;
-        max-width: 704px;
-        margin-bottom: 56px;
-    }
-
-    .advice-border {
+  
+.advice-border {
+    @media (768px<=width) {
         padding-left: 32px;
         border-left: 1px solid #292929;
-    }
+    }  
+} 
     
-    .advice-img {
+.advice-img {
+    @media (768px<=width) {
         max-width: 672px;
-    }
-    .advice-list {
-        width: 672px;
-        margin-top: 56px;
-        margin-left: 32px;
-    }
-    .advice-item {
-        margin-bottom: 24px;
-        font-size: 18px;
-        line-height: 1.55;
-        letter-spacing: 0.01em;
-    }
-
+    }  
 }
 
-@media (1440px<=width) {
-
-    .advice-title {
-        max-width: 1072px;
-        margin-bottom: 55px;
-        margin-left: 155px;
-    }
-
-    .advice-info{
+.advice-info{
+    @media (1440px<=width) {
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    .advice-list {
-        width: 448px;
-        margin-top: 0;
-        margin-left: 104px;
-        margin-top: 15px;
-    }
-    
-    .advice-item {
-        margin-bottom: 24px;
-        font-size: 18px;
-        line-height: 1.55;
-        letter-spacing: 0.01em;
     }
 }
  
