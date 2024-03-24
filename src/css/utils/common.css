@@ -74,6 +74,59 @@ body::-webkit-scrollbar-track {
 
   @media (1440px<=width) {
     max-width: var(--desktop);
+    padding: 0 112px;
+  }
+}
+
+.btn-connect {
+  border: none;
+  cursor: pointer;
+  width: 224px;
+  height: 96px;
+  background-color: white;
+  background-image: url(../../images/common/button@1x.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: brightness(100%);
+  -webkit-transition: -webkit-filter var(--transition-time)
+    var(--transition-effect);
+  transition: filter var(--transition-time) var(--transition-effect);
+}
+
+.btn-connect:hover {
+  filter: saturate(50%);
+}
+
+@media (min-resolution: 2dppx) {
+  .btn-connect {
+    background-image: url(../../images/common/button@2x.png);
+  }
+}
+
+@media (min-resolution: 3dppx) {
+  .btn-connect {
+    background-image: url(../../images/common/button@3x.png);
+  }
+}
+
+.section-title {
+  margin-bottom: 32px;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.375;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--primary-text-color);
+
+  @media (768px<=width) {
+    margin-bottom: 56px;
+    font-size: 56px;
+    line-height: 1.2;
+  }
+
+  @media (1440px<=width) {
+    margin-bottom: 72px;
   }
 }
 
