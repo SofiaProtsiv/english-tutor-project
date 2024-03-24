@@ -17,7 +17,6 @@ const imgSwiper = new Swiper(".opp-img-swiper", {
     1440: {
       slidesPerView: 3,
       centeredSlides: true,
-      initialSlide: 1,
       spaceBetween: 0,
     },
   },
@@ -60,7 +59,6 @@ const textSwiper = new Swiper(".opp-text-swiper", {
     1440: {
       slidesPerView: 3,
       centeredSlides: true,
-      initialSlide: 1,
       spaceBetween: 32,
     },
   },
