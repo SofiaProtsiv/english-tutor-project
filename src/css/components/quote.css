@@ -3,7 +3,6 @@
     
 }
 
-
 .quote-card {
     position: relative;
     text-align: center;
@@ -11,8 +10,15 @@
     justify-content: center;
     align-items: center;
     margin-top: 18px;
-}
 
+    @media (768px<=width) {
+        margin-top: 78px;
+    }
+
+    @media (1440px<=width) {
+        margin-top: 74px;
+    }
+}
 
 .quote-text-accent {
     color: #DC3353;
@@ -24,7 +30,19 @@
     top: -60px;
     left: 2px;
     z-index: 2;
+
+    @media (768px<=width) {
+        font-size: 96px;
+        letter-spacing: 0.02em;
+        top: -104px;
+        left: -20px;
+    }
+
+    @media (1440px<=width) {
+        left: 180px;
+    }
 }
+
 .quote-text {
     position: relative;
     font-family: Playfair Display;
@@ -34,39 +52,16 @@
     line-height: 1.38;
     letter-spacing: 0.01em;
     max-width: 270px;
-}
 
-@media (768px<=width) {
-    .quote-card {
-        margin-top: 78px;
-    }
-    .quote-text-accent {
-        font-size: 96px;
-        letter-spacing: 0.02em;
-        top: -104px;
-        left: -20px;
-        
-    }
-
-    .quote-text {
+    @media (768px<=width) {
         font-size: 56px;
         line-height: 1.24;
         letter-spacing: -0.01em;
         max-width: 704px;
         margin-left: 0px;
     }
-}
-
-@media (1440px<=width) {
-    .quote-card {
-        margin-top: 74px;
-    }
-
-    .quote-text-accent {
-        left: 180px;
-    }
     
-    .quote-text {
+    @media (1440px<=width) {
         letter-spacing: 0.01em;
         max-width: 1008px;
     }
