@@ -8,7 +8,7 @@
     margin: 0;
     padding: 0;
 
-    @media screen and (max-width: 1440px) and (min-width: 768px) {
+    @media screen and (max-width: 1439px) and (min-width: 768px) {
       width: 704px;
     }
 
@@ -31,7 +31,7 @@
     align-items: center;
     position: relative;
 
-    @media screen and (max-width: 1440px) and (min-width: 768px) {
+    @media screen and (max-width: 1439px) and (min-width: 768px) {
       display: block;
     }
 
@@ -58,7 +58,7 @@
     margin: 108px 0px 108px 100px;
     padding: 0;
 
-    @media screen and (max-width: 1440px) and (min-width: 768px) {
+    @media screen and (max-width: 1439px) and (min-width: 768px) {
       margin: 40px 32px;
     }
 
@@ -106,7 +106,7 @@
     background-repeat: no-repeat;
     background-size: contain;
 
-    @media screen and (max-width: 1440px) and (min-width: 768px) {
+    @media screen and (max-width: 1439px) and (min-width: 768px) {
       margin: 40px 0px 40px 0px;
     }
 
@@ -131,7 +131,7 @@
     bottom: 108px;
     z-index: -1;
 
-    @media screen and (max-width: 1440px) and (min-width: 768px) {
+    @media screen and (max-width: 1439px) and (min-width: 768px) {
       width: 256px;
       bottom: 40px;
     }
@@ -153,7 +153,7 @@
     list-style-type: none;
   }
 
-  @media screen and (max-width: 1440px) and (min-width: 768px) {
+  @media screen and (max-width: 1439px) and (min-width: 768px) {
       
   }
 
@@ -172,23 +172,39 @@
       justify-content: space-between;
     }
   }
-/* 
+
   .menu-social::before {
     content: "";
     position: absolute;
     border: 1px solid var(--primary-text-color);
-    width: 1000%;
-    left: auto;
-    bottom: 12px;
-  } */
+    width: 75%;
+    left: 0;
+    bottom: 13px;
+  }
 
-  /* @media screen and (max-width: 767px) and (min-width: 360px) {
+  @media screen and (max-width: 1439px) and (min-width: 768px) {
+    .menu-social::before {
+      width: 55%;
+      left: 0;
+      bottom: 13px;
+    }
+  }
+
+  @media screen and (max-width: 767px) and (min-width: 360px) {
     .menu-social::before {
       width: 112%;
-      right: -21px;
+      left: -20px;
       bottom: 34px;
     }
-  } */
+  }
+
+  @media screen and (max-width: 360px) {
+    .menu-social::before {
+      width: 112%;
+      left: -20px;
+      bottom: 34px;
+    }
+  }
   
   .menu-social-item {
     font-family: var(--secondary-font-family);
@@ -199,7 +215,7 @@
     padding: 5px 0px;
     margin-left: 20px;
 
-    @media screen and (max-width: 1440px) and (min-width: 768px) {
+    @media screen and (max-width: 1439px) and (min-width: 768px) {
       
     }
 
