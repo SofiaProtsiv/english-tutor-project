@@ -12,7 +12,7 @@
       width: 704px;
     }
 
-    @media screen and (max-width: 768px) and (min-width: 360px) {
+    @media screen and (max-width: 767px) and (min-width: 360px) {
       width: 320px;
       font-size: 48px;
       line-height: 1.25;
@@ -35,7 +35,7 @@
       display: block;
     }
 
-    @media screen and (max-width: 768px) and (min-width: 360px) {
+    @media screen and (max-width: 767px) and (min-width: 360px) {
       display: block;
       width: 320px;
       margin-right: auto;
@@ -62,7 +62,7 @@
       margin: 40px 32px;
     }
 
-    @media screen and (max-width: 768px) and (min-width: 360px) {
+    @media screen and (max-width: 767px) and (min-width: 360px) {
       width: 296px;
       font-size: 16px;
       margin: 32px 20px;      
@@ -86,7 +86,7 @@
     left: -32px;
   }
 
-  @media screen and (max-width: 768px) and (min-width: 360px) {
+  @media screen and (max-width: 767px) and (min-width: 360px) {
     .about-me::before {
       left: -24px;
     }
@@ -112,7 +112,7 @@
       margin: 40px 0px 40px 0px;
     }
 
-    @media screen and (max-width: 768px) and (min-width: 360px) {
+    @media screen and (max-width: 767px) and (min-width: 360px) {
       margin: 32px 48px 40px 48px;
       font-size: 16px;
     }
@@ -142,7 +142,7 @@
       bottom: 40px;
     }
 
-    @media screen and (max-width: 768px) and (min-width: 360px) {
+    @media screen and (max-width: 767px) and (min-width: 360px) {
       display: none;
     }
 
@@ -163,7 +163,7 @@
       
   }
 
-  @media screen and (max-width: 768px) and (min-width: 360px) {
+  @media screen and (max-width: 767px) and (min-width: 360px) {
     .menu-social {
       width: 320px;
       display: flex;
@@ -214,6 +214,7 @@
   
   .menu-social-item {
     font-family: var(--secondary-font-family);
+    font-size: 14px;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -225,7 +226,7 @@
       
     }
 
-    @media screen and (max-width: 768px) and (min-width: 360px) {
+    @media screen and (max-width: 767px) and (min-width: 360px) {
       margin-left: 0;
     }
 
