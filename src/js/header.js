@@ -28,8 +28,8 @@ const renderHeaderMarkup = () => {
    </button>
    <section class="menu-container">
      <div class="menu-content">
-       <nav id="MENU_NAV_JS" class="menu-nav">
-       </nav>
+       <ul id="MENU_NAV_JS" class="menu-nav">
+       </ul>
         <div class="custom-select-small" id="CUSTOM_SELECT_SMALL_JS"></div>
        <div class="custom-select" id="CUSTOM_SELECT_JS">
        </div>
@@ -72,45 +72,42 @@ if (menuNav) {
 const menuNavigation = document.querySelector("#MENU_NAV_JS");
 
 const createNavigationMarkup = () => {
-  return ` <button class="menu-item" data-section="about-me"  type="button">
+  return ` <li class="menu-item" data-section="about-me"  type="button">
             ПРО МЕНЕ
-          </button>
-          <button class="menu-item" data-section="quote" type="button">
+          </li>
+          <li class="menu-item" data-section="quote" type="button">
             ВАРТІСТЬ
-          </button>
-          <button class="menu-item" data-section="rewiews" type="button">
+          </li>
+          <li class="menu-item" data-section="rewiews" type="button">
             ВІДГУКИ
-          </button>
-          <button class="menu-item" data-section="contacts" type="button">
+          </li>
+          <li class="menu-item" data-section="contacts" type="button">
             КОНТАКТИ
-          </button>`;
+          </li>`;
 };
 
-const addEventListenersToButtons = () => {
-  const buttons = document.querySelectorAll(".menu-item");
-  buttons.forEach((button) => {
-    button.addEventListener("click", handleButtonClick);
-  });
-};
+if (menuNavigation) {
+  menuNavigation.onclick = (event) => {
+    if (event.target.dataset.section) {
+      const sectionId = event.target.dataset.section;
+      const element = document.getElementById(sectionId);
+      console.log(event.target.dataset.section);
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "end",
+          inline: "nearest",
+        });
+      }
+    }
+  };
+}
 
 const renderNavigationMarkup = () => {
   if (menuNavigation) {
     menuNavigation.innerHTML = createNavigationMarkup();
-    addEventListenersToButtons();
   }
 };
-
-function handleButtonClick(event) {
-  const sectionId = event.target.dataset.section;
-  const element = document.getElementById(sectionId);
-  if (element) {
-    element.scrollIntoView({
-      behavior: "smooth",
-      block: "end",
-      inline: "nearest",
-    });
-  }
-}
 
 renderNavigationMarkup();
 
