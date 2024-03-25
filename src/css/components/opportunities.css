@@ -101,7 +101,7 @@
 
   @media (768px<=width) {
     height: 300px;
-    transform: translate(184px, -300px);
+    transform: translate(368px, -300px);
   }
 
   @media (1440px<=width) {
@@ -150,10 +150,10 @@
 
   @media (768px<=width) {
     width: 336px;
-    margin: 0 auto;
   }
 
   @media (1440px<=width) {
+    margin: 0 auto;
     width: 384px;
   }
 }
