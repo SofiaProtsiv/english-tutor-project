@@ -20,7 +20,7 @@
       margin-left: auto;
     }
 
-    @media  screen and (max-width: 360px) {
+    @media  screen and (max-width: 359px) {
       width: 100%;
       font-size: 48px;
     }
@@ -42,7 +42,7 @@
       margin-left: auto;
     }
 
-    @media  screen and (max-width: 360px) {
+    @media  screen and (max-width: 359px) {
       display: block;
       width: 100%;
     }
@@ -68,7 +68,7 @@
       margin: 32px 20px;      
     }
 
-    @media  screen and (max-width: 360px) {
+    @media  screen and (max-width: 359px) {
       width: 100%;
       font-size: 16px;
       margin: 20px 0px 0px 0px;
@@ -117,7 +117,7 @@
       font-size: 16px;
     }
 
-    @media  screen and (max-width: 360px) {
+    @media  screen and (max-width: 359px) {
       font-size: 16px;
       display: flex;
       align-items: center;
@@ -146,7 +146,7 @@
       display: none;
     }
 
-    @media screen and (max-width: 360px) {
+    @media screen and (max-width: 359px) {
       display: none;
     }
   }
@@ -171,7 +171,7 @@
     }
   }
 
-  @media  screen and (max-width: 360px) {
+  @media  screen and (max-width: 359px) {
     .menu-social {
       width: 100%;
       margin: 0;
@@ -204,7 +204,7 @@
     }
   }
 
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 359px) {
     .menu-social::before {
       width: 112%;
       left: -20px;
@@ -229,7 +229,7 @@
       margin-left: 0;
     }
 
-    @media  screen and (max-width: 360px) {
+    @media  screen and (max-width: 359px) {
       width: 100%;
       margin: 0;
       margin-right: 5px;
