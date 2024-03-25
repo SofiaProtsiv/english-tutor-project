@@ -115,7 +115,7 @@ renderNavigationMarkup();
 
 const selectEl = document.querySelector("#CUSTOM_SELECT_JS");
 const selectSmallEl = document.querySelector("#CUSTOM_SELECT_SMALL_JS");
-const ITEMS = ["en", "ua"];
+const ITEMS = ["UA", "EN"];
 const state = { current: ITEMS[0] };
 
 const createCustomSelectOption = (code, order) => {

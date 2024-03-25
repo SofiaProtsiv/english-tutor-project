@@ -263,13 +263,16 @@
 
 .custom-select-option {
   font-family: var(--primary-font-family);
+  display: flex;
+  align-items: center;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 1.55;
+  font-size: 18px;
+  line-height: 1.55556;
   letter-spacing: 0.01em;
   text-transform: uppercase;
   color: var(--primary-text-color);
   text-decoration: none;
+  text-align: center;
   height: 24px;
 }
 
@@ -329,6 +332,10 @@
 /* ======= desctop styles ======= */
 
 @media (1440px<=width) {
+  .icon-logo {
+    width: 193px;
+    height: 56px;
+  }
   .menu-container {
     position: initial;
     top: initial;
