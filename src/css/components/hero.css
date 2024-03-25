@@ -183,15 +183,15 @@
     content: "";
     position: absolute;
     border: 1px solid var(--primary-text-color);
-    width: 75%;
-    left: 0;
+    width: 85%;
+    left: -100px;
     bottom: 13px;
   }
 
   @media screen and (max-width: 1439px) and (min-width: 768px) {
     .menu-social::before {
-      width: 55%;
-      left: 0;
+      width: 100%;
+      left: -320px;
       bottom: 13px;
     }
   }
