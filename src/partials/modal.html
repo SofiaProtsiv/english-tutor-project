@@ -3,7 +3,7 @@
       <div class="mdl-forma">
 
           <svg class="close" width="24" height="24">
-              <use href="../images/icons-sprite.svg#close-icon"></use>
+              <use class="use-close" href="../images/icons-sprite.svg#close-icon"></use>
           </svg>
 
           <div class="mdl-content">
@@ -13,28 +13,33 @@
               <p class="paragraf-form">Будь ласка, заповніть форму<br> і я зв’яжуся з Вами якнайшвидше для обговорення деталей.</p>
             </div>
 
-            <form class="forma-for-connect">
+            <form class="forma-for-connect" novalidate>
         
               <label class="label-inpt"><span>Ваше ім’я<span class="star">*</span></span>
-              <input type="text" class="user-inpt username" name="username" placeholder="Анастасія" required>
+                <input type="text" class="user-inpt username" name="username" placeholder="Анастасія" pattern="^[a-zA-Zа-яА-ЯёЁґҐіІїЇєЄ]+$" required/>
+                <span class="error-input" style="color: var(--accent-color);">Будь ласка, введіть коректне ім’я</span>
               </label>
 
               <label class="label-inpt"><span>Номер телефону<span class="star">*</span></span>
-              <input type="tel" class="user-inpt phone" name="phone" placeholder="+38 000 000 00 00" pattern="\+[0-9]{11,12}" required>
+                <input type="tel" class="user-inpt phone" name="phone" placeholder="+38 000 000 00 00" pattern="\+[0-9]{11,12}" required/>
+                <span class="error-input" style="color: var(--accent-color);">Будь ласка, введіть коректний номер</span>
               </label>
 
               <label class="label-inpt">Формат навчання
-                <div class="select-box">
-                    <select class="user-inpt selected-category" name="education">
-                        <option value="Individual study">Індивідуальне навчання</option>
-                        <option value="Study with a friend">Парні заняття</option>
-                        <option value="Groupe study">Групові заняття</option>
-                    </select>
-                </div>
+                  <div class="new-select">
+                    <button type="button" class="user-btn first-item-list" required>Оберіть варіант навчання</button>
+                    <span class="error-input" style="color: var(--accent-color);">Будь ласка, виберіть варіант навчання</span>
+
+                    <ul class="list-item-select" name="education">
+                      <li class="list-item-select-opt" data-value="Individual study">Індивідуальне навчання</li>
+                      <li class="list-item-select-opt" data-value="Study with a friend">Парне навчання</li>
+                      <li class="list-item-select-opt" data-value="Groupe study">Групове навчання</li>
+                    </ul>
+                  </div>
               </label>
 
               <label class="label-inpt">Коментар
-                <textarea class="user-inpt text-com" name="comment" placeholder="Ваш коментар"></textarea>
+                <textarea class="user-textarea text-com" name="comment" placeholder="Ваш коментар"></textarea>
               </label>
                      
             <button class="but-submit" type="submit">ВІДПРАВИТИ</button> 

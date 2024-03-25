@@ -79,25 +79,57 @@
     margin: 0;
     font-family: var(--secondary-font-family);
 }
+.user-inpt,
+.user-btn,
+.user-textarea {
+    padding: 12px 16px;
+    width: 272px;
+    font-family: var(--secondary-font-family);
+    height: 48px;
+    background-color: var(--input-bg);
+    border: none;
+    outline: none;
+    color: var(--primary-text-color);
+}
+.user-inpt::placeholder,
+.user-btn::placeholder,
+.user-textarea::placeholder {
+    color: var( --primary-text-color);
+    opacity: 0.4;
+}
 
+.new-select {
+    position: relative;
+}
 /* select*/
 
-select {
-    letter-spacing: inherit;
-    word-spacing: inherit;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-    cursor: pointer;
-    color: var(--primary-text-color);
-  }
-  .select-box {
+  .user-btn {
     position: relative;
   }
-  select::-ms-expand {
+  .list-item-select {
     display: none;
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 55px;
   }
-  .select-box::before {
+.list-item-select-visible {
+    display: block;
+}
+  .first-item-list {
+    text-align: start;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: var(--text-color-select);
+    position: relative;
+  }
+  .first-item-list-active {
+    color: var(--primary-text-color);
+}
+  .user-btn::before {
     content: "";
     position: absolute;
     right: 21px;
@@ -110,22 +142,25 @@ select {
     pointer-events: none;
     z-index: 999;
   }
+  .list-item-select-opt {
+    font-family: var(--secondary-font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: var(--primary-text-color);
+    border-bottom: 1px solid rgba(41, 41, 41, 0.1);
+    padding: 12px 16px;
+    height: 52px;
+    background: var(--input-bg);
+  }
+  .list-item-select-opt:hover {
+    background-color: #e6e8eb;
+    cursor: pointer;
+  }
+
 /*select */
 
-.user-inpt {
-    padding: 12px 16px;
-    width: 272px;
-    font-family: var(--secondary-font-family);
-    height: 48px;
-    background-color: var(--input-bg);
-    border: none;
-    outline: none;
-    color: var(--primary-text-color);
-}
-.user-inpt::placeholder {
-    color: var( --primary-text-color);
-    opacity: 0.4;
-}
 .red {
     border: 2px solid var(--accent-color); 
 }
@@ -142,7 +177,7 @@ select {
     background-image: url(/images/common/button@1x.png);
     background-repeat: no-repeat;
     background-size: contain;
-    font-family: var(--font-family);
+    font-family: var(--secondary-font-family);
     font-weight: 600;
     font-size: 16px;
     line-height: 156%;
@@ -197,9 +232,13 @@ select {
     }
     .text-feedback {
         width: 500px;
+        height: 84px;
         margin: 0;
+        font-size: 18px;
     }
-    .user-inpt {
+    .user-inpt,
+    .user-btn,
+    .user-textarea {
         padding: 12px 16px;
         width: 592px;
         height: 52px;
@@ -229,6 +268,17 @@ select {
         letter-spacing: 0.01em;
         width: 100%;
     }
+    .list-item-select {
+        height: 156px;
+        top: 60px;
+    }
+    .list-item-select-opt {
+        font-size: 18px;
+        line-height: 156%;
+    }
+    .title-feedback {
+        font-size: 96px;
+    }
 }
 @media screen and (min-width: 1440px) {
     .mdl-forma {
@@ -248,10 +298,32 @@ select {
     .title-form {
         font-weight: 600;
         font-size: 56px;
+        height: 136px;
+        width: 368px;
         line-height: 121%;
     }
-    .paragraf-form {
+    .title-form + .paragraf-form {
         margin: 32px 0 0 0;
         width: 280px;
+        height: 112px;
+        font-size: 18px;
     }
+    .but-submit {
+        width: 220px;
+        height: 92px;
+    }
+}
+
+/*  */
+.error-input {
+    display: none;
+    font-family: var(--secondary-font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: 0.01em;
+    color: red;
+}
+.error-input.check {
+    display: block;
 }
