@@ -183,15 +183,15 @@
     content: "";
     position: absolute;
     border: 1px solid var(--primary-text-color);
-    width: 85%;
-    left: -100px;
+    width: 100%;
+    left: -400px;
     bottom: 13px;
   }
 
   @media screen and (max-width: 1439px) and (min-width: 768px) {
     .menu-social::before {
       width: 100%;
-      left: -320px;
+      left: -400px;
       bottom: 13px;
     }
   }
@@ -214,7 +214,7 @@
   
   .menu-social-item {
     font-family: var(--secondary-font-family);
-    font-size: 14px;
+    font-size: 18px;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -223,14 +223,16 @@
     margin-left: 20px;
 
     @media screen and (max-width: 1439px) and (min-width: 768px) {
-      
+      font-size: 18px;
     }
 
     @media screen and (max-width: 767px) and (min-width: 360px) {
       margin-left: 0;
+      font-size: 16px;
     }
 
     @media  screen and (max-width: 359px) {
+      font-size: 16px;
       width: 100%;
       margin: 0;
       margin-right: 5px;
