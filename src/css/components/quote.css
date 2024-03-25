@@ -30,17 +30,23 @@
     top: -60px;
     left: 2px;
     z-index: 2;
+    max-width: 320px;
+    max-height: 52px;
 
     @media (768px<=width) {
         font-size: 96px;
         letter-spacing: 0.02em;
         top: -99px;
         left: 0px;
+        max-width: 568px;
+        max-height: 76px;
     }
 
     @media (1440px<=width) {
         top: -100px;
         left: 175px;
+        max-width: 568px;
+        max-height: 76px;
     }
 }
 
