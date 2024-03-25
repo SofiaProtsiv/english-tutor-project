@@ -95,12 +95,13 @@
 .opp-text-swiper {
   height: 272px;
   display: flex;
+  /*Якщо swiper буде підключений через npm, цей flex має бути !important*/
   flex-direction: column;
   justify-content: space-between;
 
   @media (768px<=width) {
     height: 300px;
-    transform: translate(368px, -300px);
+    transform: translate(184px, -300px);
   }
 
   @media (1440px<=width) {
@@ -149,11 +150,11 @@
 
   @media (768px<=width) {
     width: 336px;
+    margin: 0 auto;
   }
 
   @media (1440px<=width) {
     width: 384px;
-    margin: 0 auto;
   }
 }
 

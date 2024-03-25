@@ -53,12 +53,10 @@ const textSwiper = new Swiper(".opp-text-swiper", {
   breakpoints: {
     768: {
       slidesPerView: 2,
-      centeredSlides: false,
       spaceBetween: 32,
     },
     1440: {
       slidesPerView: 3,
-      centeredSlides: true,
       spaceBetween: 32,
     },
   },
