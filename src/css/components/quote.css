@@ -34,8 +34,8 @@
     @media (768px<=width) {
         font-size: 96px;
         letter-spacing: 0.02em;
-        top: -104px;
-        left: -20px;
+        top: -99px;
+        left: 0px;
     }
 
     @media (1440px<=width) {
@@ -56,15 +56,26 @@
 
     @media (768px<=width) {
         font-size: 56px;
-        line-height: 1.24;
+        line-height: 1.215;
         letter-spacing: -0.01em;
         max-width: 704px;
         margin-left: 0px;
     }
     
     @media (1440px<=width) {
-        
         letter-spacing: 0.01em;
         max-width: 1008px;
+    }
+}
+
+.quote-text-string {
+    @media (768px<=width) {
+        padding-right: 180px;
+        padding-left: 93px;
+        letter-spacing: 0.015em;
+    }
+    @media (1440px<=width) {
+        padding-right: 0;
+        padding-left: 0;
     }
 }
