@@ -158,7 +158,7 @@ const createCustomSelectSmall = () => {
 const renderCustomSelect = () => {
   if (selectEl) {
     const storedLang = localStorage.getItem("lang");
-
+    localizeElements(storedLang);
     // if (!storedLang) {
     //   setGeolocationLanguage();
     // }
@@ -188,7 +188,7 @@ const renderCustomSelect = () => {
 const renderCustomSelectSmall = () => {
   if (selectSmallEl) {
     const storedLang = localStorage.getItem("lang");
-
+    localizeElements(storedLang);
     // if (!storedLang) {
     //   setGeolocationLanguage();
     // }
