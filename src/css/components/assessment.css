@@ -84,4 +84,7 @@
   line-height: 1;
   letter-spacing: 0.01em;
   text-transform: uppercase;
+  @media (768px<=width) {
+    font-size: 18px;
+  }
 }
