@@ -1,60 +1,12 @@
 const header = document.querySelector("#HEADER_JS");
 
-const renderHeaderMarkup = () => {
-  header.innerHTML = `
- <div class="header-container container">
-   <a
-     href="./index.html"
-     target="_self"
-     class="logo"
-     aria-label="link on main page"
-   >
-     <svg class="icon-logo">
-       <use href="../images/icons-sprite.svg#icon-logo"></use>
-     </svg>
-   </a>
-   <button
-     id="HEADER_MENU_JS"
-     class="menu-button"
-     title="open menu"
-     type="button"
-   >
-     <svg class="icon-menu">
-       <use href="../images/icons-sprite.svg#icon-menu"></use>
-     </svg>
-     <svg class="icon-menu-close">
-       <use href="../images/icons-sprite.svg#icon-menu-close"></use>
-     </svg>
-   </button>
-   <section class="menu-container">
-     <div class="menu-content">
-       <ul id="MENU_NAV_JS" class="menu-nav">
-       </ul>
-        <div class="custom-select-small" id="CUSTOM_SELECT_SMALL_JS"></div>
-       <div class="custom-select" id="CUSTOM_SELECT_JS">
-       </div>
-     </div>
-     <nav class="menu-social" id="MENU_SOCIAL_JS">
-       <svg class="icon-horisontal-line">
-         <use href="../images/icons-sprite.svg#icon-horisontal-line"></use>
-       </svg>
-     </nav>
-   </section>
- </div>
-  `;
-};
-
-if (header) {
-  renderHeaderMarkup();
-}
-
 /* ======= menu button ======= */
 
 const menuButton = document.querySelector("#HEADER_MENU_JS");
 
 if (menuButton) {
   menuButton.onclick = () => {
-    header.classList.toggle("header-menu-open");
+    header.classList.toggle("ih-header-menu-open");
   };
 }
 
@@ -63,7 +15,7 @@ const menuNav = document.querySelector("#MENU_NAV_JS");
 if (menuNav) {
   menuNav.onclick = (event) => {
     if (event.target.tagName === "A") {
-      header.classList.remove("header-menu-open");
+      header.classList.remove("ih-header-menu-open");
     }
   };
 }
@@ -72,16 +24,16 @@ if (menuNav) {
 const menuNavigation = document.querySelector("#MENU_NAV_JS");
 
 const createNavigationMarkup = () => {
-  return ` <li class="menu-item" data-section="about-me"  type="button">
+  return ` <li class="ih-menu-item" data-section="about-me"  type="button">
             ПРО МЕНЕ
           </li>
-          <li class="menu-item" data-section="quote" type="button">
+          <li class="ih-menu-item" data-section="quote" type="button">
             ВАРТІСТЬ
           </li>
-          <li class="menu-item" data-section="rewiews" type="button">
+          <li class="ih-menu-item" data-section="rewiews" type="button">
             ВІДГУКИ
           </li>
-          <li class="menu-item" data-section="contacts" type="button">
+          <li class="ih-menu-item" data-section="contacts" type="button">
             КОНТАКТИ
           </li>`;
 };
@@ -120,7 +72,7 @@ const state = { current: ITEMS[0] };
 
 const createCustomSelectOption = (code, order) => {
   return `
-    <div data-value="${code}" class="custom-select-option" style="
+    <div data-value="${code}" class="ih-custom-select-option" style="
     ${state.current === code ? "background:transparent; " : ""}order:${
     state.current === code ? 0 : order
   }">${code}</div>
@@ -129,8 +81,8 @@ const createCustomSelectOption = (code, order) => {
 
 const createCustomSelect = () => {
   return `
-   <svg class="custom-select-icon">
-            <use href="../images/icons-sprite.svg#icon-switch-arrow"></use>
+   <svg class="ih-custom-select-icon">
+            <use href="/images/ih-icons-sprite.svg#icon-switch-arrow"></use>
           </svg>
     ${ITEMS.map((code, index) => {
       return createCustomSelectOption(code, index + 1);
@@ -142,11 +94,11 @@ const createCustomSelect = () => {
 const createCustomSelectSmall = () => {
   return `
         ${ITEMS.map((code) => {
-          return `<div data-value="${code}" class="select-lang-btn${
+          return `<div data-value="${code}" class="ih-select-lang-btn${
             state.current === code ? " select-lang-btn-active" : ""
           }">${code}</div>`;
-        }).join(`<svg class="vertical-line">
-           <use href="../images/icons-sprite.svg#icon-vertical-line"></use>
+        }).join(`<svg class="ih-vertical-line">
+           <use href="/images/ih-icons-sprite.svg#icon-vertical-line"></use>
          </svg>`)}
 `;
 };
@@ -155,7 +107,7 @@ const renderCustomSelect = () => {
   if (selectEl) {
     selectEl.innerHTML = createCustomSelect();
     selectEl.onclick = (e) => {
-      selectEl.classList.toggle("custom-select-open");
+      selectEl.classList.toggle("ih-custom-select-open");
       const newCurrentLang = e.target.dataset.value;
       if (newCurrentLang && newCurrentLang !== state.current) {
         state.current = newCurrentLang;
@@ -187,7 +139,7 @@ const menuSocial = document.querySelector("#MENU_SOCIAL_JS");
 
 const createMenuSocialMarkup = () => {
   return `  <a
-         class="menu-social-item"
+         class="ih-menu-social-item"
          target="_blank"
          rel="noopener"
          href="https://t.me/@alyona_alyona"
@@ -195,7 +147,7 @@ const createMenuSocialMarkup = () => {
          TELEGRAM
        </a>
        <a
-         class="menu-social-item"
+         class="ih-menu-social-item"
          target="_blank"
          rel="noopener"
          href="https://www.instagram.com/lolaserenity?igsh=MWxpdGRwM2R2M3Rxcg=="
@@ -203,7 +155,7 @@ const createMenuSocialMarkup = () => {
          INSTAGRAM
        </a>
        <a
-         class="menu-social-item"
+         class="ih-menu-social-item"
          target="_blank"
          rel="noopener"
          href="https://www.facebook.com/alyona.stulina"
