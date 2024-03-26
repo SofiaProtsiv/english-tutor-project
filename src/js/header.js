@@ -1,3 +1,5 @@
+import { localizeElements } from "./localization";
+import translations from "../assets/translations";
 const header = document.querySelector("#HEADER_JS");
 
 /* ======= menu button ======= */
@@ -24,16 +26,17 @@ if (menuNav) {
 const menuNavigation = document.querySelector("#MENU_NAV_JS");
 
 const createNavigationMarkup = () => {
-  return ` <li class="ih-menu-item" data-section="about-me"  type="button">
+  return ` <li class="ih-menu-item" data-section="about-me" data-lang="header.menu.about_me" type="button">
             ПРО МЕНЕ
           </li>
-          <li class="ih-menu-item" data-section="quote" type="button">
+          <li class="ih-menu-item" data-section="quote" data-lang="header.menu.quote" type="button">
             ВАРТІСТЬ
           </li>
-          <li class="ih-menu-item" data-section="rewiews" type="button">
+          <li class="ih-menu-item" data-section="reviews"
+          data-lang="header.menu.reviews" type="button">
             ВІДГУКИ
           </li>
-          <li class="ih-menu-item" data-section="contacts" type="button">
+          <li class="ih-menu-item" data-section="contacts" data-lang="header.menu.contacts" type="button">
             КОНТАКТИ
           </li>`;
 };
@@ -67,7 +70,7 @@ renderNavigationMarkup();
 
 const selectEl = document.querySelector("#CUSTOM_SELECT_JS");
 const selectSmallEl = document.querySelector("#CUSTOM_SELECT_SMALL_JS");
-const ITEMS = ["UA", "EN"];
+const ITEMS = Object.keys(translations);
 const state = { current: ITEMS[0] };
 
 const createCustomSelectOption = (code, order) => {
@@ -111,6 +114,7 @@ const renderCustomSelect = () => {
       const newCurrentLang = e.target.dataset.value;
       if (newCurrentLang && newCurrentLang !== state.current) {
         state.current = newCurrentLang;
+        localizeElements(newCurrentLang);
         selectEl.innerHTML = createCustomSelect();
       }
     };
@@ -124,6 +128,7 @@ const renderCustomSelectSmall = () => {
       const newCurrentLang = e.target.dataset.value;
       if (newCurrentLang && newCurrentLang !== state.current) {
         state.current = newCurrentLang;
+        localizeElements(newCurrentLang);
         selectSmallEl.innerHTML = createCustomSelectSmall();
       }
     };
