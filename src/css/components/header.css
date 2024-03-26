@@ -19,15 +19,24 @@
 
 .ih-header.ih-header-menu-open {
   background: rgb(240, 242, 245);
+  overflow-y: hidden;
 }
 
 .ih-logo {
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .ih-icon-logo {
+  margin-top: 14px;
   width: 150px;
   height: 44px;
+
+  @media (768px<=width) {
+    width: 193px;
+    height: 56px;
+  }
 }
 
 .ih-menu-button {
@@ -40,6 +49,11 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+
+  @media (1440px<=width) {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 .ih-icon-menu {
@@ -79,6 +93,23 @@
   background: rgb(240, 242, 245);
   width: 100%;
   transition: all 0.3s linear;
+
+  @media (768px<=width) {
+    height: calc(100vh - var(--header-height-small));
+  }
+
+  @media (1440px<=width) {
+    position: initial;
+    top: initial;
+    left: initial;
+    display: flex;
+    visibility: initial;
+    flex-direction: row;
+    align-items: center;
+    height: initial;
+    background: initial;
+    width: initial;
+  }
 }
 
 .ih-header-menu-open .ih-menu-container {
@@ -109,6 +140,19 @@
   border-bottom: 1px solid var(--primary-text-color);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   flex: 1;
+
+  @media (768px<=width) {
+    border-bottom: none;
+    box-shadow: none;
+  }
+
+  @media (1440px<=width) {
+    flex-direction: row;
+    border-bottom: initial;
+    box-shadow: initial;
+    flex: initial;
+    width: initial;
+  }
 }
 
 .ih-menu-nav {
@@ -117,6 +161,12 @@
   align-items: center;
   width: 100%;
   flex-direction: column;
+
+  @media (1440px<=width) {
+    flex-direction: row;
+    flex: initial;
+    width: initial;
+  }
 }
 
 .ih-menu-item {
@@ -133,6 +183,23 @@
   cursor: pointer;
   border: none;
   background: transparent;
+
+  @media (768px<=width) {
+    font-size: 28px;
+    line-height: 1.28571;
+    cursor: pointer;
+  }
+
+  @media (1440px<=width) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0;
+    font-size: 18px;
+    line-height: 1.55556;
+    margin-right: 48px;
+    margin-top: 0;
+  }
 }
 
 .ih-menu-item:after {
@@ -171,6 +238,11 @@
   padding: 0;
   width: 70px;
   height: 24px;
+
+  @media (1440px<=width) {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 .ih-select-lang-btn {
@@ -183,7 +255,7 @@
   cursor: pointer;
 }
 
-.ih-select-lang-btn-active {
+.ih-select-lang-btn:active {
   color: var(--accent-color);
 }
 
@@ -201,11 +273,33 @@
   height: 64px;
   width: 100%;
   padding-top: 16px;
+
+  @media (768px<=width) {
+    justify-content: initial;
+  }
+
+  @media (1440px<=width) {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 .ih-icon-horisontal-line {
   display: none;
   visibility: hidden;
+
+  @media (768px<=width) {
+    display: flex;
+    visibility: visible;
+    align-items: center;
+    flex: 1;
+    margin-right: 20px;
+  }
+
+  @media (1440px<=width) {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 .ih-menu-social-item {
@@ -223,6 +317,16 @@
   letter-spacing: 0.01em;
   color: var(--primary-text-color);
   cursor: pointer;
+
+  @media (768px<=width) {
+    width: 104px;
+    height: 28px;
+    font-size: 18px;
+    line-height: 1.55556;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    margin-right: 20px;
+  }
 }
 
 .ih-menu-social-item:after {
@@ -255,6 +359,12 @@
   overflow: hidden;
   cursor: pointer;
   padding-right: 20px;
+
+  @media (1440px<=width) {
+    display: flex;
+    visibility: visible;
+    max-width: 52px;
+  }
 }
 
 .ih-custom-select-open {
@@ -286,117 +396,4 @@
 }
 .ih-custom-select-option:hover {
   background: #f0f2f5;
-}
-
-/* ======= tablet styles ======= */
-
-@media (768px<=width) {
-  .ih-menu-container {
-    height: calc(100vh - var(--header-height-small));
-  }
-
-  .ih-menu-content {
-    border-bottom: none;
-    box-shadow: none;
-  }
-
-  .ih-menu-item {
-    font-size: 28px;
-    line-height: 1.28571;
-    cursor: pointer;
-  }
-
-  .ih-menu-social {
-    justify-content: initial;
-  }
-
-  .ih-icon-horisontal-line {
-    display: flex;
-    visibility: visible;
-    align-items: center;
-    flex: 1;
-    margin-right: 20px;
-  }
-
-  .ih-menu-social-item {
-    width: 104px;
-    height: 28px;
-    font-size: 18px;
-    line-height: 1.55556;
-    font-weight: 400;
-    letter-spacing: 0.01em;
-    margin-right: 20px;
-  }
-}
-
-/* ======= desctop styles ======= */
-
-@media (1440px<=width) {
-  .ih-icon-logo {
-    width: 193px;
-    height: 56px;
-  }
-  .ih-menu-container {
-    position: initial;
-    top: initial;
-    left: initial;
-    display: flex;
-    visibility: initial;
-    flex-direction: row;
-    align-items: center;
-    height: initial;
-    background: initial;
-    width: initial;
-  }
-
-  .ih-menu-button {
-    display: none;
-    visibility: hidden;
-  }
-
-  .ih-menu-content {
-    flex-direction: row;
-    border-bottom: initial;
-    box-shadow: initial;
-    flex: initial;
-    width: initial;
-  }
-
-  .ih-menu-nav {
-    flex-direction: row;
-    flex: initial;
-    width: initial;
-  }
-
-  .ih-menu-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 0;
-    font-size: 18px;
-    line-height: 1.55556;
-    margin-right: 48px;
-    margin-top: 0;
-  }
-
-  .ih-menu-social {
-    display: none;
-    visibility: hidden;
-  }
-
-  .ih-icon-horisontal-line {
-    display: none;
-    visibility: hidden;
-  }
-
-  .ih-custom-select-small {
-    display: none;
-    visibility: hidden;
-  }
-
-  .ih-custom-select {
-    display: flex;
-    visibility: visible;
-    max-width: 52px;
-  }
 }

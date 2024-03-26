@@ -2,27 +2,67 @@ import { localizeElements } from "./localization";
 import translations from "../assets/translations";
 const header = document.querySelector("#HEADER_JS");
 
+/* ======= set geolocation language ======= */
+
+const setGeolocationLanguage = () => {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function (position) {
+      var latitude = position.coords.latitude;
+      var longitude = position.coords.longitude;
+
+      var geocodingUrl =
+        "https://nominatim.openstreetmap.org/reverse?format=json&lat=" +
+        latitude +
+        "&lon=" +
+        longitude;
+
+      fetch(geocodingUrl)
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.address) {
+            var country = data.address.country;
+            if (country === "Ukraine") {
+              localStorage.setItem("lang", "ua");
+              renderCustomSelectSmall();
+              renderCustomSelect();
+            } else {
+              localStorage.setItem("lang", "en");
+              renderCustomSelectSmall();
+              renderCustomSelect();
+            }
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching geolocation data:", error);
+        });
+    });
+  }
+};
+
+setGeolocationLanguage();
+
 /* ======= menu button ======= */
 
 const menuButton = document.querySelector("#HEADER_MENU_JS");
 
 if (menuButton) {
-  menuButton.onclick = () => {
+  menuButton.addEventListener("click", () => {
     header.classList.toggle("ih-header-menu-open");
-  };
+  });
 }
 
 const menuNav = document.querySelector("#MENU_NAV_JS");
 
 if (menuNav) {
-  menuNav.onclick = (event) => {
+  menuNav.addEventListener("click", (event) => {
     if (event.target.tagName === "A") {
       header.classList.remove("ih-header-menu-open");
     }
-  };
+  });
 }
 
 /* ======= menu navigation  ======= */
+
 const menuNavigation = document.querySelector("#MENU_NAV_JS");
 
 const createNavigationMarkup = () => {
@@ -41,23 +81,6 @@ const createNavigationMarkup = () => {
           </li>`;
 };
 
-if (menuNavigation) {
-  menuNavigation.onclick = (event) => {
-    if (event.target.dataset.section) {
-      const sectionId = event.target.dataset.section;
-      const element = document.getElementById(sectionId);
-      console.log(event.target.dataset.section);
-      if (element) {
-        element.scrollIntoView({
-          behavior: "smooth",
-          block: "end",
-          inline: "nearest",
-        });
-      }
-    }
-  };
-}
-
 const renderNavigationMarkup = () => {
   if (menuNavigation) {
     menuNavigation.innerHTML = createNavigationMarkup();
@@ -66,7 +89,27 @@ const renderNavigationMarkup = () => {
 
 renderNavigationMarkup();
 
-/* ======= select ======= */
+/* ======= smooth scroll  ======= */
+
+if (menuNavigation) {
+  menuNavigation.addEventListener("click", (event) => {
+    if (event.target.dataset.section) {
+      const sectionId = event.target.dataset.section;
+      const element = document.getElementById(sectionId);
+      console.log(event.target.dataset.section);
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+          inline: "nearest",
+        });
+        header.classList.remove("ih-header-menu-open");
+      }
+    }
+  });
+}
+
+/* ======= select language ======= */
 
 const selectEl = document.querySelector("#CUSTOM_SELECT_JS");
 const selectSmallEl = document.querySelector("#CUSTOM_SELECT_SMALL_JS");
@@ -108,30 +151,49 @@ const createCustomSelectSmall = () => {
 
 const renderCustomSelect = () => {
   if (selectEl) {
+    const storedLang = localStorage.getItem("lang");
+
+    if (storedLang && storedLang !== state.current) {
+      state.current = storedLang;
+      localizeElements(storedLang);
+    }
+
     selectEl.innerHTML = createCustomSelect();
-    selectEl.onclick = (e) => {
+
+    selectEl.addEventListener("click", (e) => {
       selectEl.classList.toggle("ih-custom-select-open");
       const newCurrentLang = e.target.dataset.value;
+
       if (newCurrentLang && newCurrentLang !== state.current) {
         state.current = newCurrentLang;
+        localStorage.setItem("lang", newCurrentLang);
         localizeElements(newCurrentLang);
         selectEl.innerHTML = createCustomSelect();
       }
-    };
+    });
   }
 };
 
 const renderCustomSelectSmall = () => {
   if (selectSmallEl) {
+    const storedLang = localStorage.getItem("lang");
+
+    if (storedLang && storedLang !== state.current) {
+      state.current = storedLang;
+      localizeElements(storedLang);
+    }
+
     selectSmallEl.innerHTML = createCustomSelectSmall();
-    selectSmallEl.onclick = (e) => {
+    selectSmallEl.addEventListener("click", (e) => {
       const newCurrentLang = e.target.dataset.value;
+
       if (newCurrentLang && newCurrentLang !== state.current) {
         state.current = newCurrentLang;
+        localStorage.setItem("lang", newCurrentLang);
         localizeElements(newCurrentLang);
         selectSmallEl.innerHTML = createCustomSelectSmall();
       }
-    };
+    });
   }
 };
 
