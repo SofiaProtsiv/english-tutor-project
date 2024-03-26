@@ -10,6 +10,7 @@ const firstBut = document.querySelector(".first-item-list");
 const selectList = document.querySelector(".list-item-select");
 const selectOpt = document.querySelectorAll(".list-item-select-opt");
 const inputs = document.querySelectorAll(".user-inpt");
+const boxFb = document.querySelector(".box-fb");
 const TOKEN = "6077606622:AAG6g12itzLvnsQfazmk9-oBfkHb1kflQYk";
 let IDCZAT = -1002080915692;
 const NAME_PATTERN = /^[a-zA-Zа-яА-ЯёЁґҐіІїЇєЄ]+$/;
@@ -24,6 +25,10 @@ buttonClick.forEach( but => {
 function showModalWindow() {
     modalWindow.style.display = "block";
     document.body.style.overflow = "hidden";
+    
+    form.classList.remove("form-feedback");
+    boxFb.style.display = "none";
+    contentForm.style.display = "flex";
 }
 // close modal window
 document.addEventListener("keydown", closeModal);
@@ -136,7 +141,8 @@ async function feedbackMessage(success) {
         <h2 class="title-feedback">${success ? `See you soon!` : `Error`}</h2>
         <p class="text-feedback">${success ? `Ваші дані були успішно відправлені.</br> Будь ласка, очікуйте: я зв'яжуся з Вами якнайшвидше для обговорення деталей.` : `На жаль, на сайті сталася помилка і Ваші дані не були відправлені. Спробуйте, будь ласка, пізніше.`}</p>`;
 
-    contentForm.innerHTML = str;
-    contentForm.classList.add("box-feedback");
+    contentForm.style.display = "none";
+    boxFb.innerHTML = str;
+    boxFb.style.display = "flex";
     form.classList.add("form-feedback");
 }

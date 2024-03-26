@@ -318,21 +318,17 @@
         letter-spacing: 0.02em;
     }
 }
-.box-feedback {
+.box-fb {
+    display: flex;
     flex-direction: column;
     gap: 24px;
     padding: 64px 24px;
 
     @media(768px<=width) {
-        flex-direction: column;
-        gap: 24px;
         padding: 64px;
     }
     @media(1440px<=width) {
-        flex-direction: column;
         align-items: center;
-        gap: 24px;
-        padding: 64px;
     }
 }
 .form-feedback {
