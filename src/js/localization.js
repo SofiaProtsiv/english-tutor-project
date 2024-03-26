@@ -15,7 +15,7 @@ function localizeElements() {
     const langValue = getValueByPath(locales[LANG], langKey);
 
     if (langValue) {
-      element.textContent = langValue;
+      element.innerHTML = langValue;
     }
   });
 }
