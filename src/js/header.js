@@ -123,7 +123,6 @@ function handleCustomSelect(e) {
     if (newCurrentLang && newCurrentLang !== state.current) {
       state.current = newCurrentLang;
       localStorage.setItem("lang", newCurrentLang);
-      localStorage.setItem("lang", newCurrentLang);
       localizeElements(newCurrentLang);
       selectEl.innerHTML = createCustomSelect();
     }
@@ -143,7 +142,6 @@ function handleCustomSelectSmall(e) {
     const newCurrentLang = e.target.dataset.value;
     if (newCurrentLang && newCurrentLang !== state.current) {
       state.current = newCurrentLang;
-      localStorage.setItem("lang", newCurrentLang);
       localStorage.setItem("lang", newCurrentLang);
       localizeElements(newCurrentLang);
       selectSmallEl.innerHTML = createCustomSelectSmall();
