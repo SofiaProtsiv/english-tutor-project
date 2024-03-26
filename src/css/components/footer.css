@@ -142,15 +142,15 @@
 
   @media (768px<=width) {
     margin-top: 0;
-    margin-bottom: 40px;
-    align-self: start;
-  }
-
-  @media (1440px<=width) {
+    padding-bottom: 40px;
     font-size: 18px;
     line-height: 1.55556;
     letter-spacing: 0.01em;
     margin-bottom: 0;
+    align-self: start;
+  }
+
+  @media (1440px<=width) {
     align-self: center;
   }
 }
