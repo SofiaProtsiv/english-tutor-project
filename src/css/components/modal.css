@@ -25,6 +25,7 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    align-items: center;
 }
 .star {
     color: var(--accent-color);
@@ -41,6 +42,19 @@
     flex-direction: column;
     gap: 32px;
     align-items: center;
+}
+/*  */
+.error-input {
+    display: none;
+    font-family: var(--secondary-font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: 0.01em;
+    color: var(--accent-color);
+}
+.error-input.check {
+    display: block;
 }
 .label-inpt {
     display: flex;
@@ -201,12 +215,19 @@
     font-weight: 400;
     margin: 0;
     text-align: center;
-    font-size: 80px;
-    line-height: 79%;
+    font-size: 52px;
+    line-height: 85%;
     letter-spacing: 0.02em;
     color: var(--accent-color);
 }
-
+.box-feedback {
+    flex-direction: column;
+    gap: 24px;
+    padding: 64px 24px;
+}
+.form-feedback {
+    padding: 0;
+}
 @media (min-resolution: 2dppx) {
     .but-submit {
       background-image: url(/images/common/button@2x.png);
@@ -236,6 +257,14 @@
         margin: 0;
         font-size: 18px;
     }
+    .box-feedback {
+        flex-direction: column;
+        gap: 24px;
+        padding: 64px;
+    }
+    .form-feedback {
+        padding: 0;
+    }
     .user-inpt,
     .user-btn,
     .user-textarea {
@@ -262,11 +291,12 @@
         line-height: 121%;
         width: 350px;
     }
-    .paragraf-form {
+    .title-form + .paragraf-form {
         font-size: 18px;
         line-height: 156%;
         letter-spacing: 0.01em;
-        width: 100%;
+        width: 592px;
+        height: 56px;
     }
     .list-item-select {
         height: 156px;
@@ -278,6 +308,8 @@
     }
     .title-feedback {
         font-size: 96px;
+        line-height: 79%;
+        letter-spacing: 0.02em;
     }
 }
 @media screen and (min-width: 1440px) {
@@ -294,6 +326,7 @@
     .mdl-content {
         flex-direction: row;
         gap: 48px;
+        align-items: start;
     }
     .title-form {
         font-weight: 600;
@@ -306,24 +339,18 @@
         margin: 32px 0 0 0;
         width: 280px;
         height: 112px;
-        font-size: 18px;
     }
     .but-submit {
         width: 220px;
         height: 92px;
     }
-}
-
-/*  */
-.error-input {
-    display: none;
-    font-family: var(--secondary-font-family);
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 143%;
-    letter-spacing: 0.01em;
-    color: red;
-}
-.error-input.check {
-    display: block;
+    .box-feedback {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        padding: 64px;
+    }
+    .form-feedback {
+        padding: 0;
+    }
 }

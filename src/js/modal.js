@@ -2,7 +2,8 @@ import axios from "axios";
 const buttonClick = document.querySelector(".btn-connect");
 const modalWindow = document.querySelector(".mdl-box");
 const modalBackground = document.querySelector(".mdl-flex");
-const contentForm = document.querySelector(".mdl-content")
+const contentForm = document.querySelector(".mdl-content");
+const form = document.querySelector(".mdl-forma");
 const butClose = document.querySelector(".close");
 const formUser = document.querySelector(".forma-for-connect");
 const firstBut = document.querySelector(".first-item-list");
@@ -44,14 +45,14 @@ async function newMessage(e) {
     const userName = formData.get("username");
     const userPhone = formData.get("phone");
     const comment = formData.get("comment");
-    const education = firstBut.textContent;
+    const education = `${firstBut.textContent === "Оберіть варіант навчання"? "Формат не вибраний" : `${firstBut.textContent}`}`;
         
     const message = `
     Нова заявка:
     1) Ім'я: ${userName};
     2) Телефон: ${userPhone};
     3) Формат навчання: ${education};
-    4) Коментар: ${comment ? comment : "Without comments"};
+    4) Коментар: ${comment ? comment : "Без коментарів"};
     `;
 
     sendMessage(message);
@@ -128,20 +129,15 @@ selectOpt.forEach(option => option.addEventListener("click", (e) => {
 async function feedbackMessage(success) {
     let str = `
         <h2 class="title-feedback">${success ? `See you soon!` : `Error`}</h2>
-        <p class="text-feedback">${success ? `Ваші дані були успішно відправлені. Будь ласка, очікуйте: я зв'яжуся з Вами якнайшвидше для обговорення деталей.` : `На жаль, на сайті сталася помилка і Ваші дані не були відправлені. Спробуйте, будь ласка, пізніше.`}</p>`;
+        <p class="text-feedback">${success ? `Ваші дані були успішно відправлені.</br> Будь ласка, очікуйте: я зв'яжуся з Вами якнайшвидше для обговорення деталей.` : `На жаль, на сайті сталася помилка і Ваші дані не були відправлені. Спробуйте, будь ласка, пізніше.`}</p>`;
 
     contentForm.innerHTML = str;
-    contentForm.style.flexDirection = "column";
-    contentForm.style.gap = "24px";
+    contentForm.classList.add("box-feedback");
+    form.classList.add("form-feedback");
 }
 
 // submit button
 document.querySelector(".but-submit").addEventListener("click", (e) => {
-    if (firstBut.textContent === "Оберіть варіант навчання") {
-        e.preventDefault();
-        firstBut.classList.add("red");
-        errorParagraf(firstBut.classList.value, true);
-    }
     inputs.forEach(input => {
         if (input.classList.contains("username")) {
             if (!NAME_PATTERN.test(input.value)) e.preventDefault();
