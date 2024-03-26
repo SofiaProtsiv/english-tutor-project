@@ -62,13 +62,13 @@ const translations = {
         "Interest and desire to learn a new language are key to success.",
       secondSubtitle: "Discipline",
       secondArticle:
-        "Learning a language that becomes a habit and a systematic approach helps in consolidating skills and achieving success in learning.",
+        "Learning a language that becomes a habit and a systematic approach helps in consolidating skills and achieving success.",
       thirdSubtitle: "Practice",
       thirdArticle:
         "Regular practice is the key to a success story. And this applies not only to English.",
       fourthSubtitle: "Patience",
       fourthArticle:
-        "Understanding that learning a language is a process that requires time and perseverance, and the result does not come instantly.",
+        "Understanding that learning a language is a process that requires time and perseverance.",
     },
     workflow: {},
     assessment: {},
