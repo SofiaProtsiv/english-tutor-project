@@ -77,6 +77,7 @@
 }
 
 .assessment .btn-connect {
+  margin: 0;
   background-color: transparent;
   font-family: var(--secondary-font-family);
   font-weight: 600;
