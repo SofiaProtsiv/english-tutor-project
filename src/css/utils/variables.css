@@ -1,16 +1,16 @@
 :root {
   /* Colors */
   --primary-text-color: #292929;
-  --accent-color: #DC3353;
-  --hover-accent-color: #8F2135;
-  --white-color: #FFFFFF;
-  --error-color: #DC3353;
-  --body-bg: #FFFFFF;
-  --container-bg: #F0F2F5;
-  --input-bg: #F0F2F5;
+  --accent-color: #dc3353;
+  --hover-accent-color: #8f2135;
+  --white-color: #ffffff;
+  --error-color: #dc3353;
+  --body-bg: #ffffff;
+  --container-bg: #f0f2f5;
+  --input-bg: #f0f2f5;
   --footer-bg: #292929;
   --scrollbar-thumb-bg: #292929;
-  --scrollbar-track-bg: #FFFFFF;
+  --scrollbar-track-bg: #ffffff;
 
   /* Breakpoints */
   --mobile: 360px;
@@ -27,8 +27,11 @@
   --background-color: rgba(0, 0, 0, 0.6);
 
   /* Backdrop */
-  --primary-font-family: 'PlayfairDisplay', sans-serif;
-  --secondary-font-family: 'Montserrat',
-    sans-serif;
-  --accent-font-family: 'Hurricane';
+  --primary-font-family: "PlayfairDisplay", sans-serif;
+  --secondary-font-family: "Montserrat", sans-serif;
+  --accent-font-family: "Hurricane";
+
+  /* Height-constants */
+  --header-height-small: 76px;
+  --header-height-medium: 88px;
 }
