@@ -152,6 +152,7 @@
 
   @media (1440px<=width) {
     align-self: center;
+    padding-bottom: 0;
   }
 }
 
