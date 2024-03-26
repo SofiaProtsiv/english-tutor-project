@@ -11,6 +11,7 @@ const selectList = document.querySelector(".list-item-select");
 const selectOpt = document.querySelectorAll(".list-item-select-opt");
 const inputs = document.querySelectorAll(".user-inpt");
 const boxFb = document.querySelector(".box-fb");
+const textArea = document.querySelector(".user-textarea");
 const TOKEN = "6077606622:AAG6g12itzLvnsQfazmk9-oBfkHb1kflQYk";
 let IDCZAT = -1002080915692;
 const NAME_PATTERN = /^[a-zA-Zа-яА-ЯёЁґҐіІїЇєЄ]+$/;
@@ -21,6 +22,15 @@ const PHONE_PATTERN = /^\+[0-9]{11,12}$/;
 buttonClick.forEach( but => {
     but.addEventListener("click", showModalWindow);
 })
+//clear all inputs after close
+function clearFormFields() {
+    inputs.forEach(input => {
+        input.value = ""; 
+    });
+    textArea.value = "";
+    firstBut.textContent = "Оберіть варіант навчання";
+    firstBut.classList.remove("first-item-list-active");
+}
 
 function showModalWindow() {
     modalWindow.style.display = "block";
@@ -145,4 +155,5 @@ async function feedbackMessage(success) {
     boxFb.innerHTML = str;
     boxFb.style.display = "flex";
     form.classList.add("form-feedback");
+    clearFormFields();
 }
