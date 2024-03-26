@@ -5,6 +5,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 9999;
     backdrop-filter: blur(8px);
     background-color: var(--background-color);
 }
@@ -183,19 +184,7 @@
     resize: none;
 }
 .but-submit {
-    border: none;
-    cursor: pointer;
-    width: 224px;
-    height: 96px;
-    background-color: var(--white-color);
-    background-image: url(/images/common/button@1x.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    font-family: var(--secondary-font-family);
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 156%;
-    letter-spacing: 0.01em;
+    margin: 0;
 }
 .but-submit:hover {
     filter: grayscale(0.5);

@@ -21,6 +21,7 @@ buttonClick.addEventListener("click", showModalWindow);
 
 function showModalWindow() {
     modalWindow.style.display = "block";
+    document.body.style.overflow = "hidden";
 }
 
 // close modal window
@@ -83,21 +84,6 @@ function checkInputs(input) {
     } else {
         input.classList.remove("red");
         errorParagraf(input.classList.value, false);
-    }
-}
-
-// check form education
-firstBut.addEventListener("blur", checkButton);
-
-function checkButton(e) {
-    console.log("focus");
-    
-    if (e.target.textContent !== "Оберіть варіант навчання") {
-        this.classList.remove("red");
-        errorParagraf(this.classList.value, false);
-    } else {
-        this.classList.add("red");
-        errorParagraf(this.classList.value, true);
     }
 }
 
