@@ -1,28 +1,79 @@
 import { localizeElements } from "./localization";
 import translations from "../assets/translations";
 const header = document.querySelector("#HEADER_JS");
+const ITEMS = Object.keys(translations);
+const state = { current: "" };
+
+/* ======= set geolocation language ======= */
+
+const setGeolocationLanguage = () => {
+  const storedLang = localStorage.getItem("lang");
+
+  if (storedLang && storedLang !== state.current) {
+    state.current = storedLang;
+    localizeElements(storedLang);
+    return;
+  }
+
+  if (!storedLang && navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function (position) {
+      var latitude = position.coords.latitude;
+      var longitude = position.coords.longitude;
+      var geocodingUrl =
+        "https://nominatim.openstreetmap.org/reverse?format=json&lat=" +
+        latitude +
+        "&lon=" +
+        longitude;
+      fetch(geocodingUrl)
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.address) {
+            const code = data.address.country_code;
+            if (ITEMS.includes(code)) {
+              localStorage.setItem("lang", code);
+              localizeElements(code);
+              return;
+            }
+            localStorage.setItem("lang", "en");
+            localizeElements("en");
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching geolocation data:", error);
+        });
+    });
+  }
+  return;
+};
+
+setGeolocationLanguage();
 
 /* ======= menu button ======= */
 
 const menuButton = document.querySelector("#HEADER_MENU_JS");
 
 if (menuButton) {
-  menuButton.onclick = () => {
-    header.classList.toggle("ih-header-menu-open");
-  };
+  menuButton.addEventListener("click", () => {
+    menuButton.addEventListener("click", () => {
+      header.classList.toggle("ih-header-menu-open");
+    });
+  });
 }
 
 const menuNav = document.querySelector("#MENU_NAV_JS");
 
 if (menuNav) {
-  menuNav.onclick = (event) => {
-    if (event.target.tagName === "A") {
-      header.classList.remove("ih-header-menu-open");
-    }
-  };
+  menuNav.addEventListener("click", (event) => {
+    menuNav.addEventListener("click", (event) => {
+      if (event.target.tagName === "A") {
+        header.classList.remove("ih-header-menu-open");
+      }
+    });
+  });
 }
 
 /* ======= menu navigation  ======= */
+
 const menuNavigation = document.querySelector("#MENU_NAV_JS");
 
 const createNavigationMarkup = () => {
@@ -41,23 +92,6 @@ const createNavigationMarkup = () => {
           </li>`;
 };
 
-if (menuNavigation) {
-  menuNavigation.onclick = (event) => {
-    if (event.target.dataset.section) {
-      const sectionId = event.target.dataset.section;
-      const element = document.getElementById(sectionId);
-      console.log(event.target.dataset.section);
-      if (element) {
-        element.scrollIntoView({
-          behavior: "smooth",
-          block: "end",
-          inline: "nearest",
-        });
-      }
-    }
-  };
-}
-
 const renderNavigationMarkup = () => {
   if (menuNavigation) {
     menuNavigation.innerHTML = createNavigationMarkup();
@@ -66,12 +100,34 @@ const renderNavigationMarkup = () => {
 
 renderNavigationMarkup();
 
-/* ======= select ======= */
+/* ======= smooth scroll  ======= */
+
+if (menuNavigation) {
+  menuNavigation.addEventListener("click", (event) => {
+    menuNavigation.addEventListener("click", (event) => {
+      if (event.target.dataset.section) {
+        const sectionId = event.target.dataset.section;
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+            block: "start",
+            inline: "nearest",
+          });
+          header.classList.remove("ih-header-menu-open");
+          header.classList.remove("ih-header-menu-open");
+        }
+      }
+    });
+  });
+}
+
+/* ======= select language ======= */
+/* ======= select language ======= */
 
 const selectEl = document.querySelector("#CUSTOM_SELECT_JS");
 const selectSmallEl = document.querySelector("#CUSTOM_SELECT_SMALL_JS");
-const ITEMS = Object.keys(translations);
-const state = { current: ITEMS[0] };
 
 const createCustomSelectOption = (code, order) => {
   return `
@@ -108,30 +164,61 @@ const createCustomSelectSmall = () => {
 
 const renderCustomSelect = () => {
   if (selectEl) {
+    const storedLang = localStorage.getItem("lang");
+    localizeElements(storedLang);
+    // if (!storedLang) {
+    //   setGeolocationLanguage();
+    // }
+
+    // if (storedLang && storedLang !== state.current) {
+    //   state.current = storedLang;
+    //   localizeElements(storedLang);
+    // }
+
     selectEl.innerHTML = createCustomSelect();
-    selectEl.onclick = (e) => {
+
+    selectEl.addEventListener("click", (e) => {
       selectEl.classList.toggle("ih-custom-select-open");
       const newCurrentLang = e.target.dataset.value;
+
       if (newCurrentLang && newCurrentLang !== state.current) {
         state.current = newCurrentLang;
+        localStorage.setItem("lang", newCurrentLang);
+        localStorage.setItem("lang", newCurrentLang);
         localizeElements(newCurrentLang);
         selectEl.innerHTML = createCustomSelect();
       }
-    };
+    });
   }
 };
 
 const renderCustomSelectSmall = () => {
   if (selectSmallEl) {
+    const storedLang = localStorage.getItem("lang");
+    localizeElements(storedLang);
+    // if (!storedLang) {
+    //   setGeolocationLanguage();
+    // }
+
+    // if (storedLang && storedLang !== state.current) {
+    //   state.current = storedLang;
+    //   localizeElements(storedLang);
+    // }
+
     selectSmallEl.innerHTML = createCustomSelectSmall();
-    selectSmallEl.onclick = (e) => {
-      const newCurrentLang = e.target.dataset.value;
-      if (newCurrentLang && newCurrentLang !== state.current) {
-        state.current = newCurrentLang;
-        localizeElements(newCurrentLang);
-        selectSmallEl.innerHTML = createCustomSelectSmall();
-      }
-    };
+    selectSmallEl.addEventListener("click", (e) => {
+      selectSmallEl.addEventListener("click", (e) => {
+        const newCurrentLang = e.target.dataset.value;
+
+        if (newCurrentLang && newCurrentLang !== state.current) {
+          state.current = newCurrentLang;
+          localStorage.setItem("lang", newCurrentLang);
+          localStorage.setItem("lang", newCurrentLang);
+          localizeElements(newCurrentLang);
+          selectSmallEl.innerHTML = createCustomSelectSmall();
+        }
+      });
+    });
   }
 };
 
