@@ -3,19 +3,6 @@
 
 }
 
-.quote-card {
-    align-items: center;
-    margin-top: 18px;
-
-    @media (768px<=width) {
-        margin-top: 78px;
-    }
-
-    @media (1440px<=width) {
-        margin-top: 74px;
-    }
-}
-
 .quote-text-accent {
     font-family: var(--accent-font-family);
         color: var(--accent-color);
