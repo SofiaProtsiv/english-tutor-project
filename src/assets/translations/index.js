@@ -1,61 +1,60 @@
 const translations = {
   ua: {
-    "header": {},
-    "hero": {},
-    "about-me": {},
-    "advice": {},
-    "quote": {},
-    "opportunities": {},
-    "requirements": {},
-    "workflow": {},
-    "assessment": {},
-    "reviews": {},
-    "footer": {},
-    "modal": {
-      "title" : "ЗВ’ЯЗАТИСЯ ЗІ МНОЮ",
-      "text" : "Будь ласка, заповніть форму і я зв’яжуся з Вами якнайшвидше для обговорення деталей.",
-      "label" : {
-        "label1" : "Ваше ім’я",
-        "label2" : "Номер телефону",
-        "label3" : "Формат навчання",
-        "label4" : "Коментар",
+    header: {
+      menu: {
+        about_me: "ПРО МЕНЕ",
+        quote: "ВАРТІСТЬ",
+        reviews: "ВІДГУКИ",
+        contacts: "КОНТАКТИ",
       },
-      "button" : "Відправити",
-      "placeholder" : {
-        "placeholder1" : "Анастасія",
-        "placeholder2" : "Оберіть варіант навчання",
-        "placeholder3" : "Ваш коментар",
-      }
     },
+    hero: {},
+    "about-me": {},
+    advice: {},
+    quote: {},
+    opportunities: {},
+    requirements: {},
+    workflow: {},
+    assessment: {},
+    reviews: {},
+    footer: {},
+    modal: {},
     "pop-up": {},
-    "formats": {
-      "title": "German title",
-      "button": {
-        "test": "Зписатися"
-      }
-    }
+    formats: {
+      title: "German title",
+      button: {
+        test: "Зписатися",
+      },
+    },
   },
   en: {
-    "header": {},
-    "hero": {},
+    header: {
+      menu: {
+        about_me: "ABOUT ME",
+        quote: "QUOTE",
+        reviews: "REVIEWS",
+        contacts: "CONTACTS",
+      },
+    },
+    hero: {},
     "about-me": {},
-    "advice": {},
-    "quote": {},
-    "opportunities": {},
-    "requirements": {},
-    "workflow": {},
-    "assessment": {},
-    "reviews": {},
-    "footer": {},
-    "modal": {},
+    advice: {},
+    quote: {},
+    opportunities: {},
+    requirements: {},
+    workflow: {},
+    assessment: {},
+    reviews: {},
+    footer: {},
+    modal: {},
     "pop-up": {},
-    "formats": {
-      "title": "Formats studing",
-      "button": {
-        "test": "Lessons!!!"
-      }
-    }
-  }
-}
+    formats: {
+      title: "Formats studing",
+      button: {
+        test: "Lessons!!!",
+      },
+    },
+  },
+};
 
-export default translations
+export default translations;
