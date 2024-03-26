@@ -15,7 +15,18 @@ const translations = {
     opportunities: {},
     requirements: {},
     workflow: {},
-    assessment: {},
+    "assessment": {
+      "section": {
+        "container": {
+          "subtitle": "By the way!",
+          "title": "А хочеш дізнатися, який у тебе рівень?",
+          "content": {
+            "text": "Під час пробного заняття я даю фідбек щодо наявного рівня володіння мовою, а також раджу як його покращити.",
+            "button": "Написати"
+          }
+        }
+      }
+    },
     reviews: {},
     footer: {},
     modal: {},
@@ -43,7 +54,18 @@ const translations = {
     opportunities: {},
     requirements: {},
     workflow: {},
-    assessment: {},
+    "assessment": {
+      "section": {
+        "container": {
+          "subtitle": "By the way!",
+          "title": "?",
+          "content": {
+            "text": ".",
+            "button": ""
+          }
+        }
+      }
+    },
     reviews: {},
     footer: {},
     modal: {},
