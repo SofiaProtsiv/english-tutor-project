@@ -1,35 +1,42 @@
 import { localizeElements } from "./localization";
 import translations from "../assets/translations";
 const header = document.querySelector("#HEADER_JS");
+const ITEMS = Object.keys(translations);
+const state = { current: "" };
 
 /* ======= set geolocation language ======= */
 
 const setGeolocationLanguage = () => {
-  if (navigator.geolocation) {
+  const storedLang = localStorage.getItem("lang");
+
+  if (storedLang && storedLang !== state.current) {
+    state.current = storedLang;
+    localizeElements(storedLang);
+    return;
+  }
+
+  if (!storedLang && navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function (position) {
       var latitude = position.coords.latitude;
       var longitude = position.coords.longitude;
-
       var geocodingUrl =
         "https://nominatim.openstreetmap.org/reverse?format=json&lat=" +
         latitude +
         "&lon=" +
         longitude;
-
       fetch(geocodingUrl)
         .then((response) => response.json())
         .then((data) => {
           if (data.address) {
-            var country = data.address.country;
-            if (country === "Ukraine") {
-              localStorage.setItem("lang", "ua");
-              renderCustomSelectSmall();
-              renderCustomSelect();
-            } else {
-              localStorage.setItem("lang", "en");
-              renderCustomSelectSmall();
-              renderCustomSelect();
+            const code = data.address.country_code;
+            console.log(data.address);
+            if (ITEMS.includes(code)) {
+              localStorage.setItem("lang", code);
+              localizeElements(code);
+              return;
             }
+            localStorage.setItem("lang", "en");
+            localizeElements("en");
           }
         })
         .catch((error) => {
@@ -37,6 +44,7 @@ const setGeolocationLanguage = () => {
         });
     });
   }
+  return;
 };
 
 setGeolocationLanguage();
@@ -113,8 +121,6 @@ if (menuNavigation) {
 
 const selectEl = document.querySelector("#CUSTOM_SELECT_JS");
 const selectSmallEl = document.querySelector("#CUSTOM_SELECT_SMALL_JS");
-const ITEMS = Object.keys(translations);
-const state = { current: ITEMS[0] };
 
 const createCustomSelectOption = (code, order) => {
   return `
@@ -153,14 +159,19 @@ const renderCustomSelect = () => {
   if (selectEl) {
     const storedLang = localStorage.getItem("lang");
 
-    if (storedLang && storedLang !== state.current) {
-      state.current = storedLang;
-      localizeElements(storedLang);
-    }
+    // if (!storedLang) {
+    //   setGeolocationLanguage();
+    // }
+
+    // if (storedLang && storedLang !== state.current) {
+    //   state.current = storedLang;
+    //   localizeElements(storedLang);
+    // }
 
     selectEl.innerHTML = createCustomSelect();
 
     selectEl.addEventListener("click", (e) => {
+      console.log(44444);
       selectEl.classList.toggle("ih-custom-select-open");
       const newCurrentLang = e.target.dataset.value;
 
@@ -178,10 +189,14 @@ const renderCustomSelectSmall = () => {
   if (selectSmallEl) {
     const storedLang = localStorage.getItem("lang");
 
-    if (storedLang && storedLang !== state.current) {
-      state.current = storedLang;
-      localizeElements(storedLang);
-    }
+    // if (!storedLang) {
+    //   setGeolocationLanguage();
+    // }
+
+    // if (storedLang && storedLang !== state.current) {
+    //   state.current = storedLang;
+    //   localizeElements(storedLang);
+    // }
 
     selectSmallEl.innerHTML = createCustomSelectSmall();
     selectSmallEl.addEventListener("click", (e) => {
