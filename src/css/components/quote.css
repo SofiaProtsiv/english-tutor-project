@@ -1,0 +1,83 @@
+.quote-section {
+    background-color: #F0F2F5;
+
+}
+
+.quote-card {
+    align-items: center;
+    margin-top: 18px;
+
+    @media (768px<=width) {
+        margin-top: 78px;
+    }
+
+    @media (1440px<=width) {
+        margin-top: 74px;
+    }
+}
+
+.quote-text-accent {
+    font-family: var(--accent-font-family);
+        color: var(--accent-color);
+        font-size: 52px;
+        line-height: 0.85;
+        letter-spacing: 0.02em;
+   
+
+    @media (768px<=width) {
+        font-size: 96px;
+        letter-spacing: 0.02em;
+        line-height: 0.79;
+        max-width: 568px;
+        max-height: 76px;
+    }
+
+    @media (1440px<=width) {
+        max-width: 568px;
+        max-height: 76px;
+        margin-left: 104px;
+    }
+}
+
+.quote-text {
+    text-align: center;
+    font-family: Playfair Display;
+    font-weight: 600;
+    font-size: 32px;
+    text-transform: uppercase;
+    line-height: 1.38;
+    letter-spacing: 0.01em;
+    max-width: 270px;
+    margin-top: 4px;
+    margin-left: 21px;
+    @media (768px<=width) {
+        font-size: 56px;
+        line-height: 1.19;
+        letter-spacing: -0.01em;
+        max-width: 704px;
+        margin-left: 2px;
+        margin-top: 0px;
+    }
+
+    @media (1440px<=width) {
+        letter-spacing: 0.01em;
+        max-width: 1008px;
+        margin-top: 0px;
+        margin-left: 110px;
+        line-height: 1.23;
+        letter-spacing: -0.01em;
+    }
+}
+
+.quote-text-string {
+    @media (768px<=width) {
+        padding-right: 180px;
+        padding-left: 93px;
+        letter-spacing: 0.015em;
+    }
+
+    @media (1440px<=width) {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
