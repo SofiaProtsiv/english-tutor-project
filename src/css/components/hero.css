@@ -133,7 +133,8 @@
     font-size: 16px;
     display: flex;
     align-items: center;
-    padding: 26px 50px;
+    justify-content: center;
+    padding: 36px 52px;
     margin: 20px 0px 20px 0px;
   }
 
@@ -143,6 +144,7 @@
   }
 
   @media screen and (min-width: 768px) and (max-width: 1439px) {
+    padding: 36px 45px;
     margin: 40px 0px 40px 0px;
   }
 }
@@ -204,7 +206,7 @@
 
 @media screen and (max-width: 359px) {
   .menu-social::before {
-    width: 112%;
+    width: 200%;
     left: -20px;
     bottom: 34px;
   }
