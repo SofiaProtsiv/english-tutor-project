@@ -23,24 +23,41 @@ function showModalWindow() {
     modalWindow.style.display = "block";
     document.body.style.overflow = "hidden";
 }
-
 // close modal window
 document.addEventListener("keydown", closeModal);
 modalBackground.addEventListener("click", closeModal);
 butClose.addEventListener("click", closeModal);
 
 function closeModal(e) {
-    if (!e || e.target === modalBackground || e.key === "Escape" || e.target === butClose || e.target.classList.contains('use-close')) {
+    if (!e || e.target === modalBackground || e.key === "Escape" || e.target === butClose || e.target.classList.contains("use-close")) {
         modalWindow.style.display = "none";
+        document.body.style.overflowY = "scroll";
     }
 }
-
 // send message
-formUser.addEventListener("submit", newMessage);
+formUser.addEventListener("submit", handleSubmit);
 
-async function newMessage(e) {
+async function handleSubmit(e) {
 
    e.preventDefault();
+
+   let isValid = true;
+
+   inputs.forEach(input => {
+    if (input.classList.contains("username")) {
+        if (!NAME_PATTERN.test(input.value)) {
+            isValid = false;
+            checkInputs(input);
+        }
+    } else if (!PHONE_PATTERN.test(input.value)) {
+        isValid = false;
+        checkInputs(input);
+    }
+    });
+
+    if (!isValid) {
+        return;
+    }
 
     const formData = new FormData(e.target);
     const userName = formData.get("username");
@@ -121,13 +138,3 @@ async function feedbackMessage(success) {
     contentForm.classList.add("box-feedback");
     form.classList.add("form-feedback");
 }
-
-// submit button
-document.querySelector(".but-submit").addEventListener("click", (e) => {
-    inputs.forEach(input => {
-        if (input.classList.contains("username")) {
-            if (!NAME_PATTERN.test(input.value)) e.preventDefault();
-        } else if (!PHONE_PATTERN.test(input.value)) e.preventDefault();
-        checkInputs(input);
-    });
-});
