@@ -2,6 +2,7 @@
 // import "swiper/css/bundle";
 
 const imgSwiper = new Swiper(".opp-img-swiper", {
+  navigation: { prevEl: ".opp-button-prev", nextEl: ".opp-button-next" },
   loop: true,
   speed: 1800,
   slidesPerView: 1,
@@ -9,24 +10,20 @@ const imgSwiper = new Swiper(".opp-img-swiper", {
   initialSlide: 0,
   spaceBetween: 20,
   breakpoints: {
-    768: {
+    704: {
       slidesPerView: 2,
-      centeredSlides: false,
       spaceBetween: 32,
     },
     1440: {
       slidesPerView: 3,
-      centeredSlides: true,
       spaceBetween: 0,
     },
   },
   on: {
-    init: function () {
-      setTimeout(() => {
-        document
-          .querySelectorAll(".opp-img-wrapper")
-          .forEach((item) => item.classList.add("img-swiper-transition"));
-      }, 1800);
+    slideChangeTransitionStart: function () {
+      document
+        .querySelectorAll(".opp-img-wrapper")
+        .forEach((item) => item.classList.add("img-swiper-transition"));
     },
   },
 });
@@ -53,16 +50,11 @@ const textSwiper = new Swiper(".opp-text-swiper", {
   breakpoints: {
     768: {
       slidesPerView: 2,
-      centeredSlides: false,
       spaceBetween: 32,
     },
     1440: {
       slidesPerView: 3,
-      centeredSlides: true,
       spaceBetween: 32,
     },
   },
 });
-
-imgSwiper.controller.control = textSwiper;
-textSwiper.controller.control = imgSwiper;

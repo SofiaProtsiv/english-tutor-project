@@ -29,7 +29,7 @@
   @media (1440px<=width) {
     width: 176px;
     height: 176px;
-    transform: translateX(230px);
+    transform: translateX(250px);
   }
 }
 
@@ -39,13 +39,13 @@
   opacity: 1;
 
   @media (768px<=width) {
-    transform: translateX(0);
+    transform: translateX(-184px);
   }
 
   @media (1440px<=width) {
     width: 488px;
     height: 560px;
-    transform: translateX(-93px);
+    transform: translateX(-92px);
   }
 }
 
@@ -53,7 +53,7 @@
   @media (768px<=width) {
     width: 80px;
     height: 80px;
-    transform: translateX(256px);
+    transform: translateX(70px);
     opacity: 1;
   }
 
@@ -76,6 +76,7 @@
     width: 280px;
     height: 280px;
     opacity: 1;
+    transform: translateX(0);
   }
 }
 
@@ -101,13 +102,15 @@
 
   @media (768px<=width) {
     height: 300px;
-    transform: translate(368px, -300px);
+    transform: translate(184px, -300px);
   }
 
   @media (1440px<=width) {
     transform: translate(416px, -300px)
   }
 }
+
+.opp-text-wrapper {}
 
 .opp-title {
   max-width: 175px;
@@ -150,10 +153,10 @@
 
   @media (768px<=width) {
     width: 336px;
+    margin: 0 auto;
   }
 
   @media (1440px<=width) {
-    margin: 0 auto;
     width: 384px;
   }
 }
