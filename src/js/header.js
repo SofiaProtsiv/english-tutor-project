@@ -10,7 +10,7 @@ const renderHeaderMarkup = () => {
      aria-label="link on main page"
    >
      <svg class="icon-logo">
-       <use href="../images/icons-sprite.svg#icon-logo"></use>
+       <use href="./images/icons-sprite.svg#icon-logo"></use>
      </svg>
    </a>
    <button
@@ -20,10 +20,10 @@ const renderHeaderMarkup = () => {
      type="button"
    >
      <svg class="icon-menu">
-       <use href="../images/icons-sprite.svg#icon-menu"></use>
+       <use href="./images/icons-sprite.svg#icon-menu"></use>
      </svg>
      <svg class="icon-menu-close">
-       <use href="../images/icons-sprite.svg#icon-menu-close"></use>
+       <use href="./images/icons-sprite.svg#icon-menu-close"></use>
      </svg>
    </button>
    <section class="menu-container">
@@ -36,7 +36,7 @@ const renderHeaderMarkup = () => {
      </div>
      <nav class="menu-social" id="MENU_SOCIAL_JS">
        <svg class="icon-horisontal-line">
-         <use href="../images/icons-sprite.svg#icon-horisontal-line"></use>
+         <use href="./images/icons-sprite.svg#icon-horisontal-line"></use>
        </svg>
      </nav>
    </section>
@@ -121,20 +121,19 @@ const state = { current: ITEMS[0] };
 const createCustomSelectOption = (code, order) => {
   return `
     <div data-value="${code}" class="custom-select-option" style="
-    ${state.current === code ? "background:transparent; " : ""}order:${
-    state.current === code ? 0 : order
-  }">${code}</div>
+    ${state.current === code ? "background:transparent; " : ""}order:${state.current === code ? 0 : order
+    }">${code}</div>
 `;
 };
 
 const createCustomSelect = () => {
   return `
    <svg class="custom-select-icon">
-            <use href="../images/icons-sprite.svg#icon-switch-arrow"></use>
+            <use href="./images/icons-sprite.svg#icon-switch-arrow"></use>
           </svg>
     ${ITEMS.map((code, index) => {
-      return createCustomSelectOption(code, index + 1);
-    }).join("")}
+    return createCustomSelectOption(code, index + 1);
+  }).join("")}
 
 `;
 };
@@ -142,11 +141,10 @@ const createCustomSelect = () => {
 const createCustomSelectSmall = () => {
   return `
         ${ITEMS.map((code) => {
-          return `<div data-value="${code}" class="select-lang-btn${
-            state.current === code ? " select-lang-btn-active" : ""
-          }">${code}</div>`;
-        }).join(`<svg class="vertical-line">
-           <use href="../images/icons-sprite.svg#icon-vertical-line"></use>
+    return `<div data-value="${code}" class="select-lang-btn${state.current === code ? " select-lang-btn-active" : ""
+      }">${code}</div>`;
+  }).join(`<svg class="vertical-line">
+           <use href="./images/icons-sprite.svg#icon-vertical-line"></use>
          </svg>`)}
 `;
 };
