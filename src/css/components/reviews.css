@@ -22,6 +22,14 @@
   }
 }
 
+.reviews-section-title {
+  text-align: right;
+
+  @media (768px<=width) {
+    text-align: center;
+  }
+}
+
 .reviews-img-swiper {
   /* min-width: 320px; */
   margin-bottom: 32px;
