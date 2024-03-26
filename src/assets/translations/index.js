@@ -8,7 +8,12 @@ const translations = {
         contacts: "КОНТАКТИ",
       },
     },
-    hero: {},
+    hero: {
+      "main-title": "давай вивчати англійську разом",
+      "about-me":
+        "Я - вчитель, із яким ви будете активно спілкуватися, ділитися посмішками, вивчати захоплюючі теми та підвищувати рівень англійської.",
+      "btn-connect": "записатися",
+    },
     "about-me": {},
     advice: {},
     quote: {},
@@ -36,7 +41,12 @@ const translations = {
         contacts: "CONTACTS",
       },
     },
-    hero: {},
+    hero: {
+      "main-title": "let's study English together",
+      "about-me":
+        "I am a teacher with whom you will actively communicate, share smiles, learn exciting topics and improve your English.",
+      "btn-connect": "sign up",
+    },
     "about-me": {},
     advice: {},
     quote: {},
