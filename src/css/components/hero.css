@@ -147,10 +147,6 @@
   }
 }
 
-.btn-connect:hover {
-  background-image: url(../../images/hero/Vectorhover.png);
-}
-
 .photo {
   position: absolute;
   width: 384px;
