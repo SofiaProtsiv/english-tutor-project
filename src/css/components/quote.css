@@ -3,18 +3,6 @@
 
 }
 
-.quote-card {
-    align-items: center;
-    margin-top: 18px;
-
-    @media (768px<=width) {
-        margin-top: 78px;
-    }
-
-    @media (1440px<=width) {
-        margin-top: 74px;
-    }
-}
 
 .quote-text-accent {
     font-family: var(--accent-font-family);
@@ -69,15 +57,3 @@
     }
 }
 
-.quote-text-string {
-    @media (768px<=width) {
-        padding-right: 180px;
-        padding-left: 93px;
-        letter-spacing: 0.015em;
-    }
-
-    @media (1440px<=width) {
-        padding-right: 0;
-        padding-left: 0;
-    }
-}
