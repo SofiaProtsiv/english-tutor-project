@@ -206,8 +206,8 @@
 
 @media screen and (max-width: 359px) {
   .menu-social::before {
-    width: 200%;
-    left: -20px;
+    width: 100%;
+    left: 0px;
     bottom: 34px;
   }
 }
