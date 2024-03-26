@@ -1,0 +1,96 @@
+/* workflow-styles */
+.workflow-container {
+  @media (1440px<=width) {
+    max-width: 1296px;
+  }
+}
+.workflow-content {
+  @media (768px<=width) {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  @media (1440px<=width) {
+    gap: 72px;
+    padding-left: 32px;
+    border-left: 1px solid var(--primary-text-color);
+  }
+}
+
+.workflow-content-image {
+  margin-bottom: 32px;
+  @media (768px<=width) {
+    margin-bottom: 0;
+  }
+}
+
+.workflow-list-item {
+  margin-bottom: 24px;
+}
+
+.workflow-list-item:last-child {
+  margin-bottom: 0;
+}
+
+.points-numbers {
+  font-family: var(--accent-font-family);
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 0.2;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: var(--accent-color);
+  @media (768px<=width) {
+    font-size: 96px;
+    line-height: 0.52;
+  }
+}
+
+.points-title {
+  margin-bottom: 12px;
+  padding-left: 52px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33333;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  @media (768px<=width) {
+    margin-bottom: 16px;
+    padding-left: 80px;
+    font-size: 28px;
+    line-height: 1;
+  }
+}
+
+.points-list {
+  padding-left: 52px;
+  list-style: disc;
+  @media (768px<=width) {
+    padding-left: 80px;
+    max-width: 400px;
+  }
+  @media (1440px<=width) {
+    max-width: 422px;
+  }
+}
+
+.points-list-item {
+  margin-bottom: 8px;
+  font-family: var(--secondary-font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  @media (768px<=width) {
+    font-size: 18px;
+  }
+}
+
+.points-list-item:last-child {
+  margin-bottom: 0;
+}
+
+.points-list-item::marker {
+  color: var(--accent-color);
+}
