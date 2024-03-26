@@ -1,3 +1,17 @@
+.advice-section {
+    padding-top: 32px;
+    padding-bottom: 64px;
+
+    @media (768px <=width) {
+        padding-top: 50px;
+        padding-bottom: 100px;
+    }
+
+    @media (width >=1440px) {
+        padding-top: 70px;
+        padding-bottom: 140px;
+    }
+}
 
 .advice-title {
     text-align: center;
@@ -22,7 +36,6 @@
         margin-bottom: 55px;
         margin-left: 155px;
     }
-
 }
 
 .advice-list {
@@ -36,7 +49,7 @@
         margin-top: 56px;
         margin-left: 32px;
     }
-    
+
     @media (width >=1440px) {
         width: 448px;
         margin-top: 0;
@@ -47,7 +60,7 @@
 
 .advice-item {
     margin-bottom: 24px;
-    font-family: Montserrat;
+    font-family: var(--secondary-font-family);
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.01em;
@@ -68,27 +81,26 @@
 }
 
 .advice-list .advice-item::marker {
-    color: #DC3353; 
+    color: #DC3353;
 }
-  
+
 .advice-border {
     @media (768px<=width) {
         padding-left: 32px;
         border-left: 1px solid #292929;
-    }  
-} 
-    
+    }
+}
+
 .advice-img {
     @media (768px<=width) {
         max-width: 672px;
-    }  
+    }
 }
 
-.advice-info{
+.advice-info {
     @media (1440px<=width) {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 }
- 

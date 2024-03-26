@@ -1,5 +1,20 @@
+.about-me-section {
+  padding-top: 64px;
+  padding-bottom: 32px;
+
+  @media (768px <=width) {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  @media (width >=1440px) {
+    padding-top: 140px;
+    padding-bottom: 70px;
+  }
+}
+
 .text-serif-about-me {
-  font-family: "Hurricane", sans-serif;
+  font-family: var(--accent-font-family);
   font-weight: 400;
   font-size: 52px;
   line-height: 100%;
@@ -18,18 +33,21 @@
 }
 
 .title-about-me {
-  font-family: "Playfair Display", sans-serif;
+  font-family: var(--primary-font-family);
   font-weight: 600;
   font-size: 32px;
   line-height: 137%;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: #292929;
+  margin: 0;
+  text-align: start;
 
   @media (768px<=width) {
     font-size: 56px;
     line-height: 121%;
     letter-spacing: 0.02em;
+    text-align: center;
   }
 
   @media (1440px<=width) {
@@ -81,7 +99,7 @@
 }
 
 .text-about-me {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--secondary-font-family);
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
