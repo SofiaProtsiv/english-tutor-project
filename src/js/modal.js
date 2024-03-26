@@ -1,5 +1,5 @@
 import axios from "axios";
-const buttonClick = document.querySelector(".btn-connect");
+const buttonClick = document.querySelectorAll(".btn-connect");
 const modalWindow = document.querySelector(".mdl-box");
 const modalBackground = document.querySelector(".mdl-flex");
 const contentForm = document.querySelector(".mdl-content");
@@ -17,7 +17,9 @@ const PHONE_PATTERN = /^\+[0-9]{11,12}$/;
 
 
 // show modal window
-buttonClick.addEventListener("click", showModalWindow);
+buttonClick.forEach( but => {
+    but.addEventListener("click", showModalWindow);
+})
 
 function showModalWindow() {
     modalWindow.style.display = "block";
