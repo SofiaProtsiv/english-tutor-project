@@ -141,10 +141,16 @@
   line-height: 150%;
   letter-spacing: 0.01em;
   padding: 0;
+  margin: 0;
   text-transform: uppercase;
 
   @media (768px <=width) {
     font-size: 18px;
     line-height: 156%;
   }
+}
+
+.formats-item img {
+  height: 100%;
+  object-fit: cover;
 }
