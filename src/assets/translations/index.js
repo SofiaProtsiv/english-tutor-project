@@ -1,6 +1,13 @@
 const translations = {
   ua: {
-    header: {},
+    header: {
+      menu: {
+        about_me: "ПРО МЕНЕ",
+        quote: "ВАРТІСТЬ",
+        reviews: "ВІДГУКИ",
+        contacts: "КОНТАКТИ",
+      },
+    },
     hero: {
       "main-title": "давай вивчати англійську разом",
       "about-me":
@@ -26,7 +33,14 @@ const translations = {
     },
   },
   en: {
-    header: {},
+    header: {
+      menu: {
+        about_me: "ABOUT ME",
+        quote: "QUOTE",
+        reviews: "REVIEWS",
+        contacts: "CONTACTS",
+      },
+    },
     hero: {
       "main-title": "let's study English together",
       "about-me":
@@ -53,4 +67,4 @@ const translations = {
   },
 };
 
-export default translations
+export default translations;
