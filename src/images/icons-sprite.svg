@@ -3,11 +3,6 @@
     <symbol id="icon-name" viewBox="0 0 32 32">
       <!-- path -->
     </symbol>
-    <symbol id="opp-arrow-left" viewBox="0 0 55 32">
-<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2.2857" d="M18.286 0c0 1.696-1.675 4.229-3.371 6.354-2.181 2.743-4.786 5.136-7.774 6.962-2.24 1.369-4.955 2.683-7.141 2.683M0 16c2.185 0 4.903 1.314 7.141 2.683 2.987 1.829 5.593 4.222 7.774 6.96 1.696 2.128 3.371 4.665 3.371 6.357M0 16h54.857"></path>
-</symbol>
-<symbol id="opp-arrow-right" viewBox="0 0 55 32">
-<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2.2857" d="M36.571 0c0 1.696 1.675 4.229 3.371 6.354 2.181 2.743 4.786 5.136 7.774 6.962 2.24 1.369 4.955 2.683 7.141 2.683M54.857 16c-2.185 0-4.903 1.314-7.141 2.683-2.987 1.829-5.593 4.222-7.774 6.96-1.696 2.128-3.371 4.665-3.371 6.357M54.857 16h-54.857"></path>
     <symbol id="reviews-arrow-left" viewBox="0 0 55 32">
 <path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2.2857" d="M18.286 0c0 1.696-1.675 4.229-3.371 6.354-2.181 2.743-4.786 5.136-7.774 6.962-2.24 1.369-4.955 2.683-7.141 2.683M0 16c2.185 0 4.903 1.314 7.141 2.683 2.987 1.829 5.593 4.222 7.774 6.96 1.696 2.128 3.371 4.665 3.371 6.357M0 16h54.857"></path>
 </symbol>
