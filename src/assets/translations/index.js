@@ -1,7 +1,19 @@
 const translations = {
   ua: {
-    "header": {},
-    "hero": {},
+    header: {
+      menu: {
+        about_me: "ПРО МЕНЕ",
+        quote: "ВАРТІСТЬ",
+        reviews: "ВІДГУКИ",
+        contacts: "КОНТАКТИ",
+      },
+    },
+    hero: {
+      "main-title": "давай вивчати англійську разом",
+      "about-me":
+        "Я - вчитель, із яким ви будете активно спілкуватися, ділитися посмішками, вивчати захоплюючі теми та підвищувати рівень англійської.",
+      "btn-connect": "записатися",
+    },
     "about-me": {},
     "advice": {
       "title": "Щоб вивчення мови було цікавим та захоплюючим",
@@ -12,25 +24,37 @@ const translations = {
         "list_item_4": "<b>Спілкуюся та надаю менторську підтримку:</b> розуміючи запит та потенціал студента, я скеровую його для отримання оптимального результату. А інколи робота перетворюється паралельно в терапевтичну сесію. Наприклад, коли день жахливий, а поспілкуєшся з викладачем англійської і стає легше :)" 
       }
     },
-    "quote": {},
-    "opportunities": {},
-    "requirements": {},
-    "workflow": {},
-    "assessment": {},
-    "reviews": {},
-    "footer": {},
-    "modal": {},
+    quote: {},
+    opportunities: {},
+    requirements: {},
+    workflow: {},
+    assessment: {},
+    reviews: {},
+    footer: {},
+    modal: {},
     "pop-up": {},
-    "formats": {
-      "title": "German title",
-      "button": {
-        "test": "Зписатися"
-      }
-    }
+    formats: {
+      title: "German title",
+      button: {
+        test: "Зписатися",
+      },
+    },
   },
   en: {
-    "header": {},
-    "hero": {},
+    header: {
+      menu: {
+        about_me: "ABOUT ME",
+        quote: "QUOTE",
+        reviews: "REVIEWS",
+        contacts: "CONTACTS",
+      },
+    },
+    hero: {
+      "main-title": "let's study English together",
+      "about-me":
+        "I am a teacher with whom you will actively communicate, share smiles, learn exciting topics and improve your English.",
+      "btn-connect": "sign up",
+    },
     "about-me": {},
     "advice": {
       "title": "Language learning should be an interesting and exciting",
@@ -41,22 +65,22 @@ const translations = {
         "list_item_4": "<b>I communicate and provide mentoring support:</b> understanding the student's request and potential, I guide him to obtain an optimal result. And sometimes the work turns into a therapy session in parallel. For example, when the day is terrible, but you talk to the English teacher and it becomes easier. This is proved by my students :)"
       }
     },
-    "quote": {},
-    "opportunities": {},
-    "requirements": {},
-    "workflow": {},
-    "assessment": {},
-    "reviews": {},
-    "footer": {},
-    "modal": {},
+    quote: {},
+    opportunities: {},
+    requirements: {},
+    workflow: {},
+    assessment: {},
+    reviews: {},
+    footer: {},
+    modal: {},
     "pop-up": {},
-    "formats": {
-      "title": "Formats studing",
-      "button": {
-        "test": "Lessons!!!"
-      }
-    }
-  }
-}
+    formats: {
+      title: "Formats studing",
+      button: {
+        test: "Lessons!!!",
+      },
+    },
+  },
+};
 
-export default translations
+export default translations;
