@@ -13,7 +13,7 @@ export function localizeElements(LANG) {
     const langValue = getValueByPath(locales[LANG], langKey);
 
     if (langValue) {
-      element.textContent = langValue;
+      element.innerHTML = langValue;
     }
   });
 }

@@ -29,7 +29,6 @@ const setGeolocationLanguage = () => {
         .then((data) => {
           if (data.address) {
             const code = data.address.country_code;
-            console.log(data.address);
             if (ITEMS.includes(code)) {
               localStorage.setItem("lang", code);
               localizeElements(code);
@@ -55,7 +54,9 @@ const menuButton = document.querySelector("#HEADER_MENU_JS");
 
 if (menuButton) {
   menuButton.addEventListener("click", () => {
-    header.classList.toggle("ih-header-menu-open");
+    menuButton.addEventListener("click", () => {
+      header.classList.toggle("ih-header-menu-open");
+    });
   });
 }
 
@@ -63,9 +64,11 @@ const menuNav = document.querySelector("#MENU_NAV_JS");
 
 if (menuNav) {
   menuNav.addEventListener("click", (event) => {
-    if (event.target.tagName === "A") {
-      header.classList.remove("ih-header-menu-open");
-    }
+    menuNav.addEventListener("click", (event) => {
+      if (event.target.tagName === "A") {
+        header.classList.remove("ih-header-menu-open");
+      }
+    });
   });
 }
 
@@ -101,22 +104,26 @@ renderNavigationMarkup();
 
 if (menuNavigation) {
   menuNavigation.addEventListener("click", (event) => {
-    if (event.target.dataset.section) {
-      const sectionId = event.target.dataset.section;
-      const element = document.getElementById(sectionId);
-      console.log(event.target.dataset.section);
-      if (element) {
-        element.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-          inline: "nearest",
-        });
-        header.classList.remove("ih-header-menu-open");
+    menuNavigation.addEventListener("click", (event) => {
+      if (event.target.dataset.section) {
+        const sectionId = event.target.dataset.section;
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+            block: "start",
+            inline: "nearest",
+          });
+          header.classList.remove("ih-header-menu-open");
+          header.classList.remove("ih-header-menu-open");
+        }
       }
-    }
+    });
   });
 }
 
+/* ======= select language ======= */
 /* ======= select language ======= */
 
 const selectEl = document.querySelector("#CUSTOM_SELECT_JS");
@@ -171,12 +178,12 @@ const renderCustomSelect = () => {
     selectEl.innerHTML = createCustomSelect();
 
     selectEl.addEventListener("click", (e) => {
-      console.log(44444);
       selectEl.classList.toggle("ih-custom-select-open");
       const newCurrentLang = e.target.dataset.value;
 
       if (newCurrentLang && newCurrentLang !== state.current) {
         state.current = newCurrentLang;
+        localStorage.setItem("lang", newCurrentLang);
         localStorage.setItem("lang", newCurrentLang);
         localizeElements(newCurrentLang);
         selectEl.innerHTML = createCustomSelect();
@@ -200,14 +207,17 @@ const renderCustomSelectSmall = () => {
 
     selectSmallEl.innerHTML = createCustomSelectSmall();
     selectSmallEl.addEventListener("click", (e) => {
-      const newCurrentLang = e.target.dataset.value;
+      selectSmallEl.addEventListener("click", (e) => {
+        const newCurrentLang = e.target.dataset.value;
 
-      if (newCurrentLang && newCurrentLang !== state.current) {
-        state.current = newCurrentLang;
-        localStorage.setItem("lang", newCurrentLang);
-        localizeElements(newCurrentLang);
-        selectSmallEl.innerHTML = createCustomSelectSmall();
-      }
+        if (newCurrentLang && newCurrentLang !== state.current) {
+          state.current = newCurrentLang;
+          localStorage.setItem("lang", newCurrentLang);
+          localStorage.setItem("lang", newCurrentLang);
+          localizeElements(newCurrentLang);
+          selectSmallEl.innerHTML = createCustomSelectSmall();
+        }
+      });
     });
   }
 };
