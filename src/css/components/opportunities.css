@@ -1,0 +1,234 @@
+/* ============= IMG_SWIPER  ================ */
+.opp-section {
+  height: 812px;
+
+  @media (768px<=width) {
+    height: 600px;
+  }
+
+  @media (1440px<=width) {
+    height: 840px;
+  }
+}
+
+.opp-img-swiper {
+  height: 380px;
+  margin-bottom: 32px;
+
+  @media (768px<=width) {
+    height: 400px;
+    margin-bottom: 0;
+  }
+
+  @media (1440px<=width) {
+    height: 560px;
+  }
+}
+
+.opp-img-wrapper {
+  width: 50%;
+  height: 50%;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+
+  @media (768px<=width) {
+    width: 80px;
+    height: 80px;
+    transform: translateX(256px);
+  }
+
+  @media (1440px<=width) {
+    width: 176px;
+    height: 176px;
+    transform: translateX(250px);
+  }
+}
+
+.opp-img-swiper .swiper-slide-active .opp-img-wrapper {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+
+  @media (768px<=width) {
+    transform: translateX(-184px);
+  }
+
+  @media (1440px<=width) {
+    width: 488px;
+    height: 560px;
+    transform: translateX(-92px);
+  }
+}
+
+.opp-img-swiper .swiper-slide-next .opp-img-wrapper {
+  @media (768px<=width) {
+    width: 80px;
+    height: 80px;
+    transform: translateX(70px);
+    opacity: 1;
+  }
+
+  @media (1440px<=width) {
+    width: 176px;
+    height: 176px;
+    transform: translateX(230px);
+  }
+}
+
+.opp-img-swiper .swiper-slide-prev .opp-img-wrapper {
+  @media (768px<=width) {
+    width: 80px;
+    height: 80px;
+    transform: translateX(0);
+    opacity: 0;
+  }
+
+  @media (1440px<=width) {
+    width: 280px;
+    height: 280px;
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.img-swiper-transition {
+  transition: all 1800ms var(--transition-effect);
+}
+
+.opp-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+/* ============= TEXT_SWIPER  ================ */
+.opp-text-swiper {
+  height: 272px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateX(-85px);
+
+  @media(767.98px>=width) {
+    overflow: visible !important;
+  }
+
+  @media (768px<=width) {
+    height: 300px;
+    transform: translate(184px, -300px);
+  }
+
+  @media (1440px<=width) {
+    transform: translate(416px, -300px)
+  }
+}
+
+.opp-text-swiper .swiper-slide {
+  @media(767.98px>=width) {
+    overflow: visible !important;
+  }
+}
+
+.opp-text-swiper .swiper-slide .opp-text-wrapper {
+  width: 320px;
+
+  @media (768px<=width) {
+    width: 336px;
+  }
+
+  @media (1440px<=width) {
+    width: 384px;
+  }
+}
+
+.opp-title {
+  max-width: 175px;
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+
+  @media (768px<=width) {
+    font-size: 28px;
+    line-height: 1.29;
+  }
+}
+
+.opp-text {
+  height: 120px;
+  font-family: var(--secondary-font-family);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+
+  @media (768px<=width) {
+    height: 140px;
+    font-size: 18px;
+    line-height: 1.56;
+  }
+}
+
+.opp-button-wrapper {
+  height: 40px;
+  z-index: 100;
+  position: relative;
+  display: flex;
+  gap: 17px;
+  justify-content: flex-end;
+  border-bottom: 1px solid var(--primary-text-color);
+  transform: translateX(85px);
+
+  @media (768px<=width) {
+    width: 336px;
+    transform: translateX(0);
+    margin: 0 auto;
+  }
+
+  @media (1440px<=width) {
+    width: 384px;
+  }
+}
+
+.opp-button-wrapper::after {
+  position: absolute;
+  right: 48px;
+  top: 8px;
+  content: '';
+  height: 24px;
+  width: 1px;
+  background-color: #29292933;
+}
+
+.opp-button-wrapper {
+  .opp-button {
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: transparent;
+    border: none;
+  }
+
+  .opp-icon {
+    display: inline-flex;
+    align-self: center;
+    fill: none;
+    stroke: var(--primary-text-color);
+    transition: stroke var(--transition-time) var(--transition-effect);
+  }
+
+  .opp-button:hover .opp-icon {
+    stroke: var(--accent-color);
+  }
+
+  .opp-button:active .opp-icon {
+    stroke: var(--primary-text-color);
+  }
+}
