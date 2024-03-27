@@ -13,7 +13,8 @@
     />
     
     <script type="module" crossorigin src="/english-tutor-project/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/english-tutor-project/assets/index-3b45414f.css">
+    <link rel="modulepreload" crossorigin href="/english-tutor-project/assets/vendor-34f890c2.js">
+    <link rel="stylesheet" href="/english-tutor-project/assets/index-04578594.css">
   </head>
 
   <body>
@@ -1154,10 +1155,10 @@
         <div class="reviews-button-wrapper">
           <button class="reviews-button reviews-button-prev" type="button">
             <svg class="reviews-icon" width="24" height="24">
-              <use href="/english-tutor-project/assets/icons-sprite-d2e94245.svg#reviews-arrow-left"></use>
+              <use href="/english-tutor-project/assets/icons-sprite-f1eade80.svg#reviews-arrow-left"></use>
             </svg></button><button class="reviews-button reviews-button-next" type="button">
             <svg class="reviews-icon" width="24" height="24">
-              <use href="/english-tutor-project/assets/icons-sprite-d2e94245.svg#reviews-arrow-right"></use>
+              <use href="/english-tutor-project/assets/icons-sprite-f1eade80.svg#reviews-arrow-right"></use>
             </svg>
           </button>
         </div>
@@ -1171,7 +1172,7 @@
     <div class="ih-footer-menu-container">
       <a href="./index.html" target="_self" class="ih-footer-logo" aria-label="link on main page">
         <svg class="ih-footer-icon-logo">
-          <use href="/english-tutor-project/assets/icons-sprite-d2e94245.svg#footer-icon-logo"></use>
+          <use href="/english-tutor-project/assets/icons-sprite-f1eade80.svg#footer-icon-logo"></use>
         </svg>
       </a>
       <nav id="MENU_NAV_JS" class="ih-footer-menu-nav">
@@ -1181,7 +1182,7 @@
         <a class="ih-footer-menu-item" data-lang="footer.nav.contacts" href="#contacts">КОНТАКТИ</a>
       </nav>
       <a class="ih-footer-phone" href="tel:+380501001010"><svg class="ih-icon-footer-phone">
-          <use href="/english-tutor-project/assets/icons-sprite-d2e94245.svg#icon-footer-phone"></use>
+          <use href="/english-tutor-project/assets/icons-sprite-f1eade80.svg#icon-footer-phone"></use>
         </svg>
         <span>+380501001010</span></a>
     </div>
@@ -1196,8 +1197,64 @@
   </section>
 </footer>
 
-    <div>modal</div>
-    <div>pop-up</div>
+    <div class="mdl-box">
+  <div class="mdl-flex">
+      <div class="mdl-forma">
+            <svg class="close" width="24" height="24">
+              <use class="use-close" href="../images/icons-sprite.svg#close-icon"></use>
+            </svg>
+
+            <div class="mdl-content">
+
+              <div class="thumb-title">
+                  <h2 class="title-form" data-lang="modal.title">Зв’язатися<br> зі мною</h2>
+                  <p class="paragraf-form" data-lang="modal.text">Будь ласка, заповніть форму<br> і я зв’яжуся з Вами якнайшвидше для обговорення деталей.</p>
+              </div>
+
+              <form class="forma-for-connect" novalidate>
+
+                  <label class="label-inpt" data-lang="modal.label.label1"><span data-lang="modal.label.label1">Ваше ім’я
+                    <span class="star">*</span></span>
+                      <input type="text" class="user-inpt username" name="username" placeholder="Анастасія" pattern="[a-zA-Zа-яА-ЯёЁґҐіІїЇєЄ]+" required/>
+                      <span class="error-input" style="color: var(--accent-color);" data-lang="textspan.text1">Будь ласка, введіть коректне ім’я</span>
+                  </label>
+
+                  <label class="label-inpt" data-lang="modal.label.label2"><span data-lang="modal.label.label2">Номер телефону
+                     <span class="star">*</span></span>
+                      <input type="tel" class="user-inpt phone" name="phone" placeholder="+38 000 000 00 00" pattern="\+[0-9]{11,12}" required/>
+                      <span class="error-input" style="color: var(--accent-color);" data-lang="modal.textspan.text2">Будь ласка, введіть коректний номер(+)11/12 символів</span>
+                  </label>
+
+                  <label class="label-inpt" data-lang="modal.label.label3">Формат навчання
+                      <div class="new-select">
+                          <button type="button" class="user-btn first-item-list">Оберіть варіант навчання</button>
+
+                          <ul class="list-item-select" name="education">
+                              <li class="list-item-select-opt" data-value="Individual study" data-lang="modal.formats.format1">Індивідуальне навчання</li>
+                              <li class="list-item-select-opt" data-value="Study with a friend" data-lang="modal.formats.format2">Парне навчання</li>
+                              <li class="list-item-select-opt" data-value="Groupe study" data-lang="modal.formats.format3">Групове навчання</li>
+                          </ul>
+                      </div>
+                  </label>
+
+                  <label class="label-inpt" data-lang="modal.label.label4">Коментар
+                      <textarea class="user-textarea text-com" name="comment" placeholder="Ваш коментар"></textarea>
+                  </label>
+
+                  <button class="btn-connect but-submit" type="submit" data-lang="modal.button">ВІДПРАВИТИ</button>
+
+              </form>
+            </div>
+
+            <div class="box-fb" style="display: none;">
+                <h2 class="title-feedback"></h2>
+                <p class="text-feedback p-success" data-lang=modal.textfdb.success>Ваші дані були успішно відправлені.<br>Будь ласка, очікуйте: я зв'яжуся з Вами якнайшвидше для обговорення деталей.</p>
+                <p class="text-feedback p-error" data-lang=modal.textfdb.error>На жаль, на сайті сталася помилка і Ваші дані не були відправлені. Спробуйте, будь ласка, пізніше.</p>
+            </div>
+      </div>
+  </div>
+</div>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
   </body>
