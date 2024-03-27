@@ -60,7 +60,9 @@ const renderNavigationMarkup = () => {
 renderNavigationMarkup();
 
 /* ======= smooth scroll  ======= */
-function handleScrollToSection(event) {
+const footerMenu = document.querySelector("#FOOTER_MENU_NAV_JS");
+
+export function handleScrollToSection(event) {
   if (event.target.dataset.section) {
     const sectionId = event.target.dataset.section;
     const element = document.getElementById(sectionId);
@@ -80,13 +82,18 @@ if (menuNavigation) {
   menuNavigation.addEventListener("click", handleScrollToSection);
 }
 
+if (footerMenu) {
+  footerMenu.removeEventListener("click", handleScrollToSection);
+  footerMenu.addEventListener("click", handleScrollToSection);
+}
 /* ======= select language ======= */
 
 function createCustomSelectOption(code, order) {
   return `
     <div data-value="${code}" class="ih-custom-select-option" style="
-    ${state.current === code ? "background:transparent; " : ""}order:${state.current === code ? 0 : order
-    }">${code}</div>
+    ${state.current === code ? "background:transparent; " : ""}order:${
+    state.current === code ? 0 : order
+  }">${code}</div>
 `;
 }
 
@@ -96,8 +103,8 @@ function createCustomSelect() {
             <use href="/images/ih-icons-sprite.svg#icon-switch-arrow"></use>
           </svg>
     ${ITEMS.map((code, index) => {
-    return createCustomSelectOption(code, index + 1);
-  }).join("")}
+      return createCustomSelectOption(code, index + 1);
+    }).join("")}
 
 `;
 }
@@ -105,9 +112,10 @@ function createCustomSelect() {
 function createCustomSelectSmall() {
   return `
         ${ITEMS.map((code) => {
-    return `<div data-value="${code}" class="ih-select-lang-btn${state.current === code ? " select-lang-btn-active" : ""
-      }">${code}</div>`;
-  }).join(`<svg class="ih-vertical-line">
+          return `<div data-value="${code}" class="ih-select-lang-btn${
+            state.current === code ? " select-lang-btn-active" : ""
+          }">${code}</div>`;
+        }).join(`<svg class="ih-vertical-line">
            <use href="/images/ih-icons-sprite.svg#icon-vertical-line"></use>
          </svg>`)}
 `;

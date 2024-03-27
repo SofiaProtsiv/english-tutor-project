@@ -8,35 +8,50 @@
         aria-label="link on main page"
       >
         <svg class="ih-footer-icon-logo">
-          <use href="../images/icons-sprite.svg#footer-icon-logo"></use>
+          <use href="/images/ih-icons-sprite.svg#footer-icon-logo"></use>
         </svg>
       </a>
-      <nav id="MENU_NAV_JS" class="ih-footer-menu-nav">
-        <a
+      <script>
+        document
+          .querySelector(".ih-footer-logo")
+          .addEventListener("click", function () {
+            document.location.reload();
+          });
+      </script>
+      <ul id="FOOTER_MENU_NAV_JS" class="ih-footer-menu-nav">
+        <li
           class="ih-footer-menu-item"
+          data-section="about-me"
           data-lang="footer.nav.about_me"
-          href="#about-me"
-          >ПРО МЕНЕ</a
+          type="button"
         >
-        <a
+          ПРО МЕНЕ
+        </li>
+        <li
           class="ih-footer-menu-item"
+          data-section="formats"
           data-lang="footer.nav.quote"
-          href="#quote"
-          >ВАРТІСТЬ</a
+          type="button"
         >
-        <a
+          ВАРТІСТЬ
+        </li>
+        <li
           class="ih-footer-menu-item"
+          data-section="reviews"
           data-lang="footer.nav.reviews"
-          href="#rewiews"
-          >ВІДГУКИ</a
+          type="button"
         >
-        <a
+          ВІДГУКИ
+        </li>
+        <li
           class="ih-footer-menu-item"
+          data-section="contacts"
           data-lang="footer.nav.contacts"
-          href="#contacts"
-          >КОНТАКТИ</a
+          type="button"
         >
-      </nav>
+          КОНТАКТИ
+        </li>
+      </ul>
       <a class="ih-footer-phone" href="tel:+380501001010"
         ><svg class="ih-icon-footer-phone">
           <use href="../images/icons-sprite.svg#icon-footer-phone"></use>
