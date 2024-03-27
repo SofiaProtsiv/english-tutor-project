@@ -7,7 +7,6 @@ const oppTextSwiper = new Swiper(".opp-text-swiper", {
   speed: 1800,
   slidesPerView: 1,
   centeredSlides: true,
-  initialSlide: 0,
   spaceBetween: 20,
   effect: "creative",
   creativeEffect: {
@@ -38,10 +37,9 @@ const oppImgSwiper = new Swiper(".opp-img-swiper", {
   speed: 1800,
   slidesPerView: 1,
   centeredSlides: true,
-  initialSlide: 0,
   spaceBetween: 20,
   breakpoints: {
-    704: {
+    768: {
       slidesPerView: 2,
       spaceBetween: 32,
     },
