@@ -3,7 +3,7 @@ const translations = {
     header: {
       menu: {
         about_me: "ПРО МЕНЕ",
-        quote: "ВАРТІСТЬ",
+        formats: "ВАРТІСТЬ",
         reviews: "ВІДГУКИ",
         contacts: "КОНТАКТИ",
       },
@@ -14,15 +14,28 @@ const translations = {
         "Я - вчитель, із яким ви будете активно спілкуватися, ділитися посмішками, вивчати захоплюючі теми та підвищувати рівень англійської.",
       "btn-connect": "записатися",
     },
-    "about-me": {},
-    "advice": {
-      "title": "Щоб вивчення мови було цікавим та захоплюючим",
-      "list": {
-        "list_item_1": "<b>Використовую різноманітну кількість ресурсів:</b> книги, відео, аудіоподкасти, мобільні додатки та інтерактивні вправи, щоб уникнути монотонності",
-        "list_item_2": "<b>Навчаю різноманітними методами і роблю це інтерактивно:</b> на заняттях ми практикуємо рольові ігри, діалоги, віртуальні екскурсії, дебати та імпровізації, щоб зробити навчання більш захоплюючим",
-        "list_item_3": "<b>Готую до подорожей та побутових тем:</b> розумію наскільки важливо вміти використовувати мову у реальних ситуаціях та спілкуватися з носіями мови",
-        "list_item_4": "<b>Спілкуюся та надаю менторську підтримку:</b> розуміючи запит та потенціал студента, я скеровую його для отримання оптимального результату. А інколи робота перетворюється паралельно в терапевтичну сесію. Наприклад, коли день жахливий, а поспілкуєшся з викладачем англійської і стає легше :)" 
-      }
+    "about-me": {
+      title: "Я альона — твій вчитель англійської",
+      paragraph: {
+        bold: "Сама того не розуміючи, я стала поліглотом.",
+        textOne:
+          "Я сама постійно вивчаю мови і можу спілкуватися на шістьох з них. Саморозвиток – це те, що рухає мене вперед і допомагає віднаходити сенси. Я реалізовую потенціал свого розвитку, подорожуючи світом мови, і вчу робити це своїх студентів. Кожне слово, яке ви вивчаєте, відкриває двері до нових можливостей та перспектив.",
+        textTwo:
+          "Саморозвиток через вивчення мови - це подорож у світ розширення горизонтів, розуміння власних можливостей і амбіцій, збільшення спроможності взаємодіяти з різними культурами. Відкрийте для себе нові світи через вивчення мови і перетворіть свій саморозвиток на незабутню подорож.",
+      },
+    },
+    advice: {
+      title: "Щоб вивчення мови було цікавим та захоплюючим",
+      list: {
+        list_item_1:
+          "<b>Використовую різноманітну кількість ресурсів:</b> книги, відео, аудіоподкасти, мобільні додатки та інтерактивні вправи, щоб уникнути монотонності",
+        list_item_2:
+          "<b>Навчаю різноманітними методами і роблю це інтерактивно:</b> на заняттях ми практикуємо рольові ігри, діалоги, віртуальні екскурсії, дебати та імпровізації, щоб зробити навчання більш захоплюючим",
+        list_item_3:
+          "<b>Готую до подорожей та побутових тем:</b> розумію наскільки важливо вміти використовувати мову у реальних ситуаціях та спілкуватися з носіями мови",
+        list_item_4:
+          "<b>Спілкуюся та надаю менторську підтримку:</b> розуміючи запит та потенціал студента, я скеровую його для отримання оптимального результату. А інколи робота перетворюється паралельно в терапевтичну сесію. Наприклад, коли день жахливий, а поспілкуєшся з викладачем англійської і стає легше :)",
+      },
     },
     quote: {},
     opportunities: {},
@@ -83,9 +96,45 @@ const translations = {
     modal: {},
     "pop-up": {},
     formats: {
-      title: "German title",
+      title: "Формати навчання",
+      types: {
+        format1: {
+          title: "Індивідуальне навчання",
+          text: "Формат навчання для тих, хто шукає персоналізований підхід та максимальну увагу вчителя. Заняття в індивідуальному форматі дозволяють адаптувати матеріали та теми до конкретних потреб та темпу вивчення кожного учня.",
+          duration: {
+            duration1: "30хв",
+            duration2: "45хв",
+            duration3: "60хв",
+          },
+          prices: {
+            price1: "від $10",
+            price2: "від $15",
+            price3: "від $18",
+          },
+        },
+        format2: {
+          title: "Парні заняття",
+          text: "Парне навчання — ідеальний спосіб сприяти взаємодопомозі та взаємному навчанню. Учасники можуть практикуватися та взаємно мотивувати один одного. Цей формат сприяє підтримці та створенню дружби на шляху вивчення мови.",
+          duration: {
+            duration1: "30хв",
+            duration2: "45хв",
+            duration3: "60хв",
+          },
+          prices: {
+            price1: "від $15",
+            price2: "від $18",
+            price3: "від $20",
+          },
+        },
+        format3: {
+          title: "Групові заняття",
+          text: "Групове навчання — це відмінний спосіб занурення в англійську мову. Заняття в групі дозволяють взаємодіяти з різними персонами, обмінюватися ідеями та розвивати навички спілкування в різних ситуаціях.",
+          duration: "60хв",
+          price: "від 400 грн",
+        },
+      },
       button: {
-        test: "Зписатися",
+        text: "Записатися",
       },
     },
   },
@@ -93,7 +142,7 @@ const translations = {
     header: {
       menu: {
         about_me: "ABOUT ME",
-        quote: "QUOTE",
+        formats: "PRICE",
         reviews: "REVIEWS",
         contacts: "CONTACTS",
       },
@@ -104,15 +153,28 @@ const translations = {
         "I am a teacher with whom you will actively communicate, share smiles, learn exciting topics and improve your English.",
       "btn-connect": "sign up",
     },
-    "about-me": {},
-    "advice": {
-      "title": "Language learning should be an interesting and exciting",
-      "list": {
-        "list_item_1": "<b>Use a variety of resources:</b> books, videos, audio podcasts, mobile applications and interactive exercises to avoid monotony",
-        "list_item_2": "<b>Teach in a variety of ways and do it interactively:</b> in classes we practice role-playing, dialogues, virtual tours, debates and improvisations to make learning more exciting",
-        "list_item_3": "<b>Preparing for travel and everyday topics:</b> I understand how important it is to be able to use the language in real situations and communicate with native speakers",
-        "list_item_4": "<b>I communicate and provide mentoring support:</b> understanding the student's request and potential, I guide him to obtain an optimal result. And sometimes the work turns into a therapy session in parallel. For example, when the day is terrible, but you talk to the English teacher and it becomes easier. This is proved by my students :)"
-      }
+    "about-me": {
+      title: "I am Alyona - yours English teacher",
+      paragraph: {
+        bold: "Without even thinking of it, I became a polyglot",
+        textOne:
+          "I constantly study languages and can communicate in six of them. Self-development is what moves me forward and helps me find meaning. I realized the potential of my development by traveling the world of language, and I teach my students to do the same. Every word you learn opens the door to new possibilities and perspectives.",
+        textTwo:
+          "Self-development through language learning is a journey into the world of expanding horizons, understanding one's own capabilities and ambitions, and increasing the ability to interact with different cultures. Discover new worlds through language learning and turn your self-development into an unforgettable journey.",
+      },
+    },
+    advice: {
+      title: "Language learning should be an interesting and exciting",
+      list: {
+        list_item_1:
+          "<b>Use a variety of resources:</b> books, videos, audio podcasts, mobile applications and interactive exercises to avoid monotony",
+        list_item_2:
+          "<b>Teach in a variety of ways and do it interactively:</b> in classes we practice role-playing, dialogues, virtual tours, debates and improvisations to make learning more exciting",
+        list_item_3:
+          "<b>Preparing for travel and everyday topics:</b> I understand how important it is to be able to use the language in real situations and communicate with native speakers",
+        list_item_4:
+          "<b>I communicate and provide mentoring support:</b> understanding the student's request and potential, I guide him to obtain an optimal result. And sometimes the work turns into a therapy session in parallel. For example, when the day is terrible, but you talk to the English teacher and it becomes easier. This is proved by my students :)",
+      },
     },
     quote: {},
     opportunities: {},
@@ -173,9 +235,45 @@ const translations = {
     modal: {},
     "pop-up": {},
     formats: {
-      title: "Formats studing",
+      title: "Studying formats",
+      types: {
+        format1: {
+          title: "Individual lessons",
+          text: "Study format for those looking for a personalized approach and maximum teacher attention. Lessons in an individual format allow you to adapt materials and topics to the specific needs and learning pace of each student.",
+          duration: {
+            duration1: "30min",
+            duration2: "45min",
+            duration3: "60min",
+          },
+          prices: {
+            price1: "from $10",
+            price2: "from $15",
+            price3: "from $18",
+          },
+        },
+        format2: {
+          title: "Pair lessons",
+          text: "Peer learning is an ideal way to promote mutual support and mutual learning. Participants can practice and mutually motivate each other. This format helps to maintain and build friendships on the language learning journey.",
+          duration: {
+            duration1: "30min",
+            duration2: "45min",
+            duration3: "60min",
+          },
+          prices: {
+            price1: "from $15",
+            price2: "from $18",
+            price3: "from $20",
+          },
+        },
+        format3: {
+          title: "Group lessons",
+          text: "Group study is a great way to immerse yourself in the English language. Group classes allow you to interact with different people, exchange ideas and develop communication skills in different situations.",
+          duration: "60min",
+          price: "from 400 grn",
+        },
+      },
       button: {
-        test: "Lessons!!!",
+        text: "Sign up",
       },
     },
   },
