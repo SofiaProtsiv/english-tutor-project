@@ -90,6 +90,7 @@ body::-webkit-scrollbar-track {
   -webkit-transition: -webkit-filter var(--transition-time)
     var(--transition-effect);
   transition: filter var(--transition-time) var(--transition-effect);
+  color: var(--primary-text-color);
 }
 
 .btn-connect:hover {
