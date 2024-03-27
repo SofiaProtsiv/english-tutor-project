@@ -123,6 +123,14 @@ const translations = {
         text: "Записатися",
       },
     },
+    footer: {
+      nav: {
+        about_me: "ПРО МЕНЕ",
+        quote: "ВАРТІСТЬ",
+        reviews: "ВІДГУКИ",
+        contacts: "КОНТАКТИ",
+      },
+    },
   },
   en: {
     header: {
@@ -242,6 +250,14 @@ const translations = {
       },
       button: {
         text: "Sign up",
+      },
+    },
+    footer: {
+      nav: {
+        about_me: "ABOUT ME",
+        quote: "QUOTE",
+        reviews: "REVIEWS",
+        contacts: "CONTACTS",
       },
     },
   },
