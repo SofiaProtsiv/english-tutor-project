@@ -1,35 +1,41 @@
 import { localizeElements } from "./localization";
 import translations from "../assets/translations";
 const header = document.querySelector("#HEADER_JS");
+const ITEMS = Object.keys(translations);
+const state = { current: "" };
 
 /* ======= set geolocation language ======= */
 
 const setGeolocationLanguage = () => {
-  if (navigator.geolocation) {
+  const storedLang = localStorage.getItem("lang");
+
+  if (storedLang && storedLang !== state.current) {
+    state.current = storedLang;
+    localizeElements(storedLang);
+    return;
+  }
+
+  if (!storedLang && navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function (position) {
       var latitude = position.coords.latitude;
       var longitude = position.coords.longitude;
-
       var geocodingUrl =
         "https://nominatim.openstreetmap.org/reverse?format=json&lat=" +
         latitude +
         "&lon=" +
         longitude;
-
       fetch(geocodingUrl)
         .then((response) => response.json())
         .then((data) => {
           if (data.address) {
-            var country = data.address.country;
-            if (country === "Ukraine") {
-              localStorage.setItem("lang", "ua");
-              renderCustomSelectSmall();
-              renderCustomSelect();
-            } else {
-              localStorage.setItem("lang", "en");
-              renderCustomSelectSmall();
-              renderCustomSelect();
+            const code = data.address.country_code;
+            if (ITEMS.includes(code)) {
+              localStorage.setItem("lang", code);
+              localizeElements(code);
+              return;
             }
+            localStorage.setItem("lang", "en");
+            localizeElements("en");
           }
         })
         .catch((error) => {
@@ -37,6 +43,7 @@ const setGeolocationLanguage = () => {
         });
     });
   }
+  return;
 };
 
 setGeolocationLanguage();
@@ -47,7 +54,9 @@ const menuButton = document.querySelector("#HEADER_MENU_JS");
 
 if (menuButton) {
   menuButton.addEventListener("click", () => {
-    header.classList.toggle("ih-header-menu-open");
+    menuButton.addEventListener("click", () => {
+      header.classList.toggle("ih-header-menu-open");
+    });
   });
 }
 
@@ -55,9 +64,11 @@ const menuNav = document.querySelector("#MENU_NAV_JS");
 
 if (menuNav) {
   menuNav.addEventListener("click", (event) => {
-    if (event.target.tagName === "A") {
-      header.classList.remove("ih-header-menu-open");
-    }
+    menuNav.addEventListener("click", (event) => {
+      if (event.target.tagName === "A") {
+        header.classList.remove("ih-header-menu-open");
+      }
+    });
   });
 }
 
@@ -93,28 +104,30 @@ renderNavigationMarkup();
 
 if (menuNavigation) {
   menuNavigation.addEventListener("click", (event) => {
-    if (event.target.dataset.section) {
-      const sectionId = event.target.dataset.section;
-      const element = document.getElementById(sectionId);
-      console.log(event.target.dataset.section);
-      if (element) {
-        element.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-          inline: "nearest",
-        });
-        header.classList.remove("ih-header-menu-open");
+    menuNavigation.addEventListener("click", (event) => {
+      if (event.target.dataset.section) {
+        const sectionId = event.target.dataset.section;
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+            block: "start",
+            inline: "nearest",
+          });
+          header.classList.remove("ih-header-menu-open");
+          header.classList.remove("ih-header-menu-open");
+        }
       }
-    }
+    });
   });
 }
 
 /* ======= select language ======= */
+/* ======= select language ======= */
 
 const selectEl = document.querySelector("#CUSTOM_SELECT_JS");
 const selectSmallEl = document.querySelector("#CUSTOM_SELECT_SMALL_JS");
-const ITEMS = Object.keys(translations);
-const state = { current: ITEMS[0] };
 
 const createCustomSelectOption = (code, order) => {
   return `
@@ -152,11 +165,15 @@ const createCustomSelectSmall = () => {
 const renderCustomSelect = () => {
   if (selectEl) {
     const storedLang = localStorage.getItem("lang");
+    localizeElements(storedLang);
+    // if (!storedLang) {
+    //   setGeolocationLanguage();
+    // }
 
-    if (storedLang && storedLang !== state.current) {
-      state.current = storedLang;
-      localizeElements(storedLang);
-    }
+    // if (storedLang && storedLang !== state.current) {
+    //   state.current = storedLang;
+    //   localizeElements(storedLang);
+    // }
 
     selectEl.innerHTML = createCustomSelect();
 
@@ -166,6 +183,7 @@ const renderCustomSelect = () => {
 
       if (newCurrentLang && newCurrentLang !== state.current) {
         state.current = newCurrentLang;
+        localStorage.setItem("lang", newCurrentLang);
         localStorage.setItem("lang", newCurrentLang);
         localizeElements(newCurrentLang);
         selectEl.innerHTML = createCustomSelect();
@@ -177,22 +195,29 @@ const renderCustomSelect = () => {
 const renderCustomSelectSmall = () => {
   if (selectSmallEl) {
     const storedLang = localStorage.getItem("lang");
+    localizeElements(storedLang);
+    // if (!storedLang) {
+    //   setGeolocationLanguage();
+    // }
 
-    if (storedLang && storedLang !== state.current) {
-      state.current = storedLang;
-      localizeElements(storedLang);
-    }
+    // if (storedLang && storedLang !== state.current) {
+    //   state.current = storedLang;
+    //   localizeElements(storedLang);
+    // }
 
     selectSmallEl.innerHTML = createCustomSelectSmall();
     selectSmallEl.addEventListener("click", (e) => {
-      const newCurrentLang = e.target.dataset.value;
+      selectSmallEl.addEventListener("click", (e) => {
+        const newCurrentLang = e.target.dataset.value;
 
-      if (newCurrentLang && newCurrentLang !== state.current) {
-        state.current = newCurrentLang;
-        localStorage.setItem("lang", newCurrentLang);
-        localizeElements(newCurrentLang);
-        selectSmallEl.innerHTML = createCustomSelectSmall();
-      }
+        if (newCurrentLang && newCurrentLang !== state.current) {
+          state.current = newCurrentLang;
+          localStorage.setItem("lang", newCurrentLang);
+          localStorage.setItem("lang", newCurrentLang);
+          localizeElements(newCurrentLang);
+          selectSmallEl.innerHTML = createCustomSelectSmall();
+        }
+      });
     });
   }
 };
