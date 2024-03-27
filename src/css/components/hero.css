@@ -237,6 +237,7 @@
   color: var(--primary-text-color);
   padding: 5px 0px;
   margin-left: 20px;
+  transition: var(--transition-time) var(--transition-effect);
 
   @media screen and (max-width: 359px) {
     font-size:small ;
