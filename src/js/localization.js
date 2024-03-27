@@ -17,6 +17,3 @@ export function localizeElements(LANG) {
     }
   });
 }
-
-// <h1 data-lang="formats.title"></h1>
-// <button data-lang="formats.button.test"></button>

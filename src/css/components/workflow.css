@@ -7,7 +7,7 @@
 .workflow-content {
   @media (768px<=width) {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 32px;
   }
 
@@ -25,25 +25,48 @@
   }
 }
 
-.workflow-list-item {
-  margin-bottom: 24px;
+.workflow-content-list {
+  @media (768px<=width) {
+    width: calc(100% - 288px - 32px);
+  }
+  @media (1440px<=width) {
+    width: calc(100% - 488px - 72px);
+  }
 }
 
-.workflow-list-item:last-child {
-  margin-bottom: 0;
+.workflow-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  height: 100%;
+}
+
+.workflow-list-item {
+  position: relative;
+  padding-top: 32px;
+  @media (768px<=width) {
+    padding-top: 52px;
+  }
 }
 
 .points-numbers {
+  position: absolute;
+  top: 0;
+  left: 0;
   font-family: var(--accent-font-family);
   font-weight: 400;
   font-size: 52px;
-  line-height: 0.2;
+  line-height: 0.8;
   letter-spacing: 0.02em;
   text-align: left;
   color: var(--accent-color);
   @media (768px<=width) {
     font-size: 96px;
-    line-height: 0.52;
+    line-height: 0.79;
+  }
+  @media (1440px<=width) {
   }
 }
 
@@ -59,7 +82,7 @@
     margin-bottom: 16px;
     padding-left: 80px;
     font-size: 28px;
-    line-height: 1;
+    line-height: 1.28;
   }
 }
 
