@@ -75,6 +75,18 @@ const translations = {
       fourthArticle:
         "Розуміння того, що вивчення мови — це процес, що вимагає часу та наполегливості.",
     },
+    "assessment": {
+      "section": {
+        "container": {
+          "subtitle": "By the way!",
+          "title": "А хочеш дізнатися, який у тебе рівень?",
+          "content": {
+            "text": "Під час пробного заняття я даю фідбек щодо наявного рівня володіння мовою, а також раджу як його покращити.",
+            "button": "Написати"
+          }
+        }
+      }
+    },
     "workflow": {
       "section": {
         "container": {
@@ -111,7 +123,6 @@ const translations = {
         }
       }
     },
-    assessment: {},
     reviews: {},
     footer: {},
     modal: {},
@@ -229,6 +240,18 @@ const translations = {
       fourthArticle:
         "Understanding that learning a language is a process that requires time and perseverance.",
     },
+    "assessment": {
+      "section": {
+        "container": {
+          "subtitle": "By the way!",
+          "title": "?",
+          "content": {
+            "text": ".",
+            "button": ""
+          }
+        }
+      }
+    },
     "workflow": {
       "section": {
         "container": {
@@ -265,7 +288,6 @@ const translations = {
         }
       }
     },
-    assessment: {},
     reviews: {},
     footer: {},
     modal: {},
