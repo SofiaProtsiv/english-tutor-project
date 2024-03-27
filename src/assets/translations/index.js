@@ -52,7 +52,7 @@ const translations = {
           "Англійська — глобальна мова спілкування, яка допомагає у комунікації між людьми з різних лінгвістичних груп.",
         career:
           "Більшість міжнародних компаній використовують англійську як основну мову для спілкування. Тому її знання може відкрити для вас нові кар’єрні перспективи.",
-        edu: "Вивчення англійської дозволяє отримати доступ до більшої кількості інформації, досліджень та освітніх ресурсів, які часто доступні саме цією мовою.Можливості освіти",
+        edu: "Вивчення англійської дозволяє отримати доступ до більшої кількості інформації, досліджень та освітніх ресурсів, які часто доступні саме цією мовою.",
         culture:
           "Володіння англійською сприяє культурному обміну та взаєморозумінню між людьми з різних куточків нашої планети.",
         tech: "Англійська також є домінуючою в галузі технологій та Інтернету. Її знання важливе у відслідковуванні технологічних інновацій та активній участі в них.",
@@ -75,6 +75,43 @@ const translations = {
       fourthArticle:
         "Розуміння того, що вивчення мови — це процес, що вимагає часу та наполегливості.",
     },
+    assessment: {
+      subtitle: "By the way!",
+      title: "А хочеш дізнатися, який у тебе рівень?",
+      content: {
+        text: "Під час пробного заняття я даю фідбек щодо наявного рівня володіння мовою, а також раджу як його покращити.",
+        button: "Написати",
+      },
+    },
+    workflow: {
+      title: "Як ми будемо працювати",
+      "content-list": {
+        item1: {
+          title: "Оцінюємо",
+          list: {
+            item1: "ваш поточний рівень",
+            item2: "ваші сильні та слабкі сторони",
+            item3: "ваші потреби",
+          },
+        },
+        item2: {
+          title: "Ви отримуєте",
+          list: {
+            item1: "індивідуальний план навчання з урахуванням вашого запиту",
+            item2: "необхідні онлайн-матеріали",
+            item3: "підтримку та розвиток ваших здібностей та скілів",
+          },
+        },
+        item3: {
+          title: "Результат",
+          list: {
+            item1: "задоволення від навчання",
+            item2: "впевненість у володінні мовою",
+          },
+        },
+      },
+    },
+    reviews: {},
     workflow: {},
     assessment: {},
     reviews: {
@@ -87,45 +124,78 @@ const translations = {
         "Хочу поділитися своїм досвідом. Займаючись з Альоною, всього за два місяці я подолала свій мовний бар'єр, значно покращила свої знання, вимову та отримала офер на роботі своєї мріі. Я була приємно здивована, наскільки легко, інтерактивно та захопливо проходять уроки. Маючи досвід навчання в інших місцях, я не могла навіть уявити, що навчання може бути таким легким та комфортним. Особливо хочу відзначити Альону як особистість та професіонала, яка неодмінно допоможе досягнути поставленої мети. Звісно, багато чого залежить від власного бажання та наполегливості, але з таким наставником, як Альона, процес навчання перетворюється і справді в цікавий процес, де з кожним днем ти стаєш краще. Домашні завдання – це окрема любов. Альона підбирає завдання під твої інтереси, дає прикольні відео для просмотру. Готує круті топики для discussion. Є багато корисної і необхідної інформації під конкретний запит. Тому всім рекомендую спробувати та змінити своє життя, тому що англійська відкриває нові горизонти. 💖",
     },
     footer: {},
-    modal: {},
-    "pop-up": {},
+    modal: {
+      title: "Зв’язатися зі мною",
+      text: "Будь ласка, заповніть форму і я зв’яжуся з Вами якнайшвидше для обговорення деталей.",
+      label: {
+        label1: `<span>Ваше ім’я
+          <span class="star">*</span></span>
+          <input type="text" class="user-inpt username" name="username" placeholder="Анастасія" pattern="[a-zA-Zа-яА-ЯёЁґҐіІїЇєЄ]+" required/>
+          <span class="error-input" style="color: var(--accent-color);">Будь ласка, введіть коректне ім’я</span>`,
+        label2: `<span>Номер телефону
+         <span class="star">*</span></span>
+         <input type="tel" class="user-inpt phone" name="phone" placeholder="+38 000 000 00 00" pattern="\\+[0-9]{11,12}" required/>
+         <span class="error-input" style="color: var(--accent-color);">Будь ласка, введіть коректний номер(+)11/12 символів</span>`,
+        label3: `Формат навчання<div class="new-select">
+        <button type="button" class="user-btn first-item-list">Оберіть варіант навчання</button>
+
+        <ul class="list-item-select" name="education">
+            <li class="list-item-select-opt" data-value="Individual study">Індивідуальне навчання</li>
+            <li class="list-item-select-opt" data-value="Study with a friend">Парне навчання</li>
+            <li class="list-item-select-opt" data-value="Groupe study">Групове навчання</li>
+        </ul>
+        </div>`,
+        label4: `Коментар<textarea class="user-textarea text-com" name="comment" placeholder="Ваш коментар"></textarea>`,
+      },
+      textspan: {
+        text1: "Будь ласка, введіть коректне ім’я",
+        text2: "Будь ласка, введіть коректний номер(+)11/12 символів",
+      },
+      button: "ВІДПРАВИТИ",
+      placeholder: {
+        placeholder1: "Анастасія",
+        placeholder2: "Оберіть варіант навчання",
+        placeholder3: "Ваш коментар",
+      },
+      textfdb: {
+        success:
+          "Ваші дані були успішно відправлені.<br> Будь ласка, очікуйте: я зв'яжуся з Вами якнайшвидше для обговорення деталей.",
+        error:
+          "На жаль, на сайті сталася помилка і Ваші дані не були відправлені. Спробуйте, будь ласка, пізніше.",
+      },
+      formats: {
+        format1: "Індивідуальне навчання",
+        format2: "Парне навчання",
+        format3: "Групове навчання",
+      },
+    },
     formats: {
       title: "Формати навчання",
-      types: {
-        format1: {
-          title: "Індивідуальне навчання",
-          text: "Формат навчання для тих, хто шукає персоналізований підхід та максимальну увагу вчителя. Заняття в індивідуальному форматі дозволяють адаптувати матеріали та теми до конкретних потреб та темпу вивчення кожного учня.",
-          duration: {
-            duration1: "30хв",
-            duration2: "45хв",
-            duration3: "60хв",
-          },
-          prices: {
-            price1: "від $10",
-            price2: "від $15",
-            price3: "від $18",
-          },
-        },
-        format2: {
-          title: "Парні заняття",
-          text: "Парне навчання — ідеальний спосіб сприяти взаємодопомозі та взаємному навчанню. Учасники можуть практикуватися та взаємно мотивувати один одного. Цей формат сприяє підтримці та створенню дружби на шляху вивчення мови.",
-          duration: {
-            duration1: "30хв",
-            duration2: "45хв",
-            duration3: "60хв",
-          },
-          prices: {
-            price1: "від $15",
-            price2: "від $18",
-            price3: "від $20",
-          },
-        },
-        format3: {
-          title: "Групові заняття",
-          text: "Групове навчання — це відмінний спосіб занурення в англійську мову. Заняття в групі дозволяють взаємодіяти з різними персонами, обмінюватися ідеями та розвивати навички спілкування в різних ситуаціях.",
-          duration: "60хв",
-          price: "від 400 грн",
-        },
+      format1: {
+        title: "Індивідуальне навчання",
+        text: "Формат навчання для тих, хто шукає персоналізований підхід та максимальну увагу вчителя. Заняття в індивідуальному форматі дозволяють адаптувати матеріали та теми до конкретних потреб та темпу вивчення кожного учня.",
+        duration1: "30хв",
+        duration2: "45хв",
+        duration3: "60хв",
+        price1: "від $10",
+        price2: "від $15",
+        price3: "від $18",
+      },
+      format2: {
+        title: "Парні заняття",
+        text: "Парне навчання — ідеальний спосіб сприяти взаємодопомозі та взаємному навчанню. Учасники можуть практикуватися та взаємно мотивувати один одного. Цей формат сприяє підтримці та створенню дружби на шляху вивчення мови.",
+        duration1: "30хв",
+        duration2: "45хв",
+        duration3: "60хв",
+        price1: "від $15",
+        price2: "від $18",
+        price3: "від $20",
+      },
+      format3: {
+        title: "Групові заняття",
+        text: "Групове навчання — це відмінний спосіб занурення в англійську мову. Заняття в групі дозволяють взаємодіяти з різними персонами, обмінюватися ідеями та розвивати навички спілкування в різних ситуаціях.",
+        duration: "60хв",
+        price: "від $10",
       },
       button: {
         text: "Записатися",
@@ -181,12 +251,12 @@ const translations = {
     quote: {},
     opportunities: {
       title: {
-        global: "",
-        career: "",
-        edu: "",
-        culture: "",
-        tech: "",
-        travel: "",
+        global: "Global communication",
+        career: "Career opportunities",
+        edu: "Educational opportunities",
+        culture: "Cultural exchange",
+        tech: "Technological achievements",
+        travel: "Travel<br/> and tourism",
       },
       text: {
         global: "",
@@ -212,6 +282,43 @@ const translations = {
       fourthArticle:
         "Understanding that learning a language is a process that requires time and perseverance.",
     },
+    assessment: {
+      subtitle: "By the way!",
+      title: "?",
+      content: {
+        text: ".",
+        button: "",
+      },
+    },
+    workflow: {
+      title: "",
+      "content-list": {
+        item1: {
+          title: "",
+          list: {
+            item1: "",
+            item2: "",
+            item3: "",
+          },
+        },
+        item2: {
+          title: "",
+          list: {
+            item1: "",
+            item2: "",
+            item3: "",
+          },
+        },
+        item3: {
+          title: "",
+          list: {
+            item1: "",
+            item2: "",
+          },
+        },
+      },
+    },
+    reviews: {},
     workflow: {},
     assessment: {},
     reviews: {
@@ -224,45 +331,65 @@ const translations = {
         "I want to share my experience. Studying with Alyona, in just two months, I overcame my language barrier, significantly improved my knowledge, pronunciation, and even received a job offer of my dreams. I was pleasantly surprised by how easy, interactive, and engaging the lessons were. Having experienced learning in other settings, I couldn't even imagine that studying could be this effortless and comfortable. I particularly want to highlight Alyona as an individual and a professional who will undoubtedly help you achieve your goal. Of course, a lot depends on your own desire and perseverance, but with a mentor like Alyona, the learning process truly becomes an interesting journey, where you become better with each day. Homework is a separate joy. Alyona tailors tasks to your interests, provides cool videos for viewing, and prepares great topics for discussion. There's a lot of useful and necessary information for specific inquiries. So, I recommend everyone to try and change their lives because English opens new horizons. 💖",
     },
     footer: {},
-    modal: {},
-    "pop-up": {},
+    modal: {
+      title: "Contact with me",
+      text: "Please fill out the form and I will contact you as soon as possible to discuss the details.",
+      label: {
+        label1: `<span>Your name
+        <span class="star">*</span></span>
+        <input type="text" class="user-inpt username" name="username" placeholder="Anastasia" pattern="[a-zA-Zа-яА-ЯёЁґҐіІїЇєЄ]+" required/>
+        <span class="error-input" style="color: var(--accent-color);">Please enter a valid name</span>`,
+        label2: `<span>Phone number
+        <span class="star">*</span></span>
+        <input type="tel" class="user-inpt phone" name="phone" placeholder="+38 000 000 00 00" pattern="\\+[0-9]{11,12}" required/>
+        <span class="error-input" style="color: var(--accent-color);">Please enter the correct number(+)11/12 characters</span>`,
+        label3: `Format study
+        <div class="new-select">
+        <button type="button" class="user-btn first-item-list">Choose a format study</button>
+
+        <ul class="list-item-select" name="education">
+            <li class="list-item-select-opt" data-value="Individual study">Individual study</li>
+            <li class="list-item-select-opt" data-value="Study with a friend">Study with a friend</li>
+            <li class="list-item-select-opt" data-value="Groupe study">Groupe study</li>
+        </ul>
+        </div>`,
+        label4: `Comment<textarea class="user-textarea text-com" name="comment" placeholder="Your comment"></textarea>`,
+      },
+      button: "Send",
+      textfdb: {
+        success:
+          "Your details have been sent successfully.<br> Please expect me to contact you as soon as possible to discuss the details.",
+        error:
+          "Unfortunately, there was an error on the site and your data was not sent. Please try again later.",
+      },
+    },
     formats: {
       title: "Studying formats",
-      types: {
-        format1: {
-          title: "Individual lessons",
-          text: "Study format for those looking for a personalized approach and maximum teacher attention. Lessons in an individual format allow you to adapt materials and topics to the specific needs and learning pace of each student.",
-          duration: {
-            duration1: "30min",
-            duration2: "45min",
-            duration3: "60min",
-          },
-          prices: {
-            price1: "from $10",
-            price2: "from $15",
-            price3: "from $18",
-          },
-        },
-        format2: {
-          title: "Pair lessons",
-          text: "Peer learning is an ideal way to promote mutual support and mutual learning. Participants can practice and mutually motivate each other. This format helps to maintain and build friendships on the language learning journey.",
-          duration: {
-            duration1: "30min",
-            duration2: "45min",
-            duration3: "60min",
-          },
-          prices: {
-            price1: "from $15",
-            price2: "from $18",
-            price3: "from $20",
-          },
-        },
-        format3: {
-          title: "Group lessons",
-          text: "Group study is a great way to immerse yourself in the English language. Group classes allow you to interact with different people, exchange ideas and develop communication skills in different situations.",
-          duration: "60min",
-          price: "from 400 grn",
-        },
+      format1: {
+        title: "Individual lessons",
+        text: "Study format for those looking for a personalized approach and maximum teacher attention. Lessons in an individual format allow you to adapt materials and topics to the specific needs and learning pace of each student.",
+        duration1: "30min",
+        duration2: "45min",
+        duration3: "60min",
+        price1: "from $10",
+        price2: "from $15",
+        price3: "from $18",
+      },
+      format2: {
+        title: "Pair lessons",
+        text: "Peer learning is an ideal way to promote mutual support and mutual learning. Participants can practice and mutually motivate each other. This format helps to maintain and build friendships on the language learning journey.",
+        duration1: "30min",
+        duration2: "45min",
+        duration3: "60min",
+        price1: "from $15",
+        price2: "from $18",
+        price3: "from $20",
+      },
+      format3: {
+        title: "Group lessons",
+        text: "Group study is a great way to immerse yourself in the English language. Group classes allow you to interact with different people, exchange ideas and develop communication skills in different situations.",
+        duration: "60min",
+        price: "from $10",
       },
       button: {
         text: "Sign up",
