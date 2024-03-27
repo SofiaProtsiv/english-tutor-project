@@ -120,10 +120,10 @@
   height: 96px;
   text-transform: uppercase;
   margin: 108px 60px;
-  border: none;
-  background: none;
+  background-color: transparent;
   cursor: pointer;
   background-image: url(../../images/hero/Vector.png);
+  color: var(--primary-text-color);
   background-repeat: no-repeat;
   background-size: contain;
 
