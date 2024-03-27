@@ -1,4 +1,16 @@
 /* ============= IMG_SWIPER  ================ */
+.opp-section {
+  height: 812px;
+
+  @media (768px<=width) {
+    height: 600px;
+  }
+
+  @media (1440px<=width) {
+    height: 840px;
+  }
+}
+
 .opp-img-swiper {
   height: 380px;
   margin-bottom: 32px;
@@ -96,11 +108,13 @@
 .opp-text-swiper {
   height: 272px;
   display: flex;
-  /*Якщо swiper буде підключений через npm, цей flex має бути !important*/
   flex-direction: column;
   justify-content: space-between;
-  overflow: visible !important;
   transform: translateX(-85px);
+
+  @media(767.98px>=width) {
+    overflow: visible !important;
+  }
 
   @media (768px<=width) {
     height: 300px;
@@ -113,7 +127,9 @@
 }
 
 .opp-text-swiper .swiper-slide {
-  overflow: visible !important;
+  @media(767.98px>=width) {
+    overflow: visible !important;
+  }
 }
 
 .opp-text-swiper .swiper-slide .opp-text-wrapper {
