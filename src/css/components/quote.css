@@ -56,15 +56,3 @@
     }
 }
 
-.quote-text-string {
-    @media (768px<=width) {
-        padding-right: 180px;
-        padding-left: 93px;
-        letter-spacing: 0.015em;
-    }
-
-    @media (1440px<=width) {
-        padding-right: 0;
-        padding-left: 0;
-    }
-}
