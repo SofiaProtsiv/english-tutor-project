@@ -86,6 +86,7 @@
   @media (768px<=width) {
     gap: 24px;
     padding-left: 32px;
+    margin-top: 56px;
   }
 
   @media (1440px<=width) {
@@ -127,6 +128,10 @@
 }
 
 .position-desc {
+  margin-top: 0;
+  @media (768px<=width) {
+    margin-top: 0;
+  }
   @media (1440px<=width) {
     align-items: flex-end;
     height: 364px;
