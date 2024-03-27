@@ -118,41 +118,31 @@ const translations = {
     "pop-up": {},
     formats: {
       title: "Формати навчання",
-      types: {
-        format1: {
-          title: "Індивідуальне навчання",
-          text: "Формат навчання для тих, хто шукає персоналізований підхід та максимальну увагу вчителя. Заняття в індивідуальному форматі дозволяють адаптувати матеріали та теми до конкретних потреб та темпу вивчення кожного учня.",
-          duration: {
-            duration1: "30хв",
-            duration2: "45хв",
-            duration3: "60хв",
-          },
-          prices: {
-            price1: "від $10",
-            price2: "від $15",
-            price3: "від $18",
-          },
-        },
-        format2: {
-          title: "Парні заняття",
-          text: "Парне навчання — ідеальний спосіб сприяти взаємодопомозі та взаємному навчанню. Учасники можуть практикуватися та взаємно мотивувати один одного. Цей формат сприяє підтримці та створенню дружби на шляху вивчення мови.",
-          duration: {
-            duration1: "30хв",
-            duration2: "45хв",
-            duration3: "60хв",
-          },
-          prices: {
-            price1: "від $15",
-            price2: "від $18",
-            price3: "від $20",
-          },
-        },
-        format3: {
-          title: "Групові заняття",
-          text: "Групове навчання — це відмінний спосіб занурення в англійську мову. Заняття в групі дозволяють взаємодіяти з різними персонами, обмінюватися ідеями та розвивати навички спілкування в різних ситуаціях.",
-          duration: "60хв",
-          price: "від 400 грн",
-        },
+      format1: {
+        title: "Індивідуальне навчання",
+        text: "Формат навчання для тих, хто шукає персоналізований підхід та максимальну увагу вчителя. Заняття в індивідуальному форматі дозволяють адаптувати матеріали та теми до конкретних потреб та темпу вивчення кожного учня.",
+        duration1: "30хв",
+        duration2: "45хв",
+        duration3: "60хв",
+        price1: "від $10",
+        price2: "від $15",
+        price3: "від $18",
+      },
+      format2: {
+        title: "Парні заняття",
+        text: "Парне навчання — ідеальний спосіб сприяти взаємодопомозі та взаємному навчанню. Учасники можуть практикуватися та взаємно мотивувати один одного. Цей формат сприяє підтримці та створенню дружби на шляху вивчення мови.",
+        duration1: "30хв",
+        duration2: "45хв",
+        duration3: "60хв",
+        price1: "від $15",
+        price2: "від $18",
+        price3: "від $20",
+      },
+      format3: {
+        title: "Групові заняття",
+        text: "Групове навчання — це відмінний спосіб занурення в англійську мову. Заняття в групі дозволяють взаємодіяти з різними персонами, обмінюватися ідеями та розвивати навички спілкування в різних ситуаціях.",
+        duration: "60хв",
+        price: "від $10",
       },
       button: {
         text: "Записатися",
@@ -282,41 +272,31 @@ const translations = {
     "pop-up": {},
     formats: {
       title: "Studying formats",
-      types: {
-        format1: {
-          title: "Individual lessons",
-          text: "Study format for those looking for a personalized approach and maximum teacher attention. Lessons in an individual format allow you to adapt materials and topics to the specific needs and learning pace of each student.",
-          duration: {
-            duration1: "30min",
-            duration2: "45min",
-            duration3: "60min",
-          },
-          prices: {
-            price1: "from $10",
-            price2: "from $15",
-            price3: "from $18",
-          },
-        },
-        format2: {
-          title: "Pair lessons",
-          text: "Peer learning is an ideal way to promote mutual support and mutual learning. Participants can practice and mutually motivate each other. This format helps to maintain and build friendships on the language learning journey.",
-          duration: {
-            duration1: "30min",
-            duration2: "45min",
-            duration3: "60min",
-          },
-          prices: {
-            price1: "from $15",
-            price2: "from $18",
-            price3: "from $20",
-          },
-        },
-        format3: {
-          title: "Group lessons",
-          text: "Group study is a great way to immerse yourself in the English language. Group classes allow you to interact with different people, exchange ideas and develop communication skills in different situations.",
-          duration: "60min",
-          price: "from 400 grn",
-        },
+      format1: {
+        title: "Individual lessons",
+        text: "Study format for those looking for a personalized approach and maximum teacher attention. Lessons in an individual format allow you to adapt materials and topics to the specific needs and learning pace of each student.",
+        duration1: "30min",
+        duration2: "45min",
+        duration3: "60min",
+        price1: "from $10",
+        price2: "from $15",
+        price3: "from $18",
+      },
+      format2: {
+        title: "Pair lessons",
+        text: "Peer learning is an ideal way to promote mutual support and mutual learning. Participants can practice and mutually motivate each other. This format helps to maintain and build friendships on the language learning journey.",
+        duration1: "30min",
+        duration2: "45min",
+        duration3: "60min",
+        price1: "from $15",
+        price2: "from $18",
+        price3: "from $20",
+      },
+      format3: {
+        title: "Group lessons",
+        text: "Group study is a great way to immerse yourself in the English language. Group classes allow you to interact with different people, exchange ideas and develop communication skills in different situations.",
+        duration: "60min",
+        price: "from $10",
       },
       button: {
         text: "Sign up",
