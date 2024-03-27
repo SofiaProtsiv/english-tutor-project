@@ -39,7 +39,7 @@ const createNavigationMarkup = () => {
   return ` <li class="ih-menu-item" data-section="about-me" data-lang="header.menu.about_me" type="button">
             ПРО МЕНЕ
           </li>
-          <li class="ih-menu-item" data-section="quote" data-lang="header.menu.quote" type="button">
+          <li class="ih-menu-item" data-section="formats" data-lang="header.menu.formats" type="button">
             ВАРТІСТЬ
           </li>
           <li class="ih-menu-item" data-section="reviews"
@@ -68,7 +68,6 @@ function handleScrollToSection(event) {
       element.scrollIntoView({
         behavior: "smooth",
         block: "start",
-        block: "start",
         inline: "nearest",
       });
       header.classList.remove("ih-header-menu-open");
@@ -86,9 +85,8 @@ if (menuNavigation) {
 function createCustomSelectOption(code, order) {
   return `
     <div data-value="${code}" class="ih-custom-select-option" style="
-    ${state.current === code ? "background:transparent; " : ""}order:${
-    state.current === code ? 0 : order
-  }">${code}</div>
+    ${state.current === code ? "background:transparent; " : ""}order:${state.current === code ? 0 : order
+    }">${code}</div>
 `;
 }
 
@@ -98,8 +96,8 @@ function createCustomSelect() {
             <use href="/images/ih-icons-sprite.svg#icon-switch-arrow"></use>
           </svg>
     ${ITEMS.map((code, index) => {
-      return createCustomSelectOption(code, index + 1);
-    }).join("")}
+    return createCustomSelectOption(code, index + 1);
+  }).join("")}
 
 `;
 }
@@ -107,10 +105,9 @@ function createCustomSelect() {
 function createCustomSelectSmall() {
   return `
         ${ITEMS.map((code) => {
-          return `<div data-value="${code}" class="ih-select-lang-btn${
-            state.current === code ? " select-lang-btn-active" : ""
-          }">${code}</div>`;
-        }).join(`<svg class="ih-vertical-line">
+    return `<div data-value="${code}" class="ih-select-lang-btn${state.current === code ? " select-lang-btn-active" : ""
+      }">${code}</div>`;
+  }).join(`<svg class="ih-vertical-line">
            <use href="/images/ih-icons-sprite.svg#icon-vertical-line"></use>
          </svg>`)}
 `;
@@ -205,7 +202,6 @@ function updateLangSelect(code) {
   localStorage.setItem("lang", code);
   state.current = code;
   localizeElements(code);
-  console.log(code);
   renderCustomSelect();
   renderCustomSelectSmall();
 }

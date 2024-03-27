@@ -3,7 +3,7 @@ const translations = {
     header: {
       menu: {
         about_me: "ПРО МЕНЕ",
-        quote: "ВАРТІСТЬ",
+        formats: "ВАРТІСТЬ",
         reviews: "ВІДГУКИ",
         contacts: "КОНТАКТИ",
       },
@@ -107,7 +107,7 @@ const translations = {
     header: {
       menu: {
         about_me: "ABOUT ME",
-        quote: "QUOTE",
+        formats: "PRICE",
         reviews: "REVIEWS",
         contacts: "CONTACTS",
       },
