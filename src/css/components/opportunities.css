@@ -99,6 +99,8 @@
   /*Якщо swiper буде підключений через npm, цей flex має бути !important*/
   flex-direction: column;
   justify-content: space-between;
+  overflow: visible !important;
+  transform: translateX(-85px);
 
   @media (768px<=width) {
     height: 300px;
@@ -107,6 +109,22 @@
 
   @media (1440px<=width) {
     transform: translate(416px, -300px)
+  }
+}
+
+.opp-text-swiper .swiper-slide {
+  overflow: visible !important;
+}
+
+.opp-text-swiper .swiper-slide .opp-text-wrapper {
+  width: 320px;
+
+  @media (768px<=width) {
+    width: 336px;
+  }
+
+  @media (1440px<=width) {
+    width: 384px;
   }
 }
 
@@ -148,9 +166,11 @@
   gap: 17px;
   justify-content: flex-end;
   border-bottom: 1px solid var(--primary-text-color);
+  transform: translateX(85px);
 
   @media (768px<=width) {
     width: 336px;
+    transform: translateX(0);
     margin: 0 auto;
   }
 
