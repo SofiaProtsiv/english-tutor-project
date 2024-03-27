@@ -230,9 +230,6 @@
     font-size: 18px;
     line-height: 1.55556;
     margin-top: 0;
-  }
-
-  @media (1440px<=width) {
     height: 28px;
   }
 }
