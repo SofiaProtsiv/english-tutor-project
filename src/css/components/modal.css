@@ -343,3 +343,8 @@
         padding: 0;
     }
 }
+
+.p-success,
+.p-error {
+    display: none;
+}

@@ -1,4 +1,6 @@
 import axios from "axios";
+
+const mdlContent = document.querySelector('.mdl-content');
 const buttonClick = document.querySelectorAll(".btn-connect");
 const modalWindow = document.querySelector(".mdl-box");
 const modalBackground = document.querySelector(".mdl-flex");
@@ -55,21 +57,20 @@ function closeModal(e) {
 formUser.addEventListener("submit", handleSubmit);
 
 async function handleSubmit(e) {
-
-   e.preventDefault();
-
-   let isValid = true;
-
-   inputs.forEach(input => {
-    if (input.classList.contains("username")) {
-        if (!NAME_PATTERN.test(input.value)) {
+    e.preventDefault();
+    let isValid = true;
+    
+    const inputsHS = document.querySelectorAll(".user-inpt");
+    inputsHS.forEach(input => {
+        if (input.classList.contains("username")) {
+            if (!NAME_PATTERN.test(input.value)) {
+                isValid = false;
+                checkInputs(input);
+            }
+        } else if (!PHONE_PATTERN.test(input.value)) {
             isValid = false;
             checkInputs(input);
         }
-    } else if (!PHONE_PATTERN.test(input.value)) {
-        isValid = false;
-        checkInputs(input);
-    }
     });
 
     if (!isValid) {
@@ -80,7 +81,7 @@ async function handleSubmit(e) {
     const userName = formData.get("username");
     const userPhone = formData.get("phone");
     const comment = formData.get("comment");
-    const education = `${firstBut.textContent === "Оберіть варіант навчання"? "Формат не вибраний" : `${firstBut.textContent}`}`;
+    const education = `${(firstBut.textContent === "Оберіть варіант навчання") || (firstBut.textContent === "Choose a format study")? "Формат не вибраний" : `${firstBut.textContent}`}`;
         
     const message = `
     Нова заявка:
@@ -107,17 +108,19 @@ async function sendMessage(message) {
 }
 
 //check input
-inputs.forEach(input => {
-    input.addEventListener("blur", () => checkInputs(input));
+mdlContent.addEventListener('focusout', function(event) {
+    if (event.target.matches('input')) {
+        checkInputs(event.target);
+    }
 });
 
 function checkInputs(input) {
     if (!input.checkValidity()) {
-        input.classList.add("red");
         errorParagraf(input.classList.value, true);
+        input.classList.add("red");
     } else {
-        input.classList.remove("red");
         errorParagraf(input.classList.value, false);
+        input.classList.remove("red");
     }
 }
 
@@ -131,28 +134,39 @@ function errorParagraf(classList, addOrRemove) {
     });
 
     const errorParagraph = document.querySelector(selector + ' + .error-input');
-    errorParagraph.classList.toggle("check", addOrRemove);
+
+    if (errorParagraph)
+        errorParagraph.classList.toggle("check", addOrRemove);
 }
 
 // settings for my select
-firstBut.addEventListener("click", () => {
-    selectList.classList.toggle("list-item-select-visible");
-});
+mdlContent.addEventListener('click', function(event) {
+    if (event.target.matches('.user-btn')) {
+        const selectList = event.target.nextElementSibling;
+        selectList.classList.toggle('list-item-select-visible');
+    }
+    
+    else if (event.target.matches('.list-item-select-opt')) {
+        const firstBut = event.target.closest('.new-select').querySelector('.user-btn');
+        const selectList = mdlContent.querySelector('.list-item-select');
+        firstBut.textContent = event.target.textContent;
+        firstBut.classList.add('first-item-list-active');
+        selectList.classList.remove('.list-item-select-visible');
+    }
 
-selectOpt.forEach(option => option.addEventListener("click", (e) => {
-    firstBut.textContent = e.target.textContent;
-    firstBut.classList.add("first-item-list-active");
-    selectList.classList.remove(".list-item-select-visible");
-}));
+    else {
+        const selectList = mdlContent.querySelector('.list-item-select');
+        selectList.classList.remove('list-item-select-visible');
+    }
+});
 
 //succes feedback//
 async function feedbackMessage(success) {
-    let str = `
-        <h2 class="title-feedback">${success ? `See you soon!` : `Error`}</h2>
-        <p class="text-feedback">${success ? `Ваші дані були успішно відправлені.</br> Будь ласка, очікуйте: я зв'яжуся з Вами якнайшвидше для обговорення деталей.` : `На жаль, на сайті сталася помилка і Ваші дані не були відправлені. Спробуйте, будь ласка, пізніше.`}</p>`;
-
+    const titleFeedback = document.querySelector('.title-feedback');
+    success ? titleFeedback.innerHTML = `See you soon!` : titleFeedback.innerHTML = `Error`;
+    success ? document.querySelector('.p-success').style.display = 'block' : document.querySelector('.p-error').style.display = 'block';
+    
     contentForm.style.display = "none";
-    boxFb.innerHTML = str;
     boxFb.style.display = "flex";
     form.classList.add("form-feedback");
     clearFormFields();
