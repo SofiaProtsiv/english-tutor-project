@@ -1,0 +1,156 @@
+.formats-container {
+  @media (width >=1440px) {
+    width: 1296px;
+  }
+}
+
+.formats-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @media (768px<=width) {
+    gap: 56px;
+  }
+
+  @media (1440px<=width) {
+    gap: 72px;
+  }
+}
+
+.formats-item {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @media (768px<=width) {
+    flex-direction: row;
+  }
+
+  @media (1440px<=width) {
+    gap: 136px;
+  }
+}
+
+.formats-item:nth-child(1),
+.formats-item:nth-child(3) {
+  @media (width >=1440px) {
+    border-left: 1px solid black;
+    padding-left: 32px;
+  }
+}
+
+.formats-item:nth-child(2) {
+  @media (768px <=width) {
+    flex-direction: row-reverse;
+  }
+
+  @media (width >=1440px) {
+    border-right: 1px solid black;
+    padding-right: 32px;
+  }
+}
+
+.formats-item-card-container {
+  @media (width < 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    align-items: center;
+  }
+
+  @media (768px<=width) {
+    max-width: 432px;
+  }
+
+  @media (1440px<=width) {
+    max-width: 488px;
+  }
+}
+
+.formats-item-card {
+  display: flex;
+  flex-direction: column;
+
+  @media (width < 768px) {
+    gap: 24px;
+  }
+
+  @media (768px <=width) {
+    margin-bottom: 34px;
+  }
+}
+
+.formats-item-card-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+
+  @media (768px<=width) {
+    font-size: 28px;
+    line-height: 129%;
+    margin-bottom: 32px;
+  }
+}
+
+.formats-item:nth-child(2) .formats-item-card-title {
+  @media (width >=360px) and (width < 768px) {
+    text-align: center;
+  }
+}
+
+.formats-item-card-description {
+  font-family: var(--secondary-font-family);
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+
+  @media (768px<=width) {
+    font-size: 18px;
+    line-height: 156%;
+  }
+}
+
+.formats-item-card-band {
+  display: block;
+  border-top: 0.1px solid;
+  width: 100%;
+
+  @media (768px<=width) {
+    margin: 24px 0;
+  }
+}
+
+.formats-list-description {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+
+.formats-item-card-delimiter {
+  color: rgba(41, 41, 41, 0.2);
+}
+
+.formats-item-card-button {
+  font-family: var(--secondary-font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+
+  @media (768px <=width) {
+    font-size: 18px;
+    line-height: 156%;
+  }
+}
+
+.formats-item img {
+  height: 100%;
+  object-fit: cover;
+}
