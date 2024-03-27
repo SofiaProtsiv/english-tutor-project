@@ -116,7 +116,7 @@ const translations = {
           title: "Групові заняття",
           text: "Групове навчання — це відмінний спосіб занурення в англійську мову. Заняття в групі дозволяють взаємодіяти з різними персонами, обмінюватися ідеями та розвивати навички спілкування в різних ситуаціях.",
           duration: "60хв",
-          price: "від 400 грн",
+          price: "від $10",
         },
       },
       button: {
@@ -245,7 +245,7 @@ const translations = {
           title: "Group lessons",
           text: "Group study is a great way to immerse yourself in the English language. Group classes allow you to interact with different people, exchange ideas and develop communication skills in different situations.",
           duration: "60min",
-          price: "from 400 grn",
+          price: "from $10",
         },
       },
       button: {
