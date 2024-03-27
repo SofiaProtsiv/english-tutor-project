@@ -77,7 +77,15 @@ const translations = {
     },
     workflow: {},
     assessment: {},
-    reviews: {},
+    reviews: {
+      title: "від студентів",
+      reviewTitle1: "поліна",
+      reviewTitle2: "надія",
+      reviewText1:
+        "Всім привіт! Хочу порадити вам репетитора Альону. Це найкращий викладач та людина, яку ви можете зустріти на своєму шляху вивчення англійської мови. Альона допомогла мені успішно скласти ЗНО та витягнула мою англійську на чудовий рівень. Це людина з якою не боїшся зробити помилку, сказати щось не те, тобі завжди комфортно. Пам’ятаю, як я вирішила витягнути свою розмову англійську. Спочатку я навіть не могла сказати одне речення, але Альона допомагала мені та робила це дуже обережно, а через місяць я вже могла вільно говорити. На заняттях завжди приємна та комфортна атмосфера, ти почуваєшся як з близькою подругою за кавою, тільки розмовляєш на англійській. Також варто додати, що Альона дуже різностороння та надихаюча особистість, у вас ніколи не буде такого, що не буде про що поговорити. Я впевнена, що Альона допоможе вам з будь-яким напрямом англійської, від юридичної до інженерної🙂 Альона заряджає своєю енергією, позитивом, креативними та сучасними підходами. Приємно бачити людину, яка настільки любить свою справу. Бажаю вам успіхів ❤️🫰🏻 Альона найкраща!",
+      reviewText2:
+        "Хочу поділитися своїм досвідом. Займаючись з Альоною, всього за два місяці я подолала свій мовний бар'єр, значно покращила свої знання, вимову та отримала офер на роботі своєї мріі. Я була приємно здивована, наскільки легко, інтерактивно та захопливо проходять уроки. Маючи досвід навчання в інших місцях, я не могла навіть уявити, що навчання може бути таким легким та комфортним. Особливо хочу відзначити Альону як особистість та професіонала, яка неодмінно допоможе досягнути поставленої мети. Звісно, багато чого залежить від власного бажання та наполегливості, але з таким наставником, як Альона, процес навчання перетворюється і справді в цікавий процес, де з кожним днем ти стаєш краще. Домашні завдання – це окрема любов. Альона підбирає завдання під твої інтереси, дає прикольні відео для просмотру. Готує круті топики для discussion. Є багато корисної і необхідної інформації під конкретний запит. Тому всім рекомендую спробувати та змінити своє життя, тому що англійська відкриває нові горизонти. 💖",
+    },
     footer: {},
     modal: {},
     "pop-up": {},
@@ -206,7 +214,15 @@ const translations = {
     },
     workflow: {},
     assessment: {},
-    reviews: {},
+    reviews: {
+      title: "from students",
+      reviewTitle1: "polina",
+      reviewTitle2: "nadiia",
+      reviewText1:
+        "Hello everyone! I want to recommend a tutor, Alyona. She is the best teacher and person you could meet on your journey to learning English. Alyona helped me successfully pass the External Independent Evaluation (EIE) and brought my English to an excellent level. With her, you are not afraid to make a mistake, say something wrong; you always feel comfortable. I remember when I decided to improve my conversational English. At first, I couldn’t even say one sentence, but Alyona helped me and did it very gently, and after a month, I could speak freely. The atmosphere in the classes is always pleasant and comfortable, you feel like you’re having coffee with a close friend, only speaking in English. It’s also worth mentioning that Alyona is a very versatile and inspiring person; you'll never run out of things to talk about. I’m confident that Alyona can help you with any aspect of English, from legal to engineering🙂 Alyona energizes you with her positivity, creativity, and modern approaches. It's nice to see someone who loves what they do so much. Wishing you all the best ❤️🫰🏻 Alyona is the best!",
+      reviewText2:
+        "I want to share my experience. Studying with Alyona, in just two months, I overcame my language barrier, significantly improved my knowledge, pronunciation, and even received a job offer of my dreams. I was pleasantly surprised by how easy, interactive, and engaging the lessons were. Having experienced learning in other settings, I couldn't even imagine that studying could be this effortless and comfortable. I particularly want to highlight Alyona as an individual and a professional who will undoubtedly help you achieve your goal. Of course, a lot depends on your own desire and perseverance, but with a mentor like Alyona, the learning process truly becomes an interesting journey, where you become better with each day. Homework is a separate joy. Alyona tailors tasks to your interests, provides cool videos for viewing, and prepares great topics for discussion. There's a lot of useful and necessary information for specific inquiries. So, I recommend everyone to try and change their lives because English opens new horizons. 💖",
+    },
     footer: {},
     modal: {},
     "pop-up": {},
