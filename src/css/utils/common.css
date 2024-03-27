@@ -82,6 +82,7 @@ body::-webkit-scrollbar-track {
   cursor: pointer;
   width: 224px;
   height: 96px;
+  color: var(--primary-text-color);
   background-color: white;
   background-image: url(../../images/common/button@1x.png);
   background-repeat: no-repeat;
