@@ -19,13 +19,13 @@ const PHONE_PATTERN = /^\+[0-9]{11,12}$/;
 
 
 // show modal window
-buttonClick.forEach( but => {
+buttonClick.forEach(but => {
     but.addEventListener("click", showModalWindow);
 })
 //clear all inputs after close
 function clearFormFields() {
     inputs.forEach(input => {
-        input.value = ""; 
+        input.value = "";
     });
     textArea.value = "";
     firstBut.textContent = "Оберіть варіант навчання";
@@ -34,8 +34,8 @@ function clearFormFields() {
 
 function showModalWindow() {
     modalWindow.style.display = "block";
-    document.body.style.overflow = "hidden";
-    
+    document.body.classList.add("is-hidden");
+
     form.classList.remove("form-feedback");
     boxFb.style.display = "none";
     contentForm.style.display = "flex";
@@ -48,7 +48,7 @@ butClose.addEventListener("click", closeModal);
 function closeModal(e) {
     if (!e || e.target === modalBackground || e.key === "Escape" || e.target === butClose || e.target.classList.contains("use-close")) {
         modalWindow.style.display = "none";
-        document.body.style.overflowY = "scroll";
+        document.body.classList.remove("is-hidden");
     }
 }
 // send message
@@ -57,7 +57,7 @@ formUser.addEventListener("submit", handleSubmit);
 async function handleSubmit(e) {
     e.preventDefault();
     let isValid = true;
-    
+
     const inputsHS = document.querySelectorAll(".user-inpt");
     inputsHS.forEach(input => {
         if (input.classList.contains("username")) {
@@ -79,8 +79,8 @@ async function handleSubmit(e) {
     const userName = formData.get("username");
     const userPhone = formData.get("phone");
     const comment = formData.get("comment");
-    const education = `${(firstBut.textContent === "Оберіть варіант навчання") || (firstBut.textContent === "Choose a format study")? "Формат не вибраний" : `${firstBut.textContent}`}`;
-        
+    const education = `${(firstBut.textContent === "Оберіть варіант навчання") || (firstBut.textContent === "Choose a format study") ? "Формат не вибраний" : `${firstBut.textContent}`}`;
+
     const message = `
     Нова заявка:
     1) Ім'я: ${userName};
@@ -98,7 +98,7 @@ async function sendMessage(message) {
             text: message
         });
         feedbackMessage(true);
-    } 
+    }
     catch (error) {
         feedbackMessage(false);
         console.error("Error in sending sms:", error);
@@ -106,7 +106,7 @@ async function sendMessage(message) {
 }
 
 //check input
-mdlContent.addEventListener('focusout', function(event) {
+mdlContent.addEventListener('focusout', function (event) {
     if (event.target.matches('input')) {
         checkInputs(event.target);
     }
@@ -128,7 +128,7 @@ function errorParagraf(classList, addOrRemove) {
     let selector = '';
     classes.forEach(className => {
         selector += `.${className}`;
-    
+
     });
 
     const errorParagraph = document.querySelector(selector + ' + .error-input');
@@ -138,12 +138,12 @@ function errorParagraf(classList, addOrRemove) {
 }
 
 // settings for my select
-mdlContent.addEventListener('click', function(event) {
+mdlContent.addEventListener('click', function (event) {
     if (event.target.matches('.user-btn')) {
         const selectList = event.target.nextElementSibling;
         selectList.classList.toggle('list-item-select-visible');
     }
-    
+
     else if (event.target.matches('.list-item-select-opt')) {
         const firstBut = event.target.closest('.new-select').querySelector('.user-btn');
         const selectList = mdlContent.querySelector('.list-item-select');
@@ -163,7 +163,7 @@ async function feedbackMessage(success) {
     const titleFeedback = document.querySelector('.title-feedback');
     success ? titleFeedback.innerHTML = `See you soon!` : titleFeedback.innerHTML = `Error`;
     success ? document.querySelector('.p-success').style.display = 'block' : document.querySelector('.p-error').style.display = 'block';
-    
+
     contentForm.style.display = "none";
     boxFb.style.display = "flex";
     form.classList.add("form-feedback");
