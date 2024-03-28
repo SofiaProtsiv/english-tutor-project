@@ -109,7 +109,7 @@ function createCustomSelectOption(code, order) {
 function createCustomSelect() {
   return `
    <svg class="ih-custom-select-icon">
-            <use href="/images/ih-icons-sprite.svg#icon-switch-arrow"></use>
+<path d="M0 0L5 5L10 0H0Z" fill="#292929"/>
           </svg>
     ${ITEMS.map((code, index) => {
     return createCustomSelectOption(code, index + 1);
