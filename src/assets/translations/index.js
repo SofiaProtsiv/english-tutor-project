@@ -427,10 +427,10 @@ const translations = {
       },
     },
     formats: {
-      title: "Studying formats",
+      title: "Studying format",
       format1: {
-        title: "Individual lessons",
-        text: "Study format for those looking for a personalized approach and maximum teacher attention. Lessons in an individual format allow you to adapt materials and topics to the specific needs and learning pace of each student.",
+        title: "Individual",
+        text: "Study format for those who are looking for a personalized approach and maximum teacher attention. Lessons in an individual format allow you to adapt materials and topics to the specific needs and learning pace of each student.",
         duration1: "30min",
         duration2: "45min",
         duration3: "60min",
@@ -439,8 +439,8 @@ const translations = {
         price3: "from $18",
       },
       format2: {
-        title: "Pair lessons",
-        text: "Peer learning is an ideal way to promote mutual support and mutual learning. Participants can practice and mutually motivate each other. This format helps to maintain and build friendships on the language learning journey.",
+        title: "DOUBLE",
+        text: "Learning in a couple is an ideal way to promote mutual support and mutual learning. Participants can practice and mutually motivate each other. This format helps to maintain and build friendship on the language learning journey.",
         duration1: "30min",
         duration2: "45min",
         duration3: "60min",
@@ -449,7 +449,7 @@ const translations = {
         price3: "from $20",
       },
       format3: {
-        title: "Group lessons",
+        title: "Group classes",
         text: "Group study is a great way to immerse yourself in the English language. Group classes allow you to interact with different people, exchange ideas and develop communication skills in different situations.",
         duration: "60min",
         price: "from $10",
