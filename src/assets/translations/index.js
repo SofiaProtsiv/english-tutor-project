@@ -455,7 +455,7 @@ const translations = {
         price: "from $10",
       },
       button: {
-        text: "Sign up",
+        text: "Write",
       },
     },
     footer: {
