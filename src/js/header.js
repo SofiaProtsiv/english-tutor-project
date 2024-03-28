@@ -24,7 +24,7 @@ if (logo) {
 
 const menuButton = document.querySelector("#HEADER_MENU_JS");
 function handleMenuButton() {
-  document.body.classList.add("is-hidden")
+  document.body.classList.toggle("is-hidden")
   header.classList.toggle("ih-header-menu-open");
 }
 
@@ -62,7 +62,7 @@ const createNavigationMarkup = () => {
           data-lang="header.menu.reviews" type="button">
             ВІДГУКИ
           </li>
-          <li class="ih-menu-item" data-section="contacts" data-lang="header.menu.contacts" type="button">
+          <li class="ih-menu-item" data-section="FOOTER_JS" data-lang="header.menu.contacts" type="button">
             КОНТАКТИ
           </li>`;
 };

@@ -2,6 +2,7 @@ function handleScrollToSection(event) {
   if (event.target.dataset.section) {
     const sectionId = event.target.dataset.section;
     const element = document.getElementById(sectionId);
+    console.log(element)
     if (element) {
       element.scrollIntoView({
         behavior: "smooth",
