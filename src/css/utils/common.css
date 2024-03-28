@@ -46,7 +46,7 @@ body::-webkit-scrollbar-track {
 }
 
 .section {
-  overflow-y: hidden;
+  overflow: hidden;
   padding: 64px 0;
 
   @media (768px<=width) {
