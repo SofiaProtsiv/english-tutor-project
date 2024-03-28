@@ -43,3 +43,25 @@ const revSwiperText = new Swiper(revTextSwiper, {
 
 revSwiperImg.controller.control = revSwiperText;
 revSwiperText.controller.control = revSwiperImg;
+
+// const handleResize = () => {
+//   const mediaQueryMobile = window.matchMedia("(max-width: 767.98px)");
+//   const mediaQueryTablet = window.matchMedia("(max-width: 1439.98px)");
+//   const reviewsTextList = document.querySelectorAll(".reviews-text");
+
+//   if (mediaQueryMobile.matches) {
+//     reviewsTextList.forEach((item) => {
+//       console.log(item.textContent.length);
+//       if (item.textContent.length > 500) {
+//         item.textContent =
+//       }
+//     });
+//   } else if (mediaQueryTablet.matches) {
+//     console.log("tablet");
+//   } else {
+//     console.log("computer");
+//   }
+// };
+
+// handleResize();
+// window.addEventListener("resize", handleResize);
