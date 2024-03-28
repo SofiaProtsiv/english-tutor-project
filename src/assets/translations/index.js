@@ -285,32 +285,32 @@ const translations = {
       }
     },
     workflow: {
-      title: "",
+      "title": "HOW WE WILL WORK",
       "content-list": {
-        item1: {
-          title: "",
-          list: {
-            item1: "",
-            item2: "",
-            item3: "",
-          },
+        "item1": {
+          "title": "We will evaluate",
+          "list": {
+            "item1": "your current level",
+            "item2": "your strengths and weaknesses",
+            "item3": "your needs"
+          }
         },
-        item2: {
-          title: "",
-          list: {
-            item1: "",
-            item2: "",
-            item3: "",
-          },
+        "item2": {
+          "title": "You get",
+          "list": {
+            "item1": "an individual study plan based on your request",
+            "item2": "required online materials",
+            "item3": "support and development of your abilities and skills"
+          }
         },
-        item3: {
-          title: "",
-          list: {
-            item1: "",
-            item2: "",
-          },
-        },
-      },
+        "item3": {
+          "title": "Result",
+          "list": {
+            "item1": "enjoyment of learning",
+            "item2": "confidence in language skills"
+          }
+        }
+      }
     },
     reviews: {},
     footer: {},
