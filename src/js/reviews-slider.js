@@ -1,5 +1,5 @@
-// import Swiper from "swiper/bundle";
-// import "swiper/css/bundle";
+import Swiper from "swiper/bundle";
+import "swiper/css/bundle";
 
 import locales from "../assets/translations";
 import { getValueByPath } from "./localization";
