@@ -6,6 +6,19 @@ const selectSmallEl = document.querySelector("#CUSTOM_SELECT_SMALL_JS");
 const ITEMS = Object.keys(translations);
 const state = { current: "" };
 
+/* ======= handle pressed logo  ======= */
+
+function handlePressedLogo() {
+  window.scrollTo({ top: 0, behavior: "instant" });
+  window.location.reload();
+}
+
+const logo = document.querySelector(".ih-logo");
+
+if (logo) {
+  logo.removeEventListener("click", handlePressedLogo);
+  logo.addEventListener("click", handlePressedLogo);
+}
 /* ======= menu button ======= */
 
 const menuButton = document.querySelector("#HEADER_MENU_JS");
@@ -60,9 +73,7 @@ const renderNavigationMarkup = () => {
 renderNavigationMarkup();
 
 /* ======= smooth scroll  ======= */
-const footerMenu = document.querySelector("#FOOTER_MENU_NAV_JS");
-
-export function handleScrollToSection(event) {
+function handleScrollToSection(event) {
   if (event.target.dataset.section) {
     const sectionId = event.target.dataset.section;
     const element = document.getElementById(sectionId);
@@ -82,10 +93,6 @@ if (menuNavigation) {
   menuNavigation.addEventListener("click", handleScrollToSection);
 }
 
-if (footerMenu) {
-  footerMenu.removeEventListener("click", handleScrollToSection);
-  footerMenu.addEventListener("click", handleScrollToSection);
-}
 /* ======= select language ======= */
 
 function createCustomSelectOption(code, order) {
@@ -115,9 +122,7 @@ function createCustomSelectSmall() {
           return `<div data-value="${code}" class="ih-select-lang-btn${
             state.current === code ? " select-lang-btn-active" : ""
           }">${code}</div>`;
-        }).join(`<svg class="ih-vertical-line">
-           <use href="/images/ih-icons-sprite.svg#icon-vertical-line"></use>
-         </svg>`)}
+        }).join(" ")}
 `;
 }
 
