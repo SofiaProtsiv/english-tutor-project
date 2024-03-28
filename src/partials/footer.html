@@ -1,19 +1,34 @@
 <footer id="FOOTER_JS" class="ih-footer">
   <section class="ih-footer-container container">
     <div class="ih-footer-menu-container">
-      <a href="./index.html" target="_self" class="ih-footer-logo" aria-label="link on main page">
+      <a href="" target="_self" class="ih-footer-logo" aria-label="link on main page">
         <svg class="ih-footer-icon-logo">
-          <use href="./images/icons-sprite.svg#footer-icon-logo"></use>
+          <use href="/images/ih-icons-sprite.svg#footer-icon-logo"></use>
         </svg>
       </a>
-      <nav id="MENU_NAV_JS" class="ih-footer-menu-nav">
-        <a class="ih-footer-menu-item" data-lang="footer.nav.about_me" href="#about-me">ПРО МЕНЕ</a>
-        <a class="ih-footer-menu-item" data-lang="footer.nav.quote" href="#quote">ВАРТІСТЬ</a>
-        <a class="ih-footer-menu-item" data-lang="footer.nav.reviews" href="#rewiews">ВІДГУКИ</a>
-        <a class="ih-footer-menu-item" data-lang="footer.nav.contacts" href="#contacts">КОНТАКТИ</a>
-      </nav>
+      <script>
+        document
+          .querySelector(".ih-footer-logo")
+          .addEventListener("click", function () {
+            document.location.reload();
+          });
+      </script>
+      <ul id="FOOTER_MENU_NAV_JS" class="ih-footer-menu-nav">
+        <li class="ih-footer-menu-item" data-section="about-me" data-lang="footer.nav.about_me" type="button">
+          ПРО МЕНЕ
+        </li>
+        <li class="ih-footer-menu-item" data-section="formats" data-lang="footer.nav.quote" type="button">
+          ВАРТІСТЬ
+        </li>
+        <li class="ih-footer-menu-item" data-section="reviews" data-lang="footer.nav.reviews" type="button">
+          ВІДГУКИ
+        </li>
+        <li class="ih-footer-menu-item" data-section="hero" data-lang="footer.nav.contacts" type="button">
+          КОНТАКТИ
+        </li>
+      </ul>
       <a class="ih-footer-phone" href="tel:+380501001010"><svg class="ih-icon-footer-phone">
-          <use href="./images/icons-sprite.svg#icon-footer-phone"></use>
+          <use href="/images/icons-sprite.svg#icon-footer-phone"></use>
         </svg>
         <span>+380501001010</span></a>
     </div>

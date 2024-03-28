@@ -17,7 +17,7 @@ const PHONE_PATTERN = /^\+[0-9]{11,12}$/;
 
 
 // show modal window
-buttonClick.forEach( but => {
+buttonClick.forEach(but => {
     but.addEventListener("click", showModalWindow);
 })
 
@@ -36,8 +36,8 @@ function clearFormFields() {
 
 function showModalWindow() {
     modalWindow.style.display = "block";
-    document.body.style.overflow = "hidden";
-    
+    document.body.classList.add("is-hidden");
+
     form.classList.remove("form-feedback");
     boxFb.style.display = "none";
     contentForm.style.display = "flex";
@@ -50,7 +50,7 @@ butClose.addEventListener("click", closeModal);
 function closeModal(e) {
     if (!e || e.target === modalBackground || e.key === "Escape" || e.target === butClose || e.target.classList.contains("use-close") || e.target.classList.contains("my-path")) {
         modalWindow.style.display = "none";
-        document.body.style.overflowY = "scroll";
+        document.body.classList.remove("is-hidden");
     }
 }
 // send message
@@ -59,7 +59,7 @@ formUser.addEventListener("submit", handleSubmit);
 async function handleSubmit(e) {
     e.preventDefault();
     let isValid = true;
-    
+
     const inputsHS = document.querySelectorAll(".user-inpt");
     inputsHS.forEach(input => {
         if (input.classList.contains("username")) {
@@ -100,7 +100,7 @@ async function sendMessage(message) {
             text: message
         });
         feedbackMessage(true);
-    } 
+    }
     catch (error) {
         feedbackMessage(false);
         console.error("Error in sending sms:", error);
@@ -130,7 +130,7 @@ function errorParagraf(classList, addOrRemove) {
     let selector = '';
     classes.forEach(className => {
         selector += `.${className}`;
-    
+
     });
 
     const errorParagraph = document.querySelector(selector + " + .error-input");

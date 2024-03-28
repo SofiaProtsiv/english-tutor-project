@@ -139,6 +139,7 @@
   display: flex;
   margin-bottom: 31px;
   cursor: pointer;
+  transition: all 0.3s ease;
 
   @media (768px<=width) {
     margin-top: 0;
@@ -157,6 +158,7 @@
 }
 
 .ih-footer-phone:hover * {
+  transition: all 300ms ease;
   stroke: var(--accent-color);
   color: var(--accent-color);
 }

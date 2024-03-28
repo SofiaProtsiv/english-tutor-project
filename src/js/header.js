@@ -1,15 +1,30 @@
 import { localizeElements } from "./localization";
 import translations from "../assets/translations";
+
 const header = document.querySelector("#HEADER_JS");
 const selectEl = document.querySelector("#CUSTOM_SELECT_JS");
 const selectSmallEl = document.querySelector("#CUSTOM_SELECT_SMALL_JS");
 const ITEMS = Object.keys(translations);
 const state = { current: "" };
 
+/* ======= handle pressed logo  ======= */
+
+function handlePressedLogo() {
+  window.scrollTo({ top: 0, behavior: "instant" });
+  window.location.reload();
+}
+
+const logo = document.querySelector(".ih-logo");
+
+if (logo) {
+  logo.removeEventListener("click", handlePressedLogo);
+  logo.addEventListener("click", handlePressedLogo);
+}
 /* ======= menu button ======= */
 
 const menuButton = document.querySelector("#HEADER_MENU_JS");
 function handleMenuButton() {
+  document.body.classList.toggle("is-hidden")
   header.classList.toggle("ih-header-menu-open");
 }
 
@@ -21,6 +36,7 @@ if (menuButton) {
 const menuNav = document.querySelector("#MENU_NAV_JS");
 
 function handleMenuNavigation(event) {
+  document.body.classList.remove("is-hidden")
   if (event.target.tagName === "A") {
     header.classList.remove("ih-header-menu-open");
   }
@@ -46,7 +62,7 @@ const createNavigationMarkup = () => {
           data-lang="header.menu.reviews" type="button">
             ВІДГУКИ
           </li>
-          <li class="ih-menu-item" data-section="contacts" data-lang="header.menu.contacts" type="button">
+          <li class="ih-menu-item" data-section="FOOTER_JS" data-lang="header.menu.contacts" type="button">
             КОНТАКТИ
           </li>`;
 };
@@ -93,7 +109,7 @@ function createCustomSelectOption(code, order) {
 function createCustomSelect() {
   return `
    <svg class="ih-custom-select-icon">
-            <use href="/images/ih-icons-sprite.svg#icon-switch-arrow"></use>
+<path d="M0 0L5 5L10 0H0Z" fill="#292929"/>
           </svg>
     ${ITEMS.map((code, index) => {
     return createCustomSelectOption(code, index + 1);
@@ -107,9 +123,7 @@ function createCustomSelectSmall() {
         ${ITEMS.map((code) => {
     return `<div data-value="${code}" class="ih-select-lang-btn${state.current === code ? " select-lang-btn-active" : ""
       }">${code}</div>`;
-  }).join(`<svg class="ih-vertical-line">
-           <use href="/images/ih-icons-sprite.svg#icon-vertical-line"></use>
-         </svg>`)}
+  }).join(" ")}
 `;
 }
 

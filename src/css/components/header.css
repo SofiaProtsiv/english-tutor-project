@@ -23,18 +23,18 @@
 }
 
 .ih-logo {
+  padding-top: 10px;
   cursor: pointer;
   display: flex;
   align-items: center;
 }
 
 .ih-icon-logo {
-  margin-top: 14px;
   width: 150px;
-  height: 44px;
+  height: 67px;
 
   @media (768px<=width) {
-    width: 193px;
+    width: 194px;
     height: 56px;
   }
 }
@@ -223,8 +223,11 @@
 }
 
 .ih-custom-select-small {
+  position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  width: 70px;
+  height: 24px;
   align-items: center;
   font-family: var(--primary-font-family);
   font-weight: 600;
@@ -237,12 +240,26 @@
   margin-top: 48px;
   padding: 0;
   width: 70px;
-  height: 24px;
+
+  @media (768px<=width) {
+    width: 77px;
+    height: 28px;
+  }
 
   @media (1440px<=width) {
     display: none;
     visibility: hidden;
   }
+}
+
+.ih-custom-select-small::after {
+  position: absolute;
+  left: 50%;
+  content: "";
+  width: 1px;
+  height: 17px;
+  background-color: var(--primary-text-color);
+  opacity: 0.32;
 }
 
 .ih-select-lang-btn {
