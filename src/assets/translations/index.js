@@ -226,7 +226,7 @@ const translations = {
       },
     },
     advice: {
-      title: "Language learning should be an interesting and exciting",
+      title: "To make language learning interesting and exciting",
       list: {
         list_item_1:
           "<b>Use a variety of resources:</b> books, videos, audio podcasts, mobile applications and interactive exercises to avoid monotony",
