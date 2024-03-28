@@ -54,7 +54,7 @@ import{S as g,a as ee}from"./assets/vendor-9d3a36e4.js";(function(){const t=docu
          class="ih-menu-social-item"
          target="_blank"
          rel="noopener"
-         href="https://t.me/@alyona_alyona"
+         href="https://t.me/alyona_alyona"
        >
          TELEGRAM
        </a>
