@@ -274,10 +274,10 @@ const translations = {
     },
     assessment: {
       "subtitle": "By the way!",
-      "title": "?",
+      "title": "Do you want to know what your level is?",
       "content": {
-        "text": ".",
-        "button": ""
+        "text": "During the trial lesson, I give feedback on the current level of language proficiency, and also advise how to improve it.",
+        "button": "WRITE"
       }
     },
     workflow: {
