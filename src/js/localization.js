@@ -1,6 +1,6 @@
 import locales from "../assets/translations";
 
-function getValueByPath(obj, path) {
+export function getValueByPath(obj, path) {
   const keys = path.split(".");
   return keys.reduce((acc, key) => (acc ? acc[key] : undefined), obj);
 }

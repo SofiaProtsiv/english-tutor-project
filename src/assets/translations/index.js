@@ -125,6 +125,8 @@ const translations = {
         "Доброго дня) пишу невеличкий відгук) Метч у нас з вами як звикладачем відбувся в першого заняття і з того часу кожне заняття як на мене було все веселіше та інтенсивніше На заняттях ми не говоримо на банальні теми, кожен урок різний по наповненню тем і категорії завдань. Як жартують, що тільки мій викладач англійської знає мій улюблений колір та мету по життю, але це насправді правда) загалом я дуже рада, що потрапила до вас)",
       reviewText4:
         "Я займаюсь з Альоною більше трьох місяців і це три місяці і кайфу. Мені є чим порівнювати і мені подобається індивідуальний підхід до навчання. У мене був запит на підвищення рівня бізнес англійської, оскільки це важливо для моєї роботи: я спілкуюсь з іноземними клієнтами, стейкхолдерами, кандидатами. І бізнес-інлиш - It’s a little bit boring, а я не хотіла і мені не цікаво вчитися просто сухо за книгою і от кожного разу, на кожен наш урок Альона готує матеріали. Кожного разу ці матеріали не схожі на інші, завдяки цьому – це реально цікаво. Якщо це граматика – то це інтерактивна граматика, завдяки чому легше запам'ятовувати інформацію і сприймати. І дуже важливий фактор для мене, оскільки я людина, яка багато працює, це те, що Альона завжди на зв'язку, але пам'ятайте, що worklife balance – це важливо. Я знаю, що я можу написати їй, наприклад, перед мітом із клієнтом, якщо маю якісь консорни як подати інформацію, як сказати інформацію англійською і вона буде завжди на зв'язку. Тому однозначно рекомендую, займайтесь і кайфуйте!",
+      moreBtn: "Читати далі",
+      lessBtn: "Згорнути",
     },
     workflow: {},
     assessment: {},
@@ -340,6 +342,8 @@ const translations = {
         "Good afternoon) I am writing a small review) The match between you as a teacher and me took place in our first meeting, and since then every class has been more fun and intense for me. In classes, we do not talk about something plain, each lesson is different in filling topics and category of tasks. As they joke that only my English teacher knows my favorite color and purpose in life, but it's actually true) in general, I'm very glad that I have got you)",
       reviewText4:
         "I've been studying with Alyona for over three months, and it's been a blast. I've tried other options before, but I really like the personalized approach to learning here. I needed to improve my business English because it's crucial for my job - I deal with foreign clients, stakeholders, and candidates. Regular business English lessons can be dull, but Aliona makes it interesting by preparing different materials for each session. It's never boring! Even grammar lessons are interactive, which makes it easier to remember and understand. Another important thing for me is that Aliona is always available when I need help, although she also reminds me about maintaining a work-life balance. I know I can message her, even before a meeting with a client, if I need advice on how to present information in English, and she'll always respond. So, I definitely recommend studying with her and enjoying the process!",
+      moreBtn: "Read more",
+      lessBtn: "Less",
     },
     footer: {},
     modal: {
