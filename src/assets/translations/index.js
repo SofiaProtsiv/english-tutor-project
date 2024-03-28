@@ -16,12 +16,23 @@ const translations = {
     },
     "about-me": {
       title: "Я альона — твій вчитель англійської",
-      paragraph: {
-        bold: "Сама того не розуміючи, я стала поліглотом.",
-        textOne:
+      list1: {
+        item1: "<b>8 років досвіду </b> у викладанні англійської мови",
+        item2:
+          "<b>Магістр української та англійської філології</b> Київського національного університету імені Тараса Шевченка, диплом з відзнакою",
+        item3:
+          "<b>Кваліфікація лінгвіста</b> і викладача вищого навчального закладу",
+      },
+      list2: {
+        item1: "<b>Участь в семінарах</b> ініційованим Посольством США",
+        item2: "<b>Підготовка студентів</b> до здачі іспитів різної складності",
+        item3:
+          "<b>Індивідуальний підхід</b> до кожного студента, з позиції викладача і ментора",
+      },
+      list3: {
+        item1: "<b>Сама того не розуміючи, я стала поліглотом.</b>",
+        item2:
           "Я сама постійно вивчаю мови і можу спілкуватися на шістьох з них. Саморозвиток – це те, що рухає мене вперед і допомагає віднаходити сенси. Я реалізовую потенціал свого розвитку, подорожуючи світом мови, і вчу робити це своїх студентів. Кожне слово, яке ви вивчаєте, відкриває двері до нових можливостей та перспектив.",
-        textTwo:
-          "Саморозвиток через вивчення мови - це подорож у світ розширення горизонтів, розуміння власних можливостей і амбіцій, збільшення спроможності взаємодіяти з різними культурами. Відкрийте для себе нові світи через вивчення мови і перетворіть свій саморозвиток на незабутню подорож.",
       },
     },
     advice: {
@@ -117,18 +128,15 @@ const translations = {
       title: "Зв’язатися зі мною",
       text: "Будь ласка, заповніть форму і я зв’яжуся з Вами якнайшвидше для обговорення деталей.",
       label: {
-        label1:
-          `<span>Ваше ім’я
+        label1: `<span>Ваше ім’я
           <span class="star">*</span></span>
           <input type="text" class="user-inpt username" name="username" placeholder="Анастасія" pattern="[a-zA-Zа-яА-ЯёЁґҐіІїЇєЄ]+" required/>
           <span class="error-input" style="color: var(--accent-color);">Будь ласка, введіть коректне ім’я</span>`,
-        label2:
-          `<span>Номер телефону
+        label2: `<span>Номер телефону
          <span class="star">*</span></span>
          <input type="tel" class="user-inpt phone" name="phone" placeholder="+38 000 000 00 00" pattern="\\+[0-9]{11,12}" required/>
          <span class="error-input" style="color: var(--accent-color);">Будь ласка, введіть коректний номер(+)11/12 символів</span>`,
-        label3:
-          `Формат навчання<div class="new-select">
+        label3: `Формат навчання<div class="new-select">
         <button type="button" class="user-btn first-item-list">Оберіть варіант навчання</button>
 
         <ul class="list-item-select" name="education">
@@ -150,14 +158,16 @@ const translations = {
         placeholder3: "Ваш коментар",
       },
       textfdb: {
-        success: "Ваші дані були успішно відправлені.<br> Будь ласка, очікуйте: я зв'яжуся з Вами якнайшвидше для обговорення деталей.",
-        error: "На жаль, на сайті сталася помилка і Ваші дані не були відправлені. Спробуйте, будь ласка, пізніше."
+        success:
+          "Ваші дані були успішно відправлені.<br> Будь ласка, очікуйте: я зв'яжуся з Вами якнайшвидше для обговорення деталей.",
+        error:
+          "На жаль, на сайті сталася помилка і Ваші дані не були відправлені. Спробуйте, будь ласка, пізніше.",
       },
       formats: {
         format1: "Індивідуальне навчання",
         format2: "Парне навчання",
         format3: "Групове навчання",
-      }
+      },
     },
     formats: {
       title: "Формати навчання",
@@ -216,13 +226,25 @@ const translations = {
       "btn-connect": "sign up",
     },
     "about-me": {
-      title: "I am Alyona - yours English teacher",
-      paragraph: {
-        bold: "Without even thinking of it, I became a polyglot",
-        textOne:
+      title: "I am Alyona - your English teacher",
+      list1: {
+        item1: "<b>8 years of experience </b> in teaching English",
+        item2:
+          "<b>Master's degree in Ukrainian and English philology</b> from National Taras Shevchenko University of  Kyiv, diploma with honors",
+        item3:
+          "<b>Qualification of a linguist</b> and teacher of a higher educational institution",
+      },
+      list2: {
+        item1: "<b>Participated in seminars</b> initiated by the US Embassy",
+        item2:
+          "<b>Successfully prepared students</b> for passing exams of various complexity",
+        item3:
+          "<b>An individual approach</b> to the needs of each student, from the position of a teacher and mentor",
+      },
+      list3: {
+        item1: "<b>Without even thinking of it, I became a polyglot.</b>",
+        item2:
           "I constantly study languages and can communicate in six of them. Self-development is what moves me forward and helps me find meaning. I realized the potential of my development by traveling the world of language, and I teach my students to do the same. Every word you learn opens the door to new possibilities and perspectives.",
-        textTwo:
-          "Self-development through language learning is a journey into the world of expanding horizons, understanding one's own capabilities and ambitions, and increasing the ability to interact with different cultures. Discover new worlds through language learning and turn your self-development into an unforgettable journey.",
       },
     },
     advice: {
@@ -277,40 +299,40 @@ const translations = {
         "Understanding that learning a language is a process that requires time and persistence.",
     },
     assessment: {
-      "subtitle": "By the way!",
-      "title": "Do you want to know what your level is?",
-      "content": {
-        "text": "During the trial lesson, I give feedback on the current level of language proficiency, and also advise how to improve it.",
-        "button": "WRITE"
-      }
+      subtitle: "By the way!",
+      title: "Do you want to know what your level is?",
+      content: {
+        text: "During the trial lesson, I give feedback on the current level of language proficiency, and also advise how to improve it.",
+        button: "WRITE",
+      },
     },
     workflow: {
-      "title": "HOW WE WILL WORK",
+      title: "HOW WE WILL WORK",
       "content-list": {
-        "item1": {
-          "title": "We will evaluate",
-          "list": {
-            "item1": "your current level",
-            "item2": "your strengths and weaknesses",
-            "item3": "your needs"
-          }
+        item1: {
+          title: "We will evaluate",
+          list: {
+            item1: "your current level",
+            item2: "your strengths and weaknesses",
+            item3: "your needs",
+          },
         },
-        "item2": {
-          "title": "You get",
-          "list": {
-            "item1": "an individual study plan based on your request",
-            "item2": "required online materials",
-            "item3": "support and development of your abilities and skills"
-          }
+        item2: {
+          title: "You get",
+          list: {
+            item1: "an individual study plan based on your request",
+            item2: "required online materials",
+            item3: "support and development of your abilities and skills",
+          },
         },
-        "item3": {
-          "title": "Result",
-          "list": {
-            "item1": "enjoyment of learning",
-            "item2": "confidence in language skills"
-          }
-        }
-      }
+        item3: {
+          title: "Result",
+          list: {
+            item1: "enjoyment of learning",
+            item2: "confidence in language skills",
+          },
+        },
+      },
     },
     reviews: {},
     footer: {},
@@ -318,18 +340,15 @@ const translations = {
       title: "Contact with me",
       text: "Please fill out the form and I will contact you as soon as possible to discuss the details.",
       label: {
-        label1:
-          `<span>Your name
+        label1: `<span>Your name
         <span class="star">*</span></span>
         <input type="text" class="user-inpt username" name="username" placeholder="Anastasia" pattern="[a-zA-Zа-яА-ЯёЁґҐіІїЇєЄ]+" required/>
         <span class="error-input" style="color: var(--accent-color);">Please enter a valid name</span>`,
-        label2:
-          `<span>Phone number
+        label2: `<span>Phone number
         <span class="star">*</span></span>
         <input type="tel" class="user-inpt phone" name="phone" placeholder="+38 000 000 00 00" pattern="\\+[0-9]{11,12}" required/>
         <span class="error-input" style="color: var(--accent-color);">Please enter the correct number(+)11/12 characters</span>`,
-        label3:
-          `Format study
+        label3: `Format study
         <div class="new-select">
         <button type="button" class="user-btn first-item-list">Choose a format study</button>
 
@@ -343,8 +362,10 @@ const translations = {
       },
       button: "Send",
       textfdb: {
-        success: "Your details have been sent successfully.<br> Please expect me to contact you as soon as possible to discuss the details.",
-        error: "Unfortunately, there was an error on the site and your data was not sent. Please try again later."
+        success:
+          "Your details have been sent successfully.<br> Please expect me to contact you as soon as possible to discuss the details.",
+        error:
+          "Unfortunately, there was an error on the site and your data was not sent. Please try again later.",
       },
     },
     formats: {
