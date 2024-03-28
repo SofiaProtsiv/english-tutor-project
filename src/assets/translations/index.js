@@ -226,7 +226,7 @@ const translations = {
       "btn-connect": "sign up",
     },
     "about-me": {
-      title: "I am Alyona - yours English teacher",
+      title: "I am Alyona - your English teacher",
       list1: {
         item1: "<b>8 years of experience </b> in teaching English",
         item2:
