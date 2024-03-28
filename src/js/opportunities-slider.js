@@ -1,5 +1,5 @@
-// import Swiper from "swiper/bundle";
-// import "swiper/css/bundle";
+import Swiper from "swiper/bundle";
+import "swiper/css/bundle";
 
 const oppTextSwiper = new Swiper(".opp-text-swiper", {
   allowTouchMove: false,
