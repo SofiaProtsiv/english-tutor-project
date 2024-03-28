@@ -16,12 +16,23 @@ const translations = {
     },
     "about-me": {
       title: "Я альона — твій вчитель англійської",
-      paragraph: {
-        bold: "Сама того не розуміючи, я стала поліглотом.",
-        textOne:
+      list1: {
+        item1: "<b>8 років досвіду </b> у викладанні англійської мови",
+        item2:
+          "<b>Магістр української та англійської філології</b> Київського національного університету імені Тараса Шевченка, диплом з відзнакою",
+        item3:
+          "<b>Кваліфікація лінгвіста</b> і викладача вищого навчального закладу",
+      },
+      list2: {
+        item1: "<b>Участь в семінарах</b> ініційованим Посольством США",
+        item2: "<b>Підготовка студентів</b> до здачі іспитів різної складності",
+        item3:
+          "<b>Індивідуальний підхід</b> до кожного студента, з позиції викладача і ментора",
+      },
+      list3: {
+        item1: "<b>Сама того не розуміючи, я стала поліглотом.</b>",
+        item2:
           "Я сама постійно вивчаю мови і можу спілкуватися на шістьох з них. Саморозвиток – це те, що рухає мене вперед і допомагає віднаходити сенси. Я реалізовую потенціал свого розвитку, подорожуючи світом мови, і вчу робити це своїх студентів. Кожне слово, яке ви вивчаєте, відкриває двері до нових можливостей та перспектив.",
-        textTwo:
-          "Саморозвиток через вивчення мови - це подорож у світ розширення горизонтів, розуміння власних можливостей і амбіцій, збільшення спроможності взаємодіяти з різними культурами. Відкрийте для себе нові світи через вивчення мови і перетворіть свій саморозвиток на незабутню подорож.",
       },
     },
     advice: {
@@ -128,9 +139,6 @@ const translations = {
       moreBtn: "Читати далі",
       lessBtn: "Згорнути",
     },
-    workflow: {},
-    assessment: {},
-    footer: {},
     modal: {
       title: "Зв’язатися зі мною",
       text: "Будь ласка, заповніть форму і я зв’яжуся з Вами якнайшвидше для обговорення деталей.",
@@ -233,17 +241,29 @@ const translations = {
       "btn-connect": "sign up",
     },
     "about-me": {
-      title: "I am Alyona - yours English teacher",
-      paragraph: {
-        bold: "Without even thinking of it, I became a polyglot",
-        textOne:
+      title: "I am Alyona - your English teacher",
+      list1: {
+        item1: "<b>8 years of experience </b> in teaching English",
+        item2:
+          "<b>Master's degree in Ukrainian and English philology</b> from National Taras Shevchenko University of  Kyiv, diploma with honors",
+        item3:
+          "<b>Qualification of a linguist</b> and teacher of a higher educational institution",
+      },
+      list2: {
+        item1: "<b>Participated in seminars</b> initiated by the US Embassy",
+        item2:
+          "<b>Successfully prepared students</b> for passing exams of various complexity",
+        item3:
+          "<b>An individual approach</b> to the needs of each student, from the position of a teacher and mentor",
+      },
+      list3: {
+        item1: "<b>Without even thinking of it, I became a polyglot.</b>",
+        item2:
           "I constantly study languages and can communicate in six of them. Self-development is what moves me forward and helps me find meaning. I realized the potential of my development by traveling the world of language, and I teach my students to do the same. Every word you learn opens the door to new possibilities and perspectives.",
-        textTwo:
-          "Self-development through language learning is a journey into the world of expanding horizons, understanding one's own capabilities and ambitions, and increasing the ability to interact with different cultures. Discover new worlds through language learning and turn your self-development into an unforgettable journey.",
       },
     },
     advice: {
-      title: "Language learning should be an interesting and exciting",
+      title: "To make language learning interesting and exciting",
       list: {
         list_item_1:
           "<b>Use a variety of resources:</b> books, videos, audio podcasts, mobile applications and interactive exercises to avoid monotony",
@@ -260,22 +280,26 @@ const translations = {
       title: {
         global: "Global communication",
         career: "Career opportunities",
-        edu: "Educational opportunities",
+        edu: "Education opportunities",
         culture: "Cultural exchange",
         tech: "Technological achievements",
-        travel: "Travel<br/> and tourism",
+        travel: "Travelling and tourism",
       },
       text: {
-        global: "",
-        career: "",
-        edu: "",
-        culture: "",
-        tech: "",
-        travel: "",
+        global:
+          "English is a global language of communication that helps in communication between people from different linguistic groups.",
+        career:
+          "Most international companies use English as their primary language for communication. Therefore, its knowledge can open new career prospects for you.",
+        edu: "Learning English gives you access to more information, research, and educational resources that are often available in that language.",
+        culture:
+          "Knowing English promotes cultural exchange and mutual understanding between people from different parts of our planet.",
+        tech: "English is also dominant in technology and the Internet. Her knowledge is important in tracking technological innovations and actively participating in them.",
+        travel:
+          "With the knowledge of English, traveling will become more pleasant, and communication with local residents and orientation in unknown places will become easier.",
       },
     },
     requirements: {
-      title: "Language learning is impossible without",
+      title: "Learning a language is impossible without",
       firstSubtitle: "Motivation",
       firstArticle:
         "Interest and desire to learn a new language are key to success.",
@@ -287,14 +311,14 @@ const translations = {
         "Regular practice is the key to a success story. And this applies not only to English.",
       fourthSubtitle: "Patience",
       fourthArticle:
-        "Understanding that learning a language is a process that requires time and perseverance.",
+        "Understanding that learning a language is a process that requires time and persistence.",
     },
     assessment: {
       subtitle: "By the way!",
-      title: "?",
+      title: "Do you want to know what your level is?",
       content: {
-        text: ".",
-        button: "",
+        text: "During the trial lesson, I give feedback on the current level of language proficiency, and also advise how to improve it.",
+        button: "WRITE",
       },
     },
     workflow: {
@@ -325,9 +349,6 @@ const translations = {
         },
       },
     },
-
-    workflow: {},
-    assessment: {},
     reviews: {
       title: "from students",
       reviewTitle1: "polina",
@@ -345,7 +366,34 @@ const translations = {
       moreBtn: "Read more",
       lessBtn: "Less",
     },
-    footer: {},
+    workflow: {
+      title: "HOW WE WILL WORK",
+      "content-list": {
+        item1: {
+          title: "We will evaluate",
+          list: {
+            item1: "your current level",
+            item2: "your strengths and weaknesses",
+            item3: "your needs",
+          },
+        },
+        item2: {
+          title: "You get",
+          list: {
+            item1: "an individual study plan based on your request",
+            item2: "required online materials",
+            item3: "support and development of your abilities and skills",
+          },
+        },
+        item3: {
+          title: "Result",
+          list: {
+            item1: "enjoyment of learning",
+            item2: "confidence in language skills",
+          },
+        },
+      },
+    },
     modal: {
       title: "Contact with me",
       text: "Please fill out the form and I will contact you as soon as possible to discuss the details.",
@@ -413,7 +461,7 @@ const translations = {
     footer: {
       nav: {
         about_me: "ABOUT ME",
-        quote: "QUOTE",
+        quote: "PRICE",
         reviews: "REVIEWS",
         contacts: "CONTACTS",
       },
