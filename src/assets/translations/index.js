@@ -75,58 +75,90 @@ const translations = {
       fourthArticle:
         "Розуміння того, що вивчення мови — це процес, що вимагає часу та наполегливості.",
     },
-    "assessment": {
-      "section": {
-        "container": {
-          "subtitle": "By the way!",
-          "title": "А хочеш дізнатися, який у тебе рівень?",
-          "content": {
-            "text": "Під час пробного заняття я даю фідбек щодо наявного рівня володіння мовою, а також раджу як його покращити.",
-            "button": "Написати"
-          }
-        }
+    assessment: {
+      "subtitle": "By the way!",
+      "title": "А хочеш дізнатися, який у тебе рівень?",
+      "content": {
+        "text": "Під час пробного заняття я даю фідбек щодо наявного рівня володіння мовою, а також раджу як його покращити.",
+        "button": "Написати"
       }
     },
-    "workflow": {
-      "section": {
-        "container": {
-          "title": "Як ми будемо працювати",
-          "content": {
-            "content-list": {
-              "list": {
-                "item1": {
-                  "title1": "Оцінюємо",
-                  "list1": {
-                    "item1": "ваш поточний рівень",
-                    "item2": "ваші сильні та слабкі сторони",
-                    "item3": "ваші потреби"
-                  }
-                },
-                "item2": {
-                  "title2": "Ви отримуєте",
-                  "list2": {
-                    "item1": "індивідуальний план навчання з урахуванням вашого запиту",
-                    "item2": "необхідні онлайн-матеріали",
-                    "item3": "підтримку та розвиток ваших здібностей та скілів"
-                  }
-                },
-                "item3": {
-                  "title3": "Результат",
-                  "list3": {
-                    "item1": "задоволення від навчання",
-                    "item2": "впевненість у володінні мовою"
-                  }
-                }
-              }
-            }
+    workflow: {
+      "title": "Як ми будемо працювати",
+      "content-list": {
+        "item1": {
+          "title": "Оцінюємо",
+          "list": {
+            "item1": "ваш поточний рівень",
+            "item2": "ваші сильні та слабкі сторони",
+            "item3": "ваші потреби"
+          }
+        },
+        "item2": {
+          "title": "Ви отримуєте",
+          "list": {
+            "item1": "індивідуальний план навчання з урахуванням вашого запиту",
+            "item2": "необхідні онлайн-матеріали",
+            "item3": "підтримку та розвиток ваших здібностей та скілів"
+          }
+        },
+        "item3": {
+          "title": "Результат",
+          "list": {
+            "item1": "задоволення від навчання",
+            "item2": "впевненість у володінні мовою"
           }
         }
       }
     },
     reviews: {},
     footer: {},
-    modal: {},
-    "pop-up": {},
+    modal: {
+      title : "Зв’язатися зі мною",
+      text : "Будь ласка, заповніть форму і я зв’яжуся з Вами якнайшвидше для обговорення деталей.",
+      label : {
+        label1 : 
+        `<span>Ваше ім’я
+          <span class="star">*</span></span>
+          <input type="text" class="user-inpt username" name="username" placeholder="Анастасія" pattern="[a-zA-Zа-яА-ЯёЁґҐіІїЇєЄ]+" required/>
+          <span class="error-input" style="color: var(--accent-color);">Будь ласка, введіть коректне ім’я</span>`,
+        label2 : 
+        `<span>Номер телефону
+         <span class="star">*</span></span>
+         <input type="tel" class="user-inpt phone" name="phone" placeholder="+38 000 000 00 00" pattern="\\+[0-9]{11,12}" required/>
+         <span class="error-input" style="color: var(--accent-color);">Будь ласка, введіть коректний номер(+)11/12 символів</span>`,
+        label3 : 
+        `Формат навчання<div class="new-select">
+        <button type="button" class="user-btn first-item-list">Оберіть варіант навчання</button>
+
+        <ul class="list-item-select" name="education">
+            <li class="list-item-select-opt" data-value="Individual study">Індивідуальне навчання</li>
+            <li class="list-item-select-opt" data-value="Study with a friend">Парне навчання</li>
+            <li class="list-item-select-opt" data-value="Groupe study">Групове навчання</li>
+        </ul>
+        </div>`,
+        label4 : `Коментар<textarea class="user-textarea text-com" name="comment" placeholder="Ваш коментар"></textarea>`,
+      },
+      textspan : {
+        text1 : "Будь ласка, введіть коректне ім’я",
+        text2 : "Будь ласка, введіть коректний номер(+)11/12 символів",
+      },
+      button : "ВІДПРАВИТИ",
+      placeholder : {
+        placeholder1 : "Анастасія",
+        placeholder2 : "Оберіть варіант навчання",
+        placeholder3 : "Ваш коментар",
+      },
+      textfdb : {
+        success : "Ваші дані були успішно відправлені.<br> Будь ласка, очікуйте: я зв'яжуся з Вами якнайшвидше для обговорення деталей.",
+        error : "На жаль, на сайті сталася помилка і Ваші дані не були відправлені. Спробуйте, будь ласка, пізніше." 
+      },
+      formats : {
+        format1 : "Індивідуальне навчання",
+        format2 : "Парне навчання",
+        format3 : "Групове навчання",
+      }
+    },
     formats: {
       title: "Формати навчання",
       format1: {
@@ -240,58 +272,77 @@ const translations = {
       fourthArticle:
         "Understanding that learning a language is a process that requires time and perseverance.",
     },
-    "assessment": {
-      "section": {
-        "container": {
-          "subtitle": "By the way!",
-          "title": "?",
-          "content": {
-            "text": ".",
-            "button": ""
-          }
-        }
+    assessment: {
+      "subtitle": "By the way!",
+      "title": "?",
+      "content": {
+        "text": ".",
+        "button": ""
       }
     },
-    "workflow": {
-      "section": {
-        "container": {
+    workflow: {
+      "title": "",
+      "content-list": {
+        "item1": {
           "title": "",
-          "content": {
-            "content-list": {
-              "list": {
-                "item1": {
-                  "title1": "",
-                  "list1": {
-                    "item1": "",
-                    "item2": "",
-                    "item3": ""
-                  }
-                },
-                "item2": {
-                  "title2": "",
-                  "list2": {
-                    "item1": "",
-                    "item2": "",
-                    "item3": ""
-                  }
-                },
-                "item3": {
-                  "title3": "",
-                  "list3": {
-                    "item1": "",
-                    "item2": ""
-                  }
-                }
-              }
-            }
+          "list": {
+            "item1": "",
+            "item2": "",
+            "item3": ""
+          }
+        },
+        "item2": {
+          "title": "",
+          "list": {
+            "item1": "",
+            "item2": "",
+            "item3": ""
+          }
+        },
+        "item3": {
+          "title": "",
+          "list": {
+            "item1": "",
+            "item2": ""
           }
         }
       }
     },
     reviews: {},
     footer: {},
-    modal: {},
-    "pop-up": {},
+    modal: {
+      title : "Contact with me",
+      text : "Please fill out the form and I will contact you as soon as possible to discuss the details.",
+      label : {
+        label1 : 
+        `<span>Your name
+        <span class="star">*</span></span>
+        <input type="text" class="user-inpt username" name="username" placeholder="Anastasia" pattern="[a-zA-Zа-яА-ЯёЁґҐіІїЇєЄ]+" required/>
+        <span class="error-input" style="color: var(--accent-color);">Please enter a valid name</span>`,
+        label2 : 
+        `<span>Phone number
+        <span class="star">*</span></span>
+        <input type="tel" class="user-inpt phone" name="phone" placeholder="+38 000 000 00 00" pattern="\\+[0-9]{11,12}" required/>
+        <span class="error-input" style="color: var(--accent-color);">Please enter the correct number(+)11/12 characters</span>`,
+        label3 : 
+        `Format study
+        <div class="new-select">
+        <button type="button" class="user-btn first-item-list">Choose a format study</button>
+
+        <ul class="list-item-select" name="education">
+            <li class="list-item-select-opt" data-value="Individual study">Individual study</li>
+            <li class="list-item-select-opt" data-value="Study with a friend">Study with a friend</li>
+            <li class="list-item-select-opt" data-value="Groupe study">Groupe study</li>
+        </ul>
+        </div>`,
+        label4 : `Comment<textarea class="user-textarea text-com" name="comment" placeholder="Your comment"></textarea>`,
+      },
+      button : "Send",
+      textfdb : {
+        success : "Your details have been sent successfully.<br> Please expect me to contact you as soon as possible to discuss the details.",
+        error : "Unfortunately, there was an error on the site and your data was not sent. Please try again later." 
+      },
+    },
     formats: {
       title: "Studying formats",
       format1: {
