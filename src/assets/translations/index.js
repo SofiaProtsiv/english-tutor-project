@@ -277,12 +277,12 @@ const translations = {
         "Understanding that learning a language is a process that requires time and perseverance.",
     },
     assessment: {
-      subtitle: "By the way!",
-      title: "?",
-      content: {
-        text: ".",
-        button: "",
-      },
+      "subtitle": "By the way!",
+      "title": "Do you want to know what your level is?",
+      "content": {
+        "text": "During the trial lesson, I give feedback on the current level of language proficiency, and also advise how to improve it.",
+        "button": "WRITE"
+      }
     },
     workflow: {
       title: "",
