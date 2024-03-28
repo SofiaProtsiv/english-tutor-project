@@ -42,9 +42,9 @@ const translations = {
       },
     },
     hero: {
-      "main-title": "let's study English together",
+      "main-title": "lets study English together",
       "about-me":
-        "I am a teacher with whom you will actively communicate, share smiles, learn exciting topics and improve your English.",
+        "I am the teacher with whom you will actively communicate, share smiles, learn fascinating topics and improve your English.",
       "btn-connect": "sign up",
     },
     "about-me": {},
