@@ -6,6 +6,19 @@ const selectSmallEl = document.querySelector("#CUSTOM_SELECT_SMALL_JS");
 const ITEMS = Object.keys(translations);
 const state = { current: "" };
 
+/* ======= handle pressed logo  ======= */
+
+function handlePressedLogo() {
+  window.scrollTo({ top: 0, behavior: "instant" });
+  window.location.reload();
+}
+
+const logo = document.querySelector(".ih-logo");
+
+if (logo) {
+  logo.removeEventListener("click", handlePressedLogo);
+  logo.addEventListener("click", handlePressedLogo);
+}
 /* ======= menu button ======= */
 
 const menuButton = document.querySelector("#HEADER_MENU_JS");
@@ -85,8 +98,9 @@ if (menuNavigation) {
 function createCustomSelectOption(code, order) {
   return `
     <div data-value="${code}" class="ih-custom-select-option" style="
-    ${state.current === code ? "background:transparent; " : ""}order:${state.current === code ? 0 : order
-    }">${code}</div>
+    ${state.current === code ? "background:transparent; " : ""}order:${
+    state.current === code ? 0 : order
+  }">${code}</div>
 `;
 }
 
@@ -96,8 +110,8 @@ function createCustomSelect() {
             <use href="/images/ih-icons-sprite.svg#icon-switch-arrow"></use>
           </svg>
     ${ITEMS.map((code, index) => {
-    return createCustomSelectOption(code, index + 1);
-  }).join("")}
+      return createCustomSelectOption(code, index + 1);
+    }).join("")}
 
 `;
 }
@@ -105,11 +119,10 @@ function createCustomSelect() {
 function createCustomSelectSmall() {
   return `
         ${ITEMS.map((code) => {
-    return `<div data-value="${code}" class="ih-select-lang-btn${state.current === code ? " select-lang-btn-active" : ""
-      }">${code}</div>`;
-  }).join(`<svg class="ih-vertical-line">
-           <use href="/images/ih-icons-sprite.svg#icon-vertical-line"></use>
-         </svg>`)}
+          return `<div data-value="${code}" class="ih-select-lang-btn${
+            state.current === code ? " select-lang-btn-active" : ""
+          }">${code}</div>`;
+        }).join(" ")}
 `;
 }
 
