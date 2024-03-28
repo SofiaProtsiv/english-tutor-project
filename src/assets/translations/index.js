@@ -76,40 +76,40 @@ const translations = {
         "Розуміння того, що вивчення мови — це процес, що вимагає часу та наполегливості.",
     },
     assessment: {
-      "subtitle": "By the way!",
-      "title": "А хочеш дізнатися, який у тебе рівень?",
-      "content": {
-        "text": "Під час пробного заняття я даю фідбек щодо наявного рівня володіння мовою, а також раджу як його покращити.",
-        "button": "Написати"
-      }
+      subtitle: "By the way!",
+      title: "А хочеш дізнатися, який у тебе рівень?",
+      content: {
+        text: "Під час пробного заняття я даю фідбек щодо наявного рівня володіння мовою, а також раджу як його покращити.",
+        button: "Написати",
+      },
     },
     workflow: {
-      "title": "Як ми будемо працювати",
+      title: "Як ми будемо працювати",
       "content-list": {
-        "item1": {
-          "title": "Оцінюємо",
-          "list": {
-            "item1": "ваш поточний рівень",
-            "item2": "ваші сильні та слабкі сторони",
-            "item3": "ваші потреби"
-          }
+        item1: {
+          title: "Оцінюємо",
+          list: {
+            item1: "ваш поточний рівень",
+            item2: "ваші сильні та слабкі сторони",
+            item3: "ваші потреби",
+          },
         },
-        "item2": {
-          "title": "Ви отримуєте",
-          "list": {
-            "item1": "індивідуальний план навчання з урахуванням вашого запиту",
-            "item2": "необхідні онлайн-матеріали",
-            "item3": "підтримку та розвиток ваших здібностей та скілів"
-          }
+        item2: {
+          title: "Ви отримуєте",
+          list: {
+            item1: "індивідуальний план навчання з урахуванням вашого запиту",
+            item2: "необхідні онлайн-матеріали",
+            item3: "підтримку та розвиток ваших здібностей та скілів",
+          },
         },
-        "item3": {
-          "title": "Результат",
-          "list": {
-            "item1": "задоволення від навчання",
-            "item2": "впевненість у володінні мовою"
-          }
-        }
-      }
+        item3: {
+          title: "Результат",
+          list: {
+            item1: "задоволення від навчання",
+            item2: "впевненість у володінні мовою",
+          },
+        },
+      },
     },
     reviews: {},
     footer: {},
@@ -199,18 +199,22 @@ const translations = {
       title: {
         global: "Global communication",
         career: "Career opportunities",
-        edu: "Educational opportunities",
+        edu: "Education opportunities",
         culture: "Cultural exchange",
         tech: "Technological achievements",
-        travel: "Travel<br/> and tourism",
+        travel: "Travelling and tourism",
       },
       text: {
-        global: "",
-        career: "",
-        edu: "",
-        culture: "",
-        tech: "",
-        travel: "",
+        global:
+          "English is a global language of communication that helps in communication between people from different linguistic groups.",
+        career:
+          "Most international companies use English as their primary language for communication. Therefore, its knowledge can open new career prospects for you.",
+        edu: "Learning English gives you access to more information, research, and educational resources that are often available in that language.",
+        culture:
+          "Knowing English promotes cultural exchange and mutual understanding between people from different parts of our planet.",
+        tech: "English is also dominant in technology and the Internet. Her knowledge is important in tracking technological innovations and actively participating in them.",
+        travel:
+          "With the knowledge of English, traveling will become more pleasant, and communication with local residents and orientation in unknown places will become easier.",
       },
     },
     requirements: {
@@ -229,40 +233,40 @@ const translations = {
         "Understanding that learning a language is a process that requires time and perseverance.",
     },
     assessment: {
-      "subtitle": "By the way!",
-      "title": "?",
-      "content": {
-        "text": ".",
-        "button": ""
-      }
+      subtitle: "By the way!",
+      title: "?",
+      content: {
+        text: ".",
+        button: "",
+      },
     },
     workflow: {
-      "title": "",
+      title: "",
       "content-list": {
-        "item1": {
-          "title": "",
-          "list": {
-            "item1": "",
-            "item2": "",
-            "item3": ""
-          }
+        item1: {
+          title: "",
+          list: {
+            item1: "",
+            item2: "",
+            item3: "",
+          },
         },
-        "item2": {
-          "title": "",
-          "list": {
-            "item1": "",
-            "item2": "",
-            "item3": ""
-          }
+        item2: {
+          title: "",
+          list: {
+            item1: "",
+            item2: "",
+            item3: "",
+          },
         },
-        "item3": {
-          "title": "",
-          "list": {
-            "item1": "",
-            "item2": ""
-          }
-        }
-      }
+        item3: {
+          title: "",
+          list: {
+            item1: "",
+            item2: "",
+          },
+        },
+      },
     },
     reviews: {},
     footer: {},
