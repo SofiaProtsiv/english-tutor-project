@@ -46,8 +46,6 @@ const revSwiperText = new Swiper(revTextSwiper, {
 revSwiperImg.controller.control = revSwiperText;
 revSwiperText.controller.control = revSwiperImg;
 
-// const resizeBtnList = document.querySelectorAll(".resize-btn");
-
 const handleClickResizeBtn = (event, review, langKey, size) => {
   const dataLang = event.target.dataset.lang;
   const lang = localStorage.getItem("lang") ?? "ua";
@@ -64,7 +62,7 @@ const handleClickResizeBtn = (event, review, langKey, size) => {
   }
 };
 
-function resizeReviewText(lang, size) {
+function resizeReviewText(isComputer, lang, size) {
   const reviewsSlides = document.querySelectorAll(".reviews-text-swiper-slide");
 
   reviewsSlides.forEach((slide) => {
@@ -72,6 +70,17 @@ function resizeReviewText(lang, size) {
     const langKey = review.getAttribute("data-lang");
     const text = getValueByPath(locales[lang], langKey);
     const btnMore = slide.querySelector(".resize-btn");
+
+    if (isComputer) {
+      review.textContent = text;
+      if (btnMore) {
+        btnMore.removeEventListener("click", (event) =>
+          handleClickResizeBtn(event, review, langKey, size)
+        );
+        btnMore.remove();
+      }
+      return;
+    }
 
     if (btnMore && btnMore.dataset.lang === "reviews.lessBtn") {
       return;
@@ -95,6 +104,9 @@ function resizeReviewText(lang, size) {
       }
     } else {
       if (btnMore) {
+        btnMore.removeEventListener("click", (event) =>
+          handleClickResizeBtn(event, review, langKey, size)
+        );
         btnMore.remove();
         review.textContent = text;
       }
@@ -108,17 +120,13 @@ export const handleResize = () => {
   const lang = localStorage.getItem("lang") ?? "ua";
 
   if (mediaQueryMobile.matches) {
-    resizeReviewText(lang, 400);
+    resizeReviewText(false, lang, 400);
   } else if (mediaQueryTablet.matches) {
-    resizeReviewText(lang, 500);
+    resizeReviewText(false, lang, 500);
   } else {
-    resizeReviewText(lang, 50000);
+    resizeReviewText(true, lang);
   }
 };
 
 handleResize();
 window.addEventListener("resize", handleResize);
-
-// resizeBtnList.forEach((resizeBtn) =>
-//   resizeBtn.addEventListener("click", handleClickResizeBtn)
-// );
