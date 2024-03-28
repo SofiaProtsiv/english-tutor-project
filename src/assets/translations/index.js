@@ -114,21 +114,21 @@ const translations = {
     reviews: {},
     footer: {},
     modal: {
-      title : "Зв’язатися зі мною",
-      text : "Будь ласка, заповніть форму і я зв’яжуся з Вами якнайшвидше для обговорення деталей.",
-      label : {
-        label1 : 
-        `<span>Ваше ім’я
+      title: "Зв’язатися зі мною",
+      text: "Будь ласка, заповніть форму і я зв’яжуся з Вами якнайшвидше для обговорення деталей.",
+      label: {
+        label1:
+          `<span>Ваше ім’я
           <span class="star">*</span></span>
           <input type="text" class="user-inpt username" name="username" placeholder="Анастасія" pattern="[a-zA-Zа-яА-ЯёЁґҐіІїЇєЄ]+" required/>
           <span class="error-input" style="color: var(--accent-color);">Будь ласка, введіть коректне ім’я</span>`,
-        label2 : 
-        `<span>Номер телефону
+        label2:
+          `<span>Номер телефону
          <span class="star">*</span></span>
          <input type="tel" class="user-inpt phone" name="phone" placeholder="+38 000 000 00 00" pattern="\\+[0-9]{11,12}" required/>
          <span class="error-input" style="color: var(--accent-color);">Будь ласка, введіть коректний номер(+)11/12 символів</span>`,
-        label3 : 
-        `Формат навчання<div class="new-select">
+        label3:
+          `Формат навчання<div class="new-select">
         <button type="button" class="user-btn first-item-list">Оберіть варіант навчання</button>
 
         <ul class="list-item-select" name="education">
@@ -137,26 +137,26 @@ const translations = {
             <li class="list-item-select-opt" data-value="Groupe study">Групове навчання</li>
         </ul>
         </div>`,
-        label4 : `Коментар<textarea class="user-textarea text-com" name="comment" placeholder="Ваш коментар"></textarea>`,
+        label4: `Коментар<textarea class="user-textarea text-com" name="comment" placeholder="Ваш коментар"></textarea>`,
       },
-      textspan : {
-        text1 : "Будь ласка, введіть коректне ім’я",
-        text2 : "Будь ласка, введіть коректний номер(+)11/12 символів",
+      textspan: {
+        text1: "Будь ласка, введіть коректне ім’я",
+        text2: "Будь ласка, введіть коректний номер(+)11/12 символів",
       },
-      button : "ВІДПРАВИТИ",
-      placeholder : {
-        placeholder1 : "Анастасія",
-        placeholder2 : "Оберіть варіант навчання",
-        placeholder3 : "Ваш коментар",
+      button: "ВІДПРАВИТИ",
+      placeholder: {
+        placeholder1: "Анастасія",
+        placeholder2: "Оберіть варіант навчання",
+        placeholder3: "Ваш коментар",
       },
-      textfdb : {
-        success : "Ваші дані були успішно відправлені.<br> Будь ласка, очікуйте: я зв'яжуся з Вами якнайшвидше для обговорення деталей.",
-        error : "На жаль, на сайті сталася помилка і Ваші дані не були відправлені. Спробуйте, будь ласка, пізніше." 
+      textfdb: {
+        success: "Ваші дані були успішно відправлені.<br> Будь ласка, очікуйте: я зв'яжуся з Вами якнайшвидше для обговорення деталей.",
+        error: "На жаль, на сайті сталася помилка і Ваші дані не були відправлені. Спробуйте, будь ласка, пізніше."
       },
-      formats : {
-        format1 : "Індивідуальне навчання",
-        format2 : "Парне навчання",
-        format3 : "Групове навчання",
+      formats: {
+        format1: "Індивідуальне навчання",
+        format2: "Парне навчання",
+        format3: "Групове навчання",
       }
     },
     formats: {
@@ -262,7 +262,7 @@ const translations = {
       },
     },
     requirements: {
-      title: "Language learning is impossible without",
+      title: "Learning a language is impossible without",
       firstSubtitle: "Motivation",
       firstArticle:
         "Interest and desire to learn a new language are key to success.",
@@ -274,7 +274,7 @@ const translations = {
         "Regular practice is the key to a success story. And this applies not only to English.",
       fourthSubtitle: "Patience",
       fourthArticle:
-        "Understanding that learning a language is a process that requires time and perseverance.",
+        "Understanding that learning a language is a process that requires time and persistence.",
     },
     assessment: {
       "subtitle": "By the way!",
@@ -315,21 +315,21 @@ const translations = {
     reviews: {},
     footer: {},
     modal: {
-      title : "Contact with me",
-      text : "Please fill out the form and I will contact you as soon as possible to discuss the details.",
-      label : {
-        label1 : 
-        `<span>Your name
+      title: "Contact with me",
+      text: "Please fill out the form and I will contact you as soon as possible to discuss the details.",
+      label: {
+        label1:
+          `<span>Your name
         <span class="star">*</span></span>
         <input type="text" class="user-inpt username" name="username" placeholder="Anastasia" pattern="[a-zA-Zа-яА-ЯёЁґҐіІїЇєЄ]+" required/>
         <span class="error-input" style="color: var(--accent-color);">Please enter a valid name</span>`,
-        label2 : 
-        `<span>Phone number
+        label2:
+          `<span>Phone number
         <span class="star">*</span></span>
         <input type="tel" class="user-inpt phone" name="phone" placeholder="+38 000 000 00 00" pattern="\\+[0-9]{11,12}" required/>
         <span class="error-input" style="color: var(--accent-color);">Please enter the correct number(+)11/12 characters</span>`,
-        label3 : 
-        `Format study
+        label3:
+          `Format study
         <div class="new-select">
         <button type="button" class="user-btn first-item-list">Choose a format study</button>
 
@@ -339,12 +339,12 @@ const translations = {
             <li class="list-item-select-opt" data-value="Groupe study">Groupe study</li>
         </ul>
         </div>`,
-        label4 : `Comment<textarea class="user-textarea text-com" name="comment" placeholder="Your comment"></textarea>`,
+        label4: `Comment<textarea class="user-textarea text-com" name="comment" placeholder="Your comment"></textarea>`,
       },
-      button : "Send",
-      textfdb : {
-        success : "Your details have been sent successfully.<br> Please expect me to contact you as soon as possible to discuss the details.",
-        error : "Unfortunately, there was an error on the site and your data was not sent. Please try again later." 
+      button: "Send",
+      textfdb: {
+        success: "Your details have been sent successfully.<br> Please expect me to contact you as soon as possible to discuss the details.",
+        error: "Unfortunately, there was an error on the site and your data was not sent. Please try again later."
       },
     },
     formats: {
@@ -382,7 +382,7 @@ const translations = {
     footer: {
       nav: {
         about_me: "ABOUT ME",
-        quote: "QUOTE",
+        quote: "PRICE",
         reviews: "REVIEWS",
         contacts: "CONTACTS",
       },
