@@ -122,8 +122,23 @@ const translations = {
         },
       },
     },
-    reviews: {},
-    footer: {},
+    reviews: {
+      title: "від студентів",
+      reviewTitle1: "поліна",
+      reviewTitle2: "надія",
+      reviewTitle3: "ліза",
+      reviewTitle4: "анна",
+      reviewText1:
+        "Всім привіт! Хочу порадити вам репетитора Альону. Це найкращий викладач та людина, яку ви можете зустріти на своєму шляху вивчення англійської мови. Альона допомогла мені успішно скласти ЗНО та витягнула мою англійську на чудовий рівень. Це людина з якою не боїшся зробити помилку, сказати щось не те, тобі завжди комфортно. Пам’ятаю, як я вирішила витягнути свою розмову англійську. Спочатку я навіть не могла сказати одне речення, але Альона допомагала мені та робила це дуже обережно, а через місяць я вже могла вільно говорити. На заняттях завжди приємна та комфортна атмосфера, ти почуваєшся як з близькою подругою за кавою, тільки розмовляєш на англійській. Також варто додати, що Альона дуже різностороння та надихаюча особистість, у вас ніколи не буде такого, що не буде про що поговорити. Я впевнена, що Альона допоможе вам з будь-яким напрямом англійської, від юридичної до інженерної Альона заряджає своєю енергією, позитивом, креативними та сучасними підходами. Приємно бачити людину, яка настільки любить свою справу. Бажаю вам успіхів ❤️🫰🏻 Альона найкраща!",
+      reviewText2:
+        "Хочу поділитися своїм досвідом. Займаючись з Альоною, всього за два місяці я подолала свій мовний бар'єр, значно покращила свої знання, вимову та отримала офер на роботі своєї мріі. Я була приємно здивована, наскільки легко, інтерактивно та захопливо проходять уроки. Маючи досвід навчання в інших місцях, я не могла навіть уявити, що навчання може бути таким легким та комфортним. Особливо хочу відзначити Альону як особистість та професіонала, яка неодмінно допоможе досягнути поставленої мети. Звісно, багато чого залежить від власного бажання та наполегливості, але з таким наставником, як Альона, процес навчання перетворюється і справді в цікавий процес, де з кожним днем ти стаєш краще. Домашні завдання – це окрема любов. Альона підбирає завдання під твої інтереси, дає прикольні відео для просмотру. Готує круті топики для discussion. Є багато корисної і необхідної інформації під конкретний запит. Тому всім рекомендую спробувати та змінити своє життя, тому що англійська відкриває нові горизонти. 💖",
+      reviewText3:
+        "Доброго дня) пишу невеличкий відгук) Метч у нас з вами як звикладачем відбувся в першого заняття і з того часу кожне заняття як на мене було все веселіше та інтенсивніше На заняттях ми не говоримо на банальні теми, кожен урок різний по наповненню тем і категорії завдань. Як жартують, що тільки мій викладач англійської знає мій улюблений колір та мету по життю, але це насправді правда) загалом я дуже рада, що потрапила до вас)",
+      reviewText4:
+        "Я займаюсь з Альоною більше трьох місяців і це три місяці і кайфу. Мені є чим порівнювати і мені подобається індивідуальний підхід до навчання. У мене був запит на підвищення рівня бізнес англійської, оскільки це важливо для моєї роботи: я спілкуюсь з іноземними клієнтами, стейкхолдерами, кандидатами. І бізнес-інлиш - It’s a little bit boring, а я не хотіла і мені не цікаво вчитися просто сухо за книгою і от кожного разу, на кожен наш урок Альона готує матеріали. Кожного разу ці матеріали не схожі на інші, завдяки цьому – це реально цікаво. Якщо це граматика – то це інтерактивна граматика, завдяки чому легше запам'ятовувати інформацію і сприймати. І дуже важливий фактор для мене, оскільки я людина, яка багато працює, це те, що Альона завжди на зв'язку, але пам'ятайте, що worklife balance – це важливо. Я знаю, що я можу написати їй, наприклад, перед мітом із клієнтом, якщо маю якісь консорни як подати інформацію, як сказати інформацію англійською і вона буде завжди на зв'язку. Тому однозначно рекомендую, займайтесь і кайфуйте!",
+      moreBtn: "Читати далі",
+      lessBtn: "Згорнути",
+    },
     modal: {
       title: "Зв’язатися зі мною",
       text: "Будь ласка, заповніть форму і я зв’яжуся з Вами якнайшвидше для обговорення деталей.",
@@ -307,6 +322,51 @@ const translations = {
       },
     },
     workflow: {
+      title: "",
+      "content-list": {
+        item1: {
+          title: "",
+          list: {
+            item1: "",
+            item2: "",
+            item3: "",
+          },
+        },
+        item2: {
+          title: "",
+          list: {
+            item1: "",
+            item2: "",
+            item3: "",
+          },
+        },
+        item3: {
+          title: "",
+          list: {
+            item1: "",
+            item2: "",
+          },
+        },
+      },
+    },
+    reviews: {
+      title: "from students",
+      reviewTitle1: "polina",
+      reviewTitle2: "nadiia",
+      reviewTitle3: "liza",
+      reviewTitle4: "anna",
+      reviewText1:
+        "Hello everybody! I would like to recommend tutor Alyona. He is the best teacher and person you can meet on your way to learn English. Alyona helped me successfully pass the external examination and brought my English to an excellent level. This is a person with whom you are not afraid to make a mistake, say something wrong, you are always comfortable. I remember how I decided to improve my conversational English. At first I couldn't even say a single sentence, but Alyona helped me and did it very carefully, and after a month I could already speak freely. The classes always have a pleasant and comfortable atmosphere, you feel like you are having coffee with a close friend, only speaking in English. It is also worth adding that Alyona is a very versatile and inspiring person, you will never run out of something to talk about. I am sure that Alyona will help you with any direction of English, from law to engineering:) Alyona charges with her energy, positivity, creative and modern approaches. It's nice to see a person who loves his job so much. I wish you success ❤️🫰🏻 Alyona is the best!",
+      reviewText2:
+        "I want to share my experience. Working with Alyona, in just two months I overcame my language barrier, significantly improved my knowledge and pronunciation, and received an offer for my dream job. I was pleasantly surprised at how easy, interactive and exciting the lessons are. Having the experience of studying in other places, I could not even imagine that studying could be so easy and comfortable. I especially want to mention Alyona as a person and a professional who will definitely help to achieve the set goal. Of course, a lot depends on your own desire and perseverance, but with a mentor like Alyona, the learning process really turns into an interesting process where you get better every day. Homework is a separate love. Alyona selects tasks according to your interests, gives cool videos to watch. Prepares cool topics for discussion. There is a lot of useful and necessary information for a specific request. Therefore, I recommend everyone to try and change their life, because English opens up new horizons. 💖",
+      reviewText3:
+        "Good afternoon) I am writing a small review) The match between you as a teacher and me took place in our first meeting, and since then every class has been more fun and intense for me. In classes, we do not talk about something plain, each lesson is different in filling topics and category of tasks. As they joke that only my English teacher knows my favorite color and purpose in life, but it's actually true) in general, I'm very glad that I have got you)",
+      reviewText4:
+        "I've been studying with Alyona for over three months, and it's been a blast. I've tried other options before, but I really like the personalized approach to learning here. I needed to improve my business English because it's crucial for my job - I deal with foreign clients, stakeholders, and candidates. Regular business English lessons can be dull, but Aliona makes it interesting by preparing different materials for each session. It's never boring! Even grammar lessons are interactive, which makes it easier to remember and understand. Another important thing for me is that Aliona is always available when I need help, although she also reminds me about maintaining a work-life balance. I know I can message her, even before a meeting with a client, if I need advice on how to present information in English, and she'll always respond. So, I definitely recommend studying with her and enjoying the process!",
+      moreBtn: "Read more",
+      lessBtn: "Less",
+    },
+    workflow: {
       title: "HOW WE WILL WORK",
       "content-list": {
         item1: {
@@ -334,8 +394,6 @@ const translations = {
         },
       },
     },
-    reviews: {},
-    footer: {},
     modal: {
       title: "Contact with me",
       text: "Please fill out the form and I will contact you as soon as possible to discuss the details.",
