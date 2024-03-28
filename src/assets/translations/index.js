@@ -224,6 +224,7 @@ const translations = {
         contacts: "КОНТАКТИ",
       },
     },
+    teamModal: { title: "<span>Команда,</span> яка створила сайт" },
   },
   en: {
     header: {
@@ -466,6 +467,7 @@ const translations = {
         contacts: "CONTACTS",
       },
     },
+    teamModal: { title: "Development team" },
   },
 };
 
