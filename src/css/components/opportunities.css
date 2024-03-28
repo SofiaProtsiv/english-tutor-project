@@ -107,7 +107,7 @@
 
 .opp-text-swiper {
   height: 272px;
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   justify-content: space-between;
   transform: translate(-85px, 0);
