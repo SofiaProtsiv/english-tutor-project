@@ -31,7 +31,7 @@
 <path d="M5.334 23.027v-1.333h21.333v1.333h-21.333zM5.334 16.667v-1.333h21.333v1.333h-21.333zM5.334 10.307v-1.333h21.333v1.333h-21.333z"></path>
 </symbol>
  <!--icon close-->
-<symbol id="close-icon" viewBox="0 0 24 24">
+<symbol id="close-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <path d="M12 10.586L7.707 6.293a1 1 0 00-1.414 1.414L10.586 12l-4.293 4.293a1 1 0 101.414 1.414L12 13.414l4.293 4.293a1 1 0 001.414-1.414L13.414 12l4.293-4.293a1 1 0 10-1.414-1.414L12 10.586z"/>
 </symbol>
 <symbol id="icon-menu-close" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
