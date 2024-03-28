@@ -1,5 +1,4 @@
 import axios from "axios";
-
 const mdlContent = document.querySelector('.mdl-content');
 const buttonClick = document.querySelectorAll(".btn-connect");
 const modalWindow = document.querySelector(".mdl-box");
@@ -9,12 +8,11 @@ const form = document.querySelector(".mdl-forma");
 const butClose = document.querySelector(".close");
 const formUser = document.querySelector(".forma-for-connect");
 const firstBut = document.querySelector(".first-item-list");
-const inputs = document.querySelectorAll(".user-inpt");
 const boxFb = document.querySelector(".box-fb");
 const textArea = document.querySelector(".user-textarea");
 const TOKEN = "6077606622:AAG6g12itzLvnsQfazmk9-oBfkHb1kflQYk";
 let IDCZAT = -1002080915692;
-const NAME_PATTERN = /^[a-zA-Zа-яА-ЯёЁґҐіІїЇєЄ]+$/;
+const NAME_PATTERN =  /^[a-zA-Zа-яА-ЯёЁґҐіІїЇєЄ]+$/;
 const PHONE_PATTERN = /^\+[0-9]{11,12}$/;
 
 
@@ -22,14 +20,18 @@ const PHONE_PATTERN = /^\+[0-9]{11,12}$/;
 buttonClick.forEach( but => {
     but.addEventListener("click", showModalWindow);
 })
+
 //clear all inputs after close
 function clearFormFields() {
-    inputs.forEach(input => {
+    const inputsHS = document.querySelectorAll(".user-inpt");
+    const firstButton = document.querySelector(".first-item-list");
+    const title = document.querySelector(".title-form");
+    inputsHS.forEach(input => {
         input.value = ""; 
     });
     textArea.value = "";
-    firstBut.textContent = "Оберіть варіант навчання";
-    firstBut.classList.remove("first-item-list-active");
+    title.textContent === "Contact with me"? firstButton.textContent = "Choose a format study" : firstButton.textContent = "Оберіть варіант навчання";
+    firstButton.classList.remove("first-item-list-active");
 }
 
 function showModalWindow() {
@@ -46,7 +48,7 @@ modalBackground.addEventListener("click", closeModal);
 butClose.addEventListener("click", closeModal);
 
 function closeModal(e) {
-    if (!e || e.target === modalBackground || e.key === "Escape" || e.target === butClose || e.target.classList.contains("use-close")) {
+    if (!e || e.target === modalBackground || e.key === "Escape" || e.target === butClose || e.target.classList.contains("use-close") || e.target.classList.contains("my-path")) {
         modalWindow.style.display = "none";
         document.body.style.overflowY = "scroll";
     }
@@ -78,7 +80,7 @@ async function handleSubmit(e) {
     const formData = new FormData(e.target);
     const userName = formData.get("username");
     const userPhone = formData.get("phone");
-    const comment = formData.get("comment");
+    const comment = `${textArea.value === "" || textArea.value === " "? "Без коментарів" : formData.get("comment")}`;
     const education = `${(firstBut.textContent === "Оберіть варіант навчання") || (firstBut.textContent === "Choose a format study")? "Формат не вибраний" : `${firstBut.textContent}`}`;
         
     const message = `
@@ -86,7 +88,7 @@ async function handleSubmit(e) {
     1) Ім'я: ${userName};
     2) Телефон: ${userPhone};
     3) Формат навчання: ${education};
-    4) Коментар: ${comment ? comment : "Без коментарів"};
+    4) Коментар: ${comment};
     `;
 
     sendMessage(message);
@@ -106,8 +108,8 @@ async function sendMessage(message) {
 }
 
 //check input
-mdlContent.addEventListener('focusout', function(event) {
-    if (event.target.matches('input')) {
+mdlContent.addEventListener("focusout", function(event) {
+    if (event.target.matches("input")) {
         checkInputs(event.target);
     }
 });
@@ -131,38 +133,38 @@ function errorParagraf(classList, addOrRemove) {
     
     });
 
-    const errorParagraph = document.querySelector(selector + ' + .error-input');
+    const errorParagraph = document.querySelector(selector + " + .error-input");
 
     if (errorParagraph)
         errorParagraph.classList.toggle("check", addOrRemove);
 }
 
 // settings for my select
-mdlContent.addEventListener('click', function(event) {
-    if (event.target.matches('.user-btn')) {
+mdlContent.addEventListener("click", function(event) {
+    if (event.target.matches(".user-btn")) {
         const selectList = event.target.nextElementSibling;
-        selectList.classList.toggle('list-item-select-visible');
+        selectList.classList.toggle("list-item-select-visible");
     }
     
-    else if (event.target.matches('.list-item-select-opt')) {
-        const firstBut = event.target.closest('.new-select').querySelector('.user-btn');
-        const selectList = mdlContent.querySelector('.list-item-select');
+    else if (event.target.matches(".list-item-select-opt")) {
+        const firstBut = event.target.closest(".new-select").querySelector(".user-btn");
+        const selectList = mdlContent.querySelector(".list-item-select");
         firstBut.textContent = event.target.textContent;
-        firstBut.classList.add('first-item-list-active');
-        selectList.classList.remove('.list-item-select-visible');
+        firstBut.classList.add("first-item-list-active");
+        selectList.classList.remove(".list-item-select-visible");
     }
 
     else {
-        const selectList = mdlContent.querySelector('.list-item-select');
-        selectList.classList.remove('list-item-select-visible');
+        const selectList = mdlContent.querySelector(".list-item-select");
+        selectList.classList.remove("list-item-select-visible");
     }
 });
 
 //succes feedback//
 async function feedbackMessage(success) {
-    const titleFeedback = document.querySelector('.title-feedback');
+    const titleFeedback = document.querySelector(".title-feedback");
     success ? titleFeedback.innerHTML = `See you soon!` : titleFeedback.innerHTML = `Error`;
-    success ? document.querySelector('.p-success').style.display = 'block' : document.querySelector('.p-error').style.display = 'block';
+    success ? document.querySelector(".p-success").style.display = "block" : document.querySelector(".p-error").style.display = "block";
     
     contentForm.style.display = "none";
     boxFb.style.display = "flex";
