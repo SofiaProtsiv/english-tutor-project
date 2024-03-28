@@ -58,7 +58,8 @@
     align-items: center;
   }
 
-  @media (1440px<=width) {}
+  @media (1440px<=width) {
+  }
 }
 
 .assessment-text {
@@ -92,5 +93,9 @@
 
   @media (768px<=width) {
     font-size: 18px;
+  }
+
+  @media (width < 360px) {
+    margin: 0 auto;
   }
 }

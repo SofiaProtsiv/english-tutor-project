@@ -89,9 +89,11 @@ body::-webkit-scrollbar-track {
   background-repeat: no-repeat;
   background-size: contain;
   filter: brightness(100%);
-  -webkit-transition: -webkit-filter var(--transition-time) var(--transition-effect);
+  -webkit-transition: -webkit-filter var(--transition-time)
+    var(--transition-effect);
   transition: filter var(--transition-time) var(--transition-effect);
   color: var(--primary-text-color);
+  background-position: center;
 }
 
 .btn-connect:hover {
