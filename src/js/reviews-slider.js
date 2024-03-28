@@ -73,6 +73,10 @@ function resizeReviewText(lang, size) {
     const text = getValueByPath(locales[lang], langKey);
     const btnMore = slide.querySelector(".resize-btn");
 
+    if (btnMore && btnMore.dataset.lang === "reviews.lessBtn") {
+      return;
+    }
+
     if (text.length > size) {
       review.textContent = `${text.slice(0, size)}...`;
 
@@ -98,7 +102,7 @@ function resizeReviewText(lang, size) {
   });
 }
 
-const handleResize = () => {
+export const handleResize = () => {
   const mediaQueryMobile = window.matchMedia("(max-width: 767.98px)");
   const mediaQueryTablet = window.matchMedia("(max-width: 1439.98px)");
   const lang = localStorage.getItem("lang") ?? "ua";

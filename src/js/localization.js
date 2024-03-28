@@ -1,4 +1,5 @@
 import locales from "../assets/translations";
+import { handleResize } from "./reviews-slider";
 
 export function getValueByPath(obj, path) {
   const keys = path.split(".");
@@ -16,4 +17,5 @@ export function localizeElements(LANG) {
       element.innerHTML = langValue;
     }
   });
+  handleResize();
 }
