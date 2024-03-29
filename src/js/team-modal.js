@@ -1,4 +1,4 @@
-import teamList from "../assets/teamList/teamList.json";
+import teamList from "../assets/teamList/teamList";
 import icon from "../assets/teamList/icon.json";
 import { localizeElements } from "./localization";
 
@@ -35,13 +35,14 @@ function closeTeamModalHandler(e) {
 }
 
 function teamModalItemMarkup(
-  { linkedIn, devName, position, photo, description, key },
+  { linkedIn, devName, position, photo, description, key, pathToPhoto },
   icon
 ) {
   return `<li class="team-modal-item">
        
           <a class="team-modal-link" target="_blank" href=${linkedIn}>
-          <img class="team-modal-img" src=${photo} width="40" height="40" alt=${description}>${icon}</a>
+          <img class="team-modal-img" src=${photo} width="40" height="40" alt=${description}>
+          ${icon}</a>
     
         <p class="team-modal-name" data-lang="teamModal.${key}">
           ${devName}<span>${position}</span>
