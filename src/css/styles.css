@@ -1,14 +1,11 @@
 /* Fonts */
 @import url('../assets/fonts/fonts.css');
-
 /* Base */
 @import url('./base/reset.css');
 @import url('./base/normalize.css');
-
 /* Utils */
 @import url('./utils/variables.css');
 @import url('./utils/common.css');
-
 /* Components */
 @import url("./components/header.css");
 @import url("./components/hero.css");
@@ -23,13 +20,13 @@
 @import url("./components/reviews.css");
 @import url("./components/footer.css");
 @import url("./components/modal.css");
+@import url("./components/team-modal.css");
 
 .example-breakpoints {
   /* до 360px */
   display: block;
   width: 100vw;
   height: 100vh;
-
   background-color: #000;
 
   /* починаючи з 360px */

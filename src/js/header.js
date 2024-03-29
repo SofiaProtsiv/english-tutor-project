@@ -24,7 +24,7 @@ if (logo) {
 
 const menuButton = document.querySelector("#HEADER_MENU_JS");
 function handleMenuButton() {
-  document.body.classList.toggle("is-hidden")
+  document.body.classList.toggle("is-hidden");
   header.classList.toggle("ih-header-menu-open");
 }
 
@@ -36,7 +36,7 @@ if (menuButton) {
 const menuNav = document.querySelector("#MENU_NAV_JS");
 
 function handleMenuNavigation(event) {
-  document.body.classList.remove("is-hidden")
+  document.body.classList.remove("is-hidden");
   if (event.target.tagName === "A") {
     header.classList.remove("ih-header-menu-open");
   }
@@ -101,8 +101,9 @@ if (menuNavigation) {
 function createCustomSelectOption(code, order) {
   return `
     <div data-value="${code}" class="ih-custom-select-option" style="
-    ${state.current === code ? "background:transparent; " : ""}order:${state.current === code ? 0 : order
-    }">${code}</div>
+    ${state.current === code ? "background:transparent; " : ""}order:${
+    state.current === code ? 0 : order
+  }">${code}</div>
 `;
 }
 
@@ -112,8 +113,8 @@ function createCustomSelect() {
 <path d="M0 0L5 5L10 0H0Z" fill="#292929"/>
           </svg>
     ${ITEMS.map((code, index) => {
-    return createCustomSelectOption(code, index + 1);
-  }).join("")}
+      return createCustomSelectOption(code, index + 1);
+    }).join("")}
 
 `;
 }
@@ -121,9 +122,10 @@ function createCustomSelect() {
 function createCustomSelectSmall() {
   return `
         ${ITEMS.map((code) => {
-    return `<div data-value="${code}" class="ih-select-lang-btn${state.current === code ? " select-lang-btn-active" : ""
-      }">${code}</div>`;
-  }).join(" ")}
+          return `<div data-value="${code}" class="ih-select-lang-btn${
+            state.current === code ? " ih-select-lang-btn-active" : ""
+          }">${code}</div>`;
+        }).join(" ")}
 `;
 }
 
@@ -180,7 +182,7 @@ const createMenuSocialMarkup = () => {
          class="ih-menu-social-item"
          target="_blank"
          rel="noopener"
-         href="https://t.me/@alyona_alyona"
+         href="https://t.me/alyona_alyona"
        >
          TELEGRAM
        </a>
