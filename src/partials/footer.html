@@ -91,9 +91,9 @@
         if (isMobile) {
           const url =
             "intent://t.me/alyona_alyona#Intent;scheme=https;package=org.telegram.messenger;end";
-          window.location.replace(url);
+          window.open(url, "_blank");
         } else {
-          window.location.replace("https://t.me/alyona_alyona");
+          window.open("https://t.me/alyona_alyona", "_blank");
         }
       }
     </script>
