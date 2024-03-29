@@ -35,13 +35,13 @@ function closeTeamModalHandler(e) {
 }
 
 function teamModalItemMarkup(
-  { linkedIn, devName, position, photo, description, key, pathToPhoto },
+  { linkedIn, devName, position, description, key, pathToPhoto },
   icon
 ) {
   return `<li class="team-modal-item">
        
           <a class="team-modal-link" target="_blank" href=${linkedIn}>
-          <img class="team-modal-img" src=${photo} width="40" height="40" alt=${description}>
+          <img class="team-modal-img" src=${pathToPhoto} width="40" height="40" alt=${description}>
           ${icon}</a>
     
         <p class="team-modal-name" data-lang="teamModal.${key}">
@@ -52,8 +52,9 @@ function teamModalItemMarkup(
 
 function teamModalListMarkup(team, icon) {
   return team
-    .map((item = { linkedIn, devName, position, photo, description, key }) =>
-      teamModalItemMarkup(item, icon)
+    .map(
+      (item = { linkedIn, devName, position, pathToPhoto, description, key }) =>
+        teamModalItemMarkup(item, icon)
     )
     .join(" ");
 }
