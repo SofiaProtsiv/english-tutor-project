@@ -1,15 +1,15 @@
 .advice-section {
     padding-top: 32px;
-    padding-bottom: 64px;
+    padding-bottom: 40px;
 
     @media (768px <=width) {
         padding-top: 50px;
-        padding-bottom: 100px;
+        padding-bottom: 75px;
     }
 
     @media (width >=1440px) {
         padding-top: 70px;
-        padding-bottom: 140px;
+        padding-bottom: 120px;
     }
 }
 
@@ -34,7 +34,7 @@
     @media (width >=1440px) {
         max-width: 1072px;
         margin-bottom: 55px;
-        margin-left: 155px;
+        margin-left: 72px;
     }
 }
 
@@ -64,12 +64,18 @@
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.01em;
+    max-width: 270px;
+
+    @media (360px <=width) {
+        max-width: 296px;
+    }
 
     @media (768px <=width) {
         margin-bottom: 24px;
         font-size: 18px;
         line-height: 1.55;
         letter-spacing: 0.01em;
+        max-width: 672px;
     }
 
     @media (width >=1440px) {
@@ -77,6 +83,7 @@
         font-size: 18px;
         line-height: 1.55;
         letter-spacing: 0.01em;
+        max-width: 448px;
     }
 }
 
