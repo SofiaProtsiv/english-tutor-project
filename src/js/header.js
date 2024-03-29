@@ -180,7 +180,7 @@ const createMenuSocialMarkup = () => {
          class="ih-menu-social-item"
          target="_blank"
          rel="noopener"
-         href="https://t.me/@alyona_alyona"
+         href="https://t.me/alyona_alyona"
        >
          TELEGRAM
        </a>

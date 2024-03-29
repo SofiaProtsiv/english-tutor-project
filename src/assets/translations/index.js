@@ -427,24 +427,23 @@ const translations = {
         <span class="star">*</span></span>
         <input type="tel" class="user-inpt phone" name="phone" placeholder="+38 000 000 00 00" pattern="\\+[0-9]{11,12}" required/>
         <span class="error-input" style="color: var(--accent-color);">Please enter the correct number(+)11/12 characters</span>`,
-        label3: `Format study
+        label3 : 
+        `Studying format
         <div class="new-select">
         <button type="button" class="user-btn first-item-list">Choose a format study</button>
 
         <ul class="list-item-select" name="education">
-            <li class="list-item-select-opt" data-value="Individual study">Individual study</li>
-            <li class="list-item-select-opt" data-value="Study with a friend">Study with a friend</li>
-            <li class="list-item-select-opt" data-value="Groupe study">Groupe study</li>
+            <li class="list-item-select-opt" data-value="Individual study">Individual</li>
+            <li class="list-item-select-opt" data-value="Study with a friend">Double</li>
+            <li class="list-item-select-opt" data-value="Groupe study">Group classes</li>
         </ul>
         </div>`,
         label4: `Comment<textarea class="user-textarea text-com" name="comment" placeholder="Your comment"></textarea>`,
       },
-      button: "Send",
-      textfdb: {
-        success:
-          "Your details have been sent successfully.<br> Please expect me to contact you as soon as possible to discuss the details.",
-        error:
-          "Unfortunately, there was an error on the site and your data was not sent. Please try again later.",
+      button : "Send",
+      textfdb : {
+        success : "Your data has been sent successfully.</br>Please wait: I will contact you as soon as possible to discuss the details.",
+        error : "Unfortunately, an error occurred on the website and your data was not sent. Please try again later." 
       },
     },
     formats: {
