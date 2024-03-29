@@ -1,4 +1,7 @@
-import { teamList, icon } from "../assets/teamList/teamList";
+import teamList from "../assets/teamList/teamList.json";
+import icon from "../assets/teamList/icon.json";
+import { localizeElements } from "./localization";
+
 const teamModalButtonOpen = document.querySelector(".ih-footer-team-button");
 const teamModalButtonClose = document.querySelector(".team-modal-button");
 const teamModalWindow = document.querySelector(".team-modal-backdrop");
@@ -31,23 +34,29 @@ function closeTeamModalHandler(e) {
   }
 }
 
-function teamModalItemMarkup({ link, name, position }, icon) {
+function teamModalItemMarkup(
+  { linkedIn, devName, position, photo, description, key },
+  icon
+) {
   return `<li class="team-modal-item">
-        <div class="team-modal-img-wrapper">
-          <a class="team-modal-link" target="_blank" href=${link}>${icon}</a>
-        </div>
-        <p class="team-modal-name">
-          ${name}<span>${position}</span>
+       
+          <a class="team-modal-link" target="_blank" href=${linkedIn}>
+          <img class="team-modal-img" src=${photo} width="40" height="40" alt=${description}>${icon}</a>
+    
+        <p class="team-modal-name" data-lang="teamModal.${key}">
+          ${devName}<span>${position}</span>
         </p>
       </li>`;
 }
 
 function teamModalListMarkup(team, icon) {
   return team
-    .map(({ linkedIn, name, position }) =>
-      teamModalItemMarkup({ linkedIn, name, position }, icon)
+    .map((item = { linkedIn, devName, position, photo, description, key }) =>
+      teamModalItemMarkup(item, icon)
     )
     .join(" ");
 }
 
 teamModalList.innerHTML = teamModalListMarkup(teamList, icon);
+const currentPageLang = localStorage.getItem("lang");
+localizeElements(currentPageLang);

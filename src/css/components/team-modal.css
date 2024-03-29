@@ -64,6 +64,11 @@
 
 .team-modal-icon {
   fill: var(--primary-text-color);
+  transition: fill var(--transition-time) var(--transition-effect);
+}
+
+.team-modal-button:hover .team-modal-icon {
+  fill: var(--accent-color);
 }
 
 .team-modal-title {
@@ -133,13 +138,11 @@
   }
 }
 
-.team-modal-img-wrapper {
-  flex-shrink: 0;
+.team-modal-link {
   position: relative;
+  flex-shrink: 0;
   width: 40px;
   height: 40px;
-  border-radius: 40px;
-  background-color: cadetblue;
 
   @media (768px<=width) {
     width: 80px;
@@ -147,17 +150,20 @@
   }
 }
 
-.team-modal-link {
+.team-modal-img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.team-modal-link:hover .team-modal-icon {
+  scale: 1.1;
+}
+
+.team-modal-icon {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 16px;
-  height: 16px;
   transition: scale var(--transition-time) var(--transition-effect);
-}
-
-.team-modal-link:hover {
-  scale: 1.1;
 }
 
 .team-modal-name {
