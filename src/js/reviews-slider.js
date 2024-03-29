@@ -131,3 +131,14 @@ export const handleResize = () => {
 
 handleResize();
 window.addEventListener("resize", handleResize);
+
+const btnsReviews = document.querySelectorAll(".reviews-button");
+const video = document.querySelector(".reviews-video");
+
+function handleClickReviewsBtn() {
+  video.pause();
+}
+
+btnsReviews.forEach((btn) => {
+  btn.addEventListener("click", handleClickReviewsBtn);
+});
