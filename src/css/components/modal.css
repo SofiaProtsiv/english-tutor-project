@@ -284,9 +284,11 @@
         font-size: 18px;
         line-height: 156%;
     }
-}
-
-.list-item-select-opt:hover {
+  }
+  .first-opt {
+    color: var(--text-color-select);
+  }
+  .list-item-select-opt:hover {
     background-color: #e6e8eb;
     cursor: pointer;
 }
@@ -374,9 +376,4 @@
     @media(768px<=width) {
         padding: 0;
     }
-}
-
-.p-success,
-.p-error {
-    display: none;
 }
