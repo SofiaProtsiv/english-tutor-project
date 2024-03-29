@@ -128,6 +128,7 @@ const translations = {
       reviewTitle2: "надія",
       reviewTitle3: "ліза",
       reviewTitle4: "анна",
+      reviewTitle5: "дарʼя",
       reviewText1:
         "Всім привіт! Хочу порадити вам репетитора Альону. Це найкращий викладач та людина, яку ви можете зустріти на своєму шляху вивчення англійської мови. Альона допомогла мені успішно скласти ЗНО та витягнула мою англійську на чудовий рівень. Це людина з якою не боїшся зробити помилку, сказати щось не те, тобі завжди комфортно. Пам’ятаю, як я вирішила витягнути свою розмову англійську. Спочатку я навіть не могла сказати одне речення, але Альона допомагала мені та робила це дуже обережно, а через місяць я вже могла вільно говорити. На заняттях завжди приємна та комфортна атмосфера, ти почуваєшся як з близькою подругою за кавою, тільки розмовляєш на англійській. Також варто додати, що Альона дуже різностороння та надихаюча особистість, у вас ніколи не буде такого, що не буде про що поговорити. Я впевнена, що Альона допоможе вам з будь-яким напрямом англійської, від юридичної до інженерної Альона заряджає своєю енергією, позитивом, креативними та сучасними підходами. Приємно бачити людину, яка настільки любить свою справу. Бажаю вам успіхів ❤️🫰🏻 Альона найкраща!",
       reviewText2:
@@ -136,6 +137,8 @@ const translations = {
         "Доброго дня) пишу невеличкий відгук) Метч у нас з вами як звикладачем відбувся в першого заняття і з того часу кожне заняття як на мене було все веселіше та інтенсивніше На заняттях ми не говоримо на банальні теми, кожен урок різний по наповненню тем і категорії завдань. Як жартують, що тільки мій викладач англійської знає мій улюблений колір та мету по життю, але це насправді правда) загалом я дуже рада, що потрапила до вас)",
       reviewText4:
         "Я займаюсь з Альоною більше трьох місяців і це три місяці і кайфу. Мені є чим порівнювати і мені подобається індивідуальний підхід до навчання. У мене був запит на підвищення рівня бізнес англійської, оскільки це важливо для моєї роботи: я спілкуюсь з іноземними клієнтами, стейкхолдерами, кандидатами. І бізнес-інлиш - It’s a little bit boring, а я не хотіла і мені не цікаво вчитися просто сухо за книгою і от кожного разу, на кожен наш урок Альона готує матеріали. Кожного разу ці матеріали не схожі на інші, завдяки цьому – це реально цікаво. Якщо це граматика – то це інтерактивна граматика, завдяки чому легше запам'ятовувати інформацію і сприймати. І дуже важливий фактор для мене, оскільки я людина, яка багато працює, це те, що Альона завжди на зв'язку, але пам'ятайте, що worklife balance – це важливо. Я знаю, що я можу написати їй, наприклад, перед мітом із клієнтом, якщо маю якісь консорни як подати інформацію, як сказати інформацію англійською і вона буде завжди на зв'язку. Тому однозначно рекомендую, займайтесь і кайфуйте!",
+      reviewText5:
+        "Якщо, ви переглядаєте сайт цієї чудової викладачки Альони, ви однозначно на вірному шляху. Мій шлях розпочався з того, що я дуже боялась розмовляти англійською, а вже через деякий час з допомогою Альони, почала вільно висловлювати свої думки. Звісно, мені треба ще багато часу для вдосконалення свого рівня англійської, але однозначно я зробила правильний вибір вчителя. Обираючи Альону, ви отримаєте цікаві, різноманітні, інтерактивні уроки, жодна ваша зустріч не буде схожа на попередню. Альона визначить ваш рівень, виявить ваші сильні сторони і допоможе підтягнути прогалини. Всі ваші побажання і забаганки будуть враховуватися, для мене, це завжди комфортні зустрічі. Дуже важливо, коли вчитель відчуває своїх учнів, і в складні моменти може змінити план уроку, задля комфортного спілкування зі своїм учнем. Дуже рекомендую вам розпочати пробне заняття, адже після першого уроку, ви захочете працювати над вашою англійською лише з Альоною.",
       moreBtn: "Читати далі",
       lessBtn: "Згорнути",
     },
@@ -377,6 +380,7 @@ const translations = {
       reviewTitle2: "nadiia",
       reviewTitle3: "liza",
       reviewTitle4: "anna",
+      reviewTitle5: "daria",
       reviewText1:
         "Hello everybody! I would like to recommend tutor Alyona. He is the best teacher and person you can meet on your way to learn English. Alyona helped me successfully pass the external examination and brought my English to an excellent level. This is a person with whom you are not afraid to make a mistake, say something wrong, you are always comfortable. I remember how I decided to improve my conversational English. At first I couldn't even say a single sentence, but Alyona helped me and did it very carefully, and after a month I could already speak freely. The classes always have a pleasant and comfortable atmosphere, you feel like you are having coffee with a close friend, only speaking in English. It is also worth adding that Alyona is a very versatile and inspiring person, you will never run out of something to talk about. I am sure that Alyona will help you with any direction of English, from law to engineering:) Alyona charges with her energy, positivity, creative and modern approaches. It's nice to see a person who loves his job so much. I wish you success ❤️🫰🏻 Alyona is the best!",
       reviewText2:
@@ -385,6 +389,8 @@ const translations = {
         "Good afternoon) I am writing a small review) The match between you as a teacher and me took place in our first meeting, and since then every class has been more fun and intense for me. In classes, we do not talk about something plain, each lesson is different in filling topics and category of tasks. As they joke that only my English teacher knows my favorite color and purpose in life, but it's actually true) in general, I'm very glad that I have got you)",
       reviewText4:
         "I've been studying with Alyona for over three months, and it's been a blast. I've tried other options before, but I really like the personalized approach to learning here. I needed to improve my business English because it's crucial for my job - I deal with foreign clients, stakeholders, and candidates. Regular business English lessons can be dull, but Aliona makes it interesting by preparing different materials for each session. It's never boring! Even grammar lessons are interactive, which makes it easier to remember and understand. Another important thing for me is that Aliona is always available when I need help, although she also reminds me about maintaining a work-life balance. I know I can message her, even before a meeting with a client, if I need advice on how to present information in English, and she'll always respond. So, I definitely recommend studying with her and enjoying the process!",
+      reviewText5:
+        "If you're browsing the website of this wonderful teacher Alyona, you're definitely on the right path. My journey started with being very afraid to speak English, but after some time with Alyona’s help, I began to express my thoughts freely. Of course, I still need a lot of time to improve my English level, but I definitely made the right choice of teacher. Choosing Alyona, you'll get interesting, diverse, and interactive lessons; none of your sessions will be like the previous one. Alyona will assess your level, identify your strengths, and help you improve your weaknesses. All your wishes and preferences will be taken into account, making the lessons comfortable for you. It's very important when a teacher understands their students and can adjust the lesson plan in difficult moments for comfortable communication with their student. I highly recommend starting with a trial lesson because after the first lesson, you'll want to work on your English only with Alyona.",
       moreBtn: "Read more",
       lessBtn: "Less",
     },
@@ -428,8 +434,7 @@ const translations = {
         <span class="star">*</span></span>
         <input type="tel" class="user-inpt phone" name="phone" placeholder="+38 000 000 00 00" pattern="\\+[0-9]{11,12}" required/>
         <span class="error-input" style="color: var(--accent-color);">Please enter the correct number(+)11/12 characters</span>`,
-        label3 : 
-        `Studying format
+        label3: `Studying format
         <div class="new-select">
         <button type="button" class="user-btn first-item-list">Choose a format study</button>
 
@@ -442,10 +447,12 @@ const translations = {
         </div>`,
         label4: `Comment<textarea class="user-textarea text-com" name="comment" placeholder="Your comment"></textarea>`,
       },
-      button : "Send",
-      textfdb : {
-        success : "Your data has been sent successfully.</br>Please wait: I will contact you as soon as possible to discuss the details.",
-        error : "Unfortunately, an error occurred on the website and your data was not sent. Please try again later." 
+      button: "Send",
+      textfdb: {
+        success:
+          "Your data has been sent successfully.</br>Please wait: I will contact you as soon as possible to discuss the details.",
+        error:
+          "Unfortunately, an error occurred on the website and your data was not sent. Please try again later.",
       },
     },
     formats: {

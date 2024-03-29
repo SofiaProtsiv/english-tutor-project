@@ -45,6 +45,21 @@
   }
 }
 
+.reviews-img-wraper {
+  width: 320px;
+  height: 480px;
+
+  @media (768px<=width) {
+    width: 704px;
+    height: 480px;
+  }
+
+  @media (1440px<=width) {
+    width: 592px;
+    height: 720px;
+  }
+}
+
 .reviews-img {
   object-fit: cover;
 }
@@ -116,6 +131,7 @@
 }
 
 .resize-btn {
+  background-color: inherit;
   color: var(--accent-color);
   font-family: var(--secondary-font-family);
   font-size: 16px;
@@ -123,11 +139,28 @@
   letter-spacing: 0.0125em;
   border: none;
   padding: 0;
+  transition: color var(--transition-time) var(--transition-effect);
 
   @media (768px<=width) {
     font-size: 18px;
     line-height: 1.556;
     letter-spacing: 0.011em;
+  }
+}
+
+@media (hover: hover) {
+  .resize-btn:hover {
+    color: var(--hover-accent-color);
+  }
+}
+
+.resize-btn:active {
+  color: var(--hover-accent-color);
+}
+
+@media (768px<=width) {
+  .resize-btn:active {
+    color: var(--accent-color);
   }
 }
 
@@ -151,38 +184,36 @@
   background-color: #29292933;
 }
 
-.reviews-button-wrapper {
-  .reviews-button {
-    display: block;
-    width: 40px;
-    height: 40px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    background-color: transparent;
-    border: none;
-  }
+.reviews-button {
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: transparent;
+  border: none;
+}
 
-  .reviews-icon {
-    display: inline-flex;
-    align-self: center;
-    fill: none;
-    stroke: var(--primary-text-color);
-    transition: stroke var(--transition-time) var(--transition-effect);
-  }
+.reviews-icon {
+  display: inline-flex;
+  align-self: center;
+  fill: none;
+  stroke: var(--primary-text-color);
+  transition: stroke var(--transition-time) var(--transition-effect);
+}
 
-  @media (hover: hover) {
-    .reviews-button:hover .reviews-icon {
-      stroke: var(--accent-color);
-    }
-  }
-
-  .reviews-button:active .reviews-icon {
+@media (hover: hover) {
+  .reviews-button:hover .reviews-icon {
     stroke: var(--accent-color);
   }
+}
 
-  @media (768px<=width) {
-    .reviews-button:active .reviews-icon {
-      stroke: var(--primary-text-color);
-    }
+.reviews-button:active .reviews-icon {
+  stroke: var(--accent-color);
+}
+
+@media (768px<=width) {
+  .reviews-button:active .reviews-icon {
+    stroke: var(--primary-text-color);
   }
 }
