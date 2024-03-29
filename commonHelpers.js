@@ -49,7 +49,7 @@ import{S as f,a as oe}from"./assets/vendor-9d3a36e4.js";(function(){const t=docu
     ${N.map((e,t)=>de(e,t+1)).join("")}
 
 `}function W(){return`
-        ${N.map(e=>`<div data-value="${e}" class="ih-select-lang-btn${c.current===e?" select-lang-btn-active":""}">${e}</div>`).join(" ")}
+        ${N.map(e=>`<div data-value="${e}" class="ih-select-lang-btn${c.current===e?" ih-select-lang-btn-active":""}">${e}</div>`).join(" ")}
 `}function O(e){if(d){d.classList.toggle("ih-custom-select-open");const t=e.target.dataset.value;t&&t!==c.current&&(c.current=t,localStorage.setItem("lang",t),w(t),d.innerHTML=F())}}function G(){d&&(d.innerHTML=F(),d.removeEventListener("click",O),d.addEventListener("click",O))}function V(e){if(p){const t=e.target.dataset.value;t&&t!==c.current&&(c.current=t,localStorage.setItem("lang",t),w(t),p.innerHTML=W())}}function Y(){p&&(p.innerHTML=W(),p.removeEventListener("click",V),p.addEventListener("click",V))}Y();G();const R=document.querySelector("#MENU_SOCIAL_JS"),me=()=>`  <a
          class="ih-menu-social-item"
          target="_blank"
