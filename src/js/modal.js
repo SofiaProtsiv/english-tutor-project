@@ -165,7 +165,14 @@ mdlContent.addEventListener("click", function(event) {
 async function feedbackMessage(success) {
     const titleFeedback = document.querySelector(".title-feedback");
     success ? titleFeedback.innerHTML = `See you soon!` : titleFeedback.innerHTML = `Error`;
-    success ? document.querySelector(".p-success").style.display = "block" : document.querySelector(".p-error").style.display = "block";
+    if(success) {
+        document.querySelector(".p-success").style.display = "block";
+        document.querySelector(".p-error").style.display = "none";
+     }
+     else {
+        document.querySelector(".p-error").style.display = "block";
+        document.querySelector(".p-success").style.display = "none";
+     }
     
     contentForm.style.display = "none";
     boxFb.style.display = "flex";
