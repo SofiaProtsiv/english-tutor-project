@@ -276,6 +276,10 @@
   color: var(--accent-color);
 }
 
+.ih-select-lang-btn-active {
+  color: var(--accent-color);
+}
+
 .ih-vertical-line {
   display: initial;
   color: #b5b4b4;
