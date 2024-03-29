@@ -155,6 +155,7 @@ const translations = {
         <button type="button" class="user-btn first-item-list">Оберіть варіант навчання</button>
 
         <ul class="list-item-select" name="education">
+            <li class="list-item-select-opt first-opt" data-value="Choose format">Оберіть варіант навчання</li>
             <li class="list-item-select-opt" data-value="Individual study">Індивідуальне навчання</li>
             <li class="list-item-select-opt" data-value="Study with a friend">Парне навчання</li>
             <li class="list-item-select-opt" data-value="Groupe study">Групове навчання</li>
@@ -412,6 +413,7 @@ const translations = {
         <button type="button" class="user-btn first-item-list">Choose a format study</button>
 
         <ul class="list-item-select" name="education">
+            <li class="list-item-select-opt first-opt" data-value="Choose format">Choose a format study</li>
             <li class="list-item-select-opt" data-value="Individual study">Individual</li>
             <li class="list-item-select-opt" data-value="Study with a friend">Double</li>
             <li class="list-item-select-opt" data-value="Groupe study">Group classes</li>

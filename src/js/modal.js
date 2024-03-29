@@ -9,6 +9,7 @@ const butClose = document.querySelector(".close");
 const formUser = document.querySelector(".forma-for-connect");
 const firstBut = document.querySelector(".first-item-list");
 const boxFb = document.querySelector(".box-fb");
+const phone = document.querySelector(".phone");
 const textArea = document.querySelector(".user-textarea");
 const TOKEN = "6077606622:AAG6g12itzLvnsQfazmk9-oBfkHb1kflQYk";
 let IDCZAT = -1002080915692;
@@ -150,7 +151,7 @@ mdlContent.addEventListener("click", function(event) {
         const firstBut = event.target.closest(".new-select").querySelector(".user-btn");
         const selectList = mdlContent.querySelector(".list-item-select");
         firstBut.textContent = event.target.textContent;
-        firstBut.classList.add("first-item-list-active");
+        event.target.matches(".first-opt") ? firstBut.classList.remove("first-item-list-active") : firstBut.classList.add("first-item-list-active");
         selectList.classList.remove(".list-item-select-visible");
     }
 
