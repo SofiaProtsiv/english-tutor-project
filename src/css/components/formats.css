@@ -96,12 +96,6 @@
   }
 }
 
-.formats-item:nth-child(2) .formats-item-card-title {
-  @media (width >=360px) and (width < 768px) {
-    text-align: center;
-  }
-}
-
 .formats-item-card-description {
   font-family: var(--secondary-font-family);
   font-size: 16px;
