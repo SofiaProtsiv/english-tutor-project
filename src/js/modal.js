@@ -7,10 +7,9 @@ const contentForm = document.querySelector(".mdl-content");
 const form = document.querySelector(".mdl-forma");
 const butClose = document.querySelector(".close");
 const formUser = document.querySelector(".forma-for-connect");
-const firstBut = document.querySelector(".first-item-list");
+let firstBut = document.querySelector(".first-item-list");
 const boxFb = document.querySelector(".box-fb");
-const phone = document.querySelector(".phone");
-const textArea = document.querySelector(".user-textarea");
+let textArea = document.querySelector(".user-textarea");
 const TOKEN = "6077606622:AAG6g12itzLvnsQfazmk9-oBfkHb1kflQYk";
 let IDCZAT = -1002080915692;
 const NAME_PATTERN =  /^[a-zA-Zа-яА-ЯёЁґҐіІїЇєЄ]+$/;
@@ -20,13 +19,14 @@ const PHONE_PATTERN = /^\+[0-9]{11,12}$/;
 // show modal window
 buttonClick.forEach(but => {
     but.addEventListener("click", showModalWindow);
-})
+});
 
 //clear all inputs after close
 function clearFormFields() {
     const inputsHS = document.querySelectorAll(".user-inpt");
     const firstButton = document.querySelector(".first-item-list");
     const title = document.querySelector(".title-form");
+    textArea = document.querySelector(".user-textarea");
     inputsHS.forEach(input => {
         input.value = ""; 
     });
@@ -54,6 +54,28 @@ function closeModal(e) {
         document.body.classList.remove("is-hidden");
     }
 }
+
+// settings for my select
+mdlContent.addEventListener("click", function(event) {
+    if (event.target.matches(".user-btn")) {
+        const selectList = event.target.nextElementSibling;
+        selectList.classList.toggle("list-item-select-visible");
+    }
+    
+    else if (event.target.matches(".list-item-select-opt")) {
+        firstBut = event.target.closest(".new-select").querySelector(".user-btn");
+        const selectList = mdlContent.querySelector(".list-item-select");
+        firstBut.textContent = event.target.textContent;
+        event.target.matches(".first-opt") ? firstBut.classList.remove("first-item-list-active") : firstBut.classList.add("first-item-list-active");
+        selectList.classList.remove(".list-item-select-visible");
+    }
+
+    else {
+        const selectList = mdlContent.querySelector(".list-item-select");
+        selectList.classList.remove("list-item-select-visible");
+    }
+});
+
 // send message
 formUser.addEventListener("submit", handleSubmit);
 
@@ -81,7 +103,7 @@ async function handleSubmit(e) {
     const formData = new FormData(e.target);
     const userName = formData.get("username");
     const userPhone = formData.get("phone");
-    const comment = `${textArea.value === "" || textArea.value === " "? "Без коментарів" : formData.get("comment")}`;
+    const comment = `${formData.get("comment").trim() === "" ? "Без коментарів" : formData.get("comment")}`;
     const education = `${(firstBut.textContent === "Оберіть варіант навчання") || (firstBut.textContent === "Choose a format study")? "Формат не вибраний" : `${firstBut.textContent}`}`;
         
     const message = `
@@ -139,27 +161,6 @@ function errorParagraf(classList, addOrRemove) {
     if (errorParagraph)
         errorParagraph.classList.toggle("check", addOrRemove);
 }
-
-// settings for my select
-mdlContent.addEventListener("click", function(event) {
-    if (event.target.matches(".user-btn")) {
-        const selectList = event.target.nextElementSibling;
-        selectList.classList.toggle("list-item-select-visible");
-    }
-    
-    else if (event.target.matches(".list-item-select-opt")) {
-        const firstBut = event.target.closest(".new-select").querySelector(".user-btn");
-        const selectList = mdlContent.querySelector(".list-item-select");
-        firstBut.textContent = event.target.textContent;
-        event.target.matches(".first-opt") ? firstBut.classList.remove("first-item-list-active") : firstBut.classList.add("first-item-list-active");
-        selectList.classList.remove(".list-item-select-visible");
-    }
-
-    else {
-        const selectList = mdlContent.querySelector(".list-item-select");
-        selectList.classList.remove("list-item-select-visible");
-    }
-});
 
 //succes feedback//
 async function feedbackMessage(success) {
