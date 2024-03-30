@@ -1,5 +1,5 @@
-import teamList from "../assets/teamList/teamList";
-import icon from "../assets/teamList/icon.json";
+import teamList from "../assets/team-list/team-list";
+import icon from "../assets/team-list/icon.json";
 import { localizeElements } from "./localization";
 
 const teamModalButtonOpen = document.querySelector(".ih-footer-team-button");
