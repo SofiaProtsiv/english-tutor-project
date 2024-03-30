@@ -25,5 +25,7 @@
 <symbol id="icon-switch-arrow" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0 0L5 5L10 0H0Z" fill="#292929"/>
 </symbol>
+ <symbol id="footer-icon-phone" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.66797 3.92232C1.66797 11.8815 8.12047 18.334 16.0796 18.334L19.168 15.2457L15.5655 11.6432L12.9913 14.2165L5.78547 7.01065L8.3588 4.43732L4.7563 0.833984L1.66797 3.92232Z"/>
+ </symbol>
   </defs>
 </svg>
