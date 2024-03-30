@@ -115,9 +115,9 @@ const teamList = [
     devName: "Зеник Філь",
     position: "Developer",
     linkedIn: "http://linkedin.com/in/zenoviy-fil",
-    pathToPhoto: "team-modal-photo/zenyk-fil.png",
-    description: "Zenyk Fil",
-    key: "zenykFil",
+    pathToPhoto: "team-modal-photo/zenuk-fil.png",
+    description: "Zenuk Fil",
+    key: "zenukFil",
   },
   {
     devName: "Прусова Марина",
