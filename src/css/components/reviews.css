@@ -46,18 +46,7 @@
 }
 
 .reviews-img-wraper {
-  width: 320px;
-  height: 480px;
-
-  @media (768px<=width) {
-    width: 704px;
-    height: 480px;
-  }
-
-  @media (1440px<=width) {
-    width: 592px;
-    height: 720px;
-  }
+  width: 100%;
 }
 
 .reviews-img {
