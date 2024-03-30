@@ -101,9 +101,8 @@ if (menuNavigation) {
 function createCustomSelectOption(code, order) {
   return `
     <div data-value="${code}" class="ih-custom-select-option" style="
-    ${state.current === code ? "background:transparent; " : ""}order:${
-    state.current === code ? 0 : order
-  }">${code}</div>
+    ${state.current === code ? "background:transparent; " : ""}order:${state.current === code ? 0 : order
+    }">${code}</div>
 `;
 }
 
@@ -113,8 +112,8 @@ function createCustomSelect() {
 <path d="M0 0L5 5L10 0H0Z" fill="#292929"/>
           </svg>
     ${ITEMS.map((code, index) => {
-      return createCustomSelectOption(code, index + 1);
-    }).join("")}
+    return createCustomSelectOption(code, index + 1);
+  }).join("")}
 
 `;
 }
@@ -122,10 +121,9 @@ function createCustomSelect() {
 function createCustomSelectSmall() {
   return `
         ${ITEMS.map((code) => {
-          return `<div data-value="${code}" class="ih-select-lang-btn${
-            state.current === code ? " ih-select-lang-btn-active" : ""
-          }">${code}</div>`;
-        }).join(" ")}
+    return `<div data-value="${code}" class="ih-select-lang-btn${state.current === code ? " ih-select-lang-btn-active" : ""
+      }">${code}</div>`;
+  }).join(" ")}
 `;
 }
 
@@ -259,4 +257,4 @@ const setGeolocationLanguage = () => {
   return;
 };
 
-setGeolocationLanguage();
+document.addEventListener("DOMContentLoaded", setGeolocationLanguage)
