@@ -230,6 +230,7 @@
 }
 
 .menu-social-item {
+  position: relative;
   font-family: var(--secondary-font-family);
   font-size: 18px;
   display: flex;
@@ -262,8 +263,21 @@
   }
 }
 
-.menu-social-item:hover {
-  color: #ffffff;
-  background-color: #292929;
-  border-bottom: 1px solid #dc3353;
+.menu-social-item:after {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  background: var(--accent-color);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+  cursor: pointer;
+}
+
+.menu-social-item:hover:after {
+  width: 100%;
+  left: 0;
+  cursor: pointer;
 }
