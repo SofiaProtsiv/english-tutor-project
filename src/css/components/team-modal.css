@@ -43,6 +43,10 @@
   }
 }
 
+.team-modal-container-full-screen {
+  height: 100vh;
+}
+
 .team-modal-button {
   position: absolute;
   top: 16px;
