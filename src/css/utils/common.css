@@ -91,7 +91,7 @@ body::-webkit-scrollbar-track {
   height: 96px;
   color: var(--primary-text-color);
   background-color: white;
-  background-image: url(images/common/button@1x.png);
+  background-image: url(../../public/images/common/button@1x.png);
   background-repeat: no-repeat;
   background-size: contain;
   filter: brightness(100%);
@@ -107,13 +107,13 @@ body::-webkit-scrollbar-track {
 
 @media (min-resolution: 2dppx) {
   .btn-connect {
-    background-image: url(images/common/button@2x.png);
+    background-image: url(../../public/images/common/button@2x.png);
   }
 }
 
 @media (min-resolution: 3dppx) {
   .btn-connect {
-    background-image: url(images/common/button@3x.png);
+    background-image: url(../../public/images/common/button@3x.png);
   }
 }
 
