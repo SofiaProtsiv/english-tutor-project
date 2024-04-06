@@ -111,6 +111,7 @@
   flex-direction: column;
   justify-content: space-between;
   transform: translate(-85px, 0);
+  overflow: hidden;
 
   @media (767.98px>=width) {
     overflow: visible !important;
