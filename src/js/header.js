@@ -73,7 +73,6 @@ const renderNavigationMarkup = () => {
   }
 };
 
-renderNavigationMarkup();
 
 /* ======= smooth scroll  ======= */
 function handleScrollToSection(event) {
@@ -136,6 +135,7 @@ function handleCustomSelect(e) {
       localStorage.setItem("lang", newCurrentLang);
       localizeElements(newCurrentLang);
       selectEl.innerHTML = createCustomSelect();
+      selectSmallEl.innerHTML = createCustomSelectSmall();
     }
   }
 }
@@ -156,6 +156,7 @@ function handleCustomSelectSmall(e) {
       localStorage.setItem("lang", newCurrentLang);
       localizeElements(newCurrentLang);
       selectSmallEl.innerHTML = createCustomSelectSmall();
+      selectEl.innerHTML = createCustomSelect();
     }
   }
 }
@@ -168,8 +169,7 @@ function renderCustomSelectSmall() {
   }
 }
 
-renderCustomSelectSmall();
-renderCustomSelect();
+
 
 /* ======= menu social ======= */
 
@@ -208,7 +208,7 @@ const renderMenuSocialMarkup = () => {
   }
 };
 
-renderMenuSocialMarkup();
+
 
 /* ======= set geolocation language ======= */
 
@@ -221,8 +221,8 @@ function updateLangSelect(code) {
 }
 
 const setGeolocationLanguage = () => {
-  const storedLang = localStorage.getItem("lang");
-
+  const storedLang = localStorage.getItem("lang") || 'ua';
+  console.log(storedLang)
   if (storedLang) {
     updateLangSelect(storedLang);
     return;
@@ -257,4 +257,10 @@ const setGeolocationLanguage = () => {
   return;
 };
 
-document.addEventListener("DOMContentLoaded", setGeolocationLanguage)
+document.addEventListener("DOMContentLoaded", () => {
+  renderNavigationMarkup();
+  renderMenuSocialMarkup();
+  renderCustomSelectSmall();
+  renderCustomSelect();
+  setGeolocationLanguage()
+})
