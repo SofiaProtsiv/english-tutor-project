@@ -122,7 +122,7 @@
   margin: 108px 60px;
   background-color: transparent;
   cursor: pointer;
-  background-image: url(../../images/hero/Vector.png);
+  background-image: url(../../public/images/hero/Vector.png);
   color: var(--primary-text-color);
   background-repeat: no-repeat;
   background-size: contain;
@@ -193,8 +193,7 @@
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1439px) {
-}
+@media screen and (min-width: 768px) and (max-width: 1439px) {}
 
 .menu-social::before {
   content: "";

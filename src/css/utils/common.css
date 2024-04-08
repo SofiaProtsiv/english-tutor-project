@@ -15,6 +15,12 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
+body.is-hidden {
+  @media (1440px<=width) {
+    overflow-y: scroll;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -85,12 +91,11 @@ body::-webkit-scrollbar-track {
   height: 96px;
   color: var(--primary-text-color);
   background-color: white;
-  background-image: url(../../images/common/button@1x.png);
+  background-image: url(../../public/images/common/button@1x.png);
   background-repeat: no-repeat;
   background-size: contain;
   filter: brightness(100%);
-  -webkit-transition: -webkit-filter var(--transition-time)
-    var(--transition-effect);
+  -webkit-transition: -webkit-filter var(--transition-time) var(--transition-effect);
   transition: filter var(--transition-time) var(--transition-effect);
   color: var(--primary-text-color);
   background-position: center;
@@ -102,13 +107,13 @@ body::-webkit-scrollbar-track {
 
 @media (min-resolution: 2dppx) {
   .btn-connect {
-    background-image: url(../../images/common/button@2x.png);
+    background-image: url(../../public/images/common/button@2x.png);
   }
 }
 
 @media (min-resolution: 3dppx) {
   .btn-connect {
-    background-image: url(../../images/common/button@3x.png);
+    background-image: url(../../public/images/common/button@3x.png);
   }
 }
 

@@ -511,7 +511,7 @@ const translations = {
       yevheniiPetrovskyi: "Yevhenii Petrovskyi<span>Developer</span>",
       hannaShchetynina: "Hanna Shchetynina<span>Developer</span>",
       yuliiaLukomska: "Yuliia Lukomska<span>Developer</span>",
-      zenykFil: "Zenyk Fil<span>Developer</span>",
+      zenukFil: "Zenyk Fil<span>Developer</span>",
       marynaPrusova: "Maryna Prusova<span>QA</span>",
       olenaSierikova: "Olena Sierikova<span>QA</span>",
       nataliiaDiadchenko: "Nataliia Diadchenko<span>QA</span>",

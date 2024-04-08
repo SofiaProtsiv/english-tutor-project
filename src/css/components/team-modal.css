@@ -111,7 +111,6 @@
   height: calc(100% - (132px + 24px));
   overflow-y: scroll;
   scroll-behavior: smooth;
-  scrollbar-width: thin;
 
   @media (768px<=width) {
     height: calc(100% - (136px + 56px));
@@ -125,6 +124,26 @@
     height: calc(100% - (68px + 72px));
     padding-right: 24px;
   }
+}
+
+.team-modal-list::-webkit-scrollbar-thumb {
+  border: 1px solid white;
+  background-color: #ccc;
+}
+
+.team-modal-list::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px !important;
+}
+
+.team-modal-list::-webkit-scrollbar:horizontal {
+  height: 13px;
+}
+
+.team-modal-list::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  border: 1px solid white;
+  background-color: var(--scrollbar-thumb-bg);
 }
 
 .team-modal-item {
